@@ -23,7 +23,7 @@ Run `npm i`
 Start the bot-list `npm start` :)
 
 # Do not change the footer of the website!
-## If i find your botlist without the footer you are X_X
+> If i find your botlist without the footer you are X_X
 
 # License Notice
 
