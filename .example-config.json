@@ -1,0 +1,42 @@
+{
+    "mongo_url": "xxxxxxxxxx",
+    "server": {
+        "botOwners": "559651275877384193",
+        "id": "793149744847257600",
+        "invite": "https://discord.gg/sQQFSnQhdt",
+        "mod_log_id": "808986924727533578",
+        "like_log": "839817679845457931",
+        "admin_user_ids": "559651275877384193",
+        "role_ids": {
+            "bot": "808988027702870037",
+            "unverified": "816638129225596968",
+            "verified": "816650236733685784",
+
+            "bot_developer": "808682198101262378",
+            "bot_verifier": "822476027824963584"
+        }
+    },
+    "bot_options": {
+        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Social", "Leveling", "Roleplay", "Role Managment", "Logging", "Web Dashboard", "Utility", "Stream", "Games", "Youtube", "Twitch", "Reddit"],
+        "max_bot_tags": 6,
+        "max_owners_count": 3,
+        "max_summary_length": 140,
+        "min_description_length": 300,
+        "max_description_length": 10000
+    },
+    "discord_client": {
+        "id": "xxxxxxxxxx",
+        "secret": "xxxxxxxxxx",
+        "token": "xxxxxxxxxx",
+        "prefix": "lb!"
+    },
+    "web": {
+        "domain_with_protocol": "xxxxxxxxxx",
+        "port": 5000,
+        "ratelimit": 100,
+        "recaptcha_v2": {
+            "site_key": "xxxxxxxxxx",
+            "secret_key": "xxxxxxxxxx"
+        }
+    }
+}
