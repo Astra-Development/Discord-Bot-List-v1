@@ -22,6 +22,9 @@ Fill All the **Values**
 Run `npm i`
 Start the bot-list `npm start` :)
 
+# Do not change the footer of the website!
+## If i find your botlist without the footer you are X_X
+
 # License Notice
 
 ![License Notice](https://i.ibb.co/Q8vQDTs/image.png)
