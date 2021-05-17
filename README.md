@@ -16,6 +16,9 @@ Lucky Bot List is an open-source!nt branch may have newer additions/features, bu
 
 ![image](https://user-images.githubusercontent.com/39243722/118496347-b818a900-b72c-11eb-9975-34ff460b713e.png)
 
+# Setup
+Rename `example.config.json` to `config.json`
+Fill All the **Values**
 
 # License Notice
 
