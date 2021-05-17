@@ -8,11 +8,11 @@ $(document).ready(async function () {
       buttonsStyling: true
     })
     let { isConfirmed } = await swalWithBootstrapButtons.fire({
-      title: 'Are you sure you want to like this bot ?',
-      text: "You won't be able to like for the next 12 hours.",
+      title: 'Are you sure you want to vote this bot?',
+      text: "You won't be able to vote for the next 12 hours.",
       icon: 'info',
       showCancelButton: true,
-      confirmButtonText: 'Yes, Like'
+      confirmButtonText: 'Vote'
     })
     if (!isConfirmed) return;
     let botid = location.href.split(location.host)[1].replace('/bots/like/', '').replace('/', '');
