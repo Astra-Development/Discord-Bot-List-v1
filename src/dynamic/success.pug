@@ -1,0 +1,183 @@
+head
+  include includes/nav.pug
+  script(src='/assets/js/like.js')
+  meta(name='theme-color', content='#d2efe6')
+  link(rel='stylesheet', href='/assets/css/main.css')
+  link(rel='stylesheet', href='/assets/css/secondary.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
+  link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
+  link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
+
+#particles-js
+  canvas.particles-js-canvas-el(style='width: 50%; height: 100%;')
+
+.vcenter-item
+  .innervcen
+    .container
+    center
+        .card.mb-1
+          .card-body
+            p.text-center.mb-1
+              img(src='https://media.discordapp.net/attachments/817464926066835486/843457017737510932/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711429-removebg-preview.png')
+            h5.text-center
+              | Thank you for submitting your bot 
+              b #{req.user.username}
+              p.mb-0.text-center.text-muted(style='font-size:12px;') You have added your bot to the list. Please wait for it to be verified.
+            hr.bg-dark.ml-0.mb-4(style='max-width:600px;')
+            .dansaidicant
+              .g-daddy
+                .g-recaptcha(data-size='invisible', data-theme='dark', data-sitekey='6LcGJPUZAAAAAE-JL52A3QLe8vwSbmXQxWRL7W23', data-callback='saveChanges')
+
+        // a.btn.btn-secondary.btn-icon(href='/')
+        //   .btnicon-icon
+        //     i.fas.fa-arrow-left
+        //   span.btnicon-content Home
+
+include includes/footer.pug
+
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js')
+script(src='/assets/js/bootstrap-multiselect.js')
+
+script(type='text/javascript', src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
+style.
+  .vcenter-item {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 73.38px);
+  }
+  .innervcen {
+  width:100%;
+  }
+  #clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  }
+  #clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #292929;
+  display: inline-block;
+  }
+  #clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  background: #303030;
+  display: inline-block;
+  }
+  .smalltext{
+  padding-top: 5px;
+  font-size: 16px;
+  }
+  .button-hover:hover {
+  border-color: #fff;
+  }
+  #particles-js {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 73.38px);
+  }
+script.
+  particlesJS('particles-js', {
+  'particles': {
+  'number': {
+  'value': 50,
+  'density': {
+  'enable': true,
+  'value_area': 800
+  }
+  },
+  'color': { 'value': '#ffffff' },
+  'shape': {
+  'type': 'star',
+  'stroke': {
+  'width': 0,
+  'color': '#000000'
+  },
+  'polygon': { 'nb_sides': 5 },
+  'image': {
+  'src': 'img/github.svg',
+  'width': 100,
+  'height': 100
+  }
+  },
+  'opacity': {
+  'value': 0.5,
+  'random': false,
+  'anim': {
+  'enable': false,
+  'speed': 1,
+  'opacity_min': 0.1,
+  'sync': false
+  }
+  },
+  'size': {
+  'value': 3,
+  'random': true,
+  'anim': {
+  'enable': false,
+  'speed': 40,
+  'size_min': 0.1,
+  'sync': false
+  }
+  },
+  'line_linked': {
+  'enable': true,
+  'distance': 150,
+  'color': '#aaaaaa',
+  'opacity': 0.4,
+  'width': 1
+  },
+  'move': {
+  'enable': true,
+  'speed': 2,
+  'direction': 'right',
+  'random': false,
+  'straight': false,
+  'out_mode': 'out',
+  'bounce': false,
+  'attract': {
+  'enable': false,
+  'rotateX': 600,
+  'rotateY': 1200
+  }
+  }
+  },
+  'interactivity': {
+  'detect_on': 'canvas',
+  'events': {
+  'onhover': {
+  'enable': true,
+  'mode': 'repulse'
+  },
+  'onclick': {
+  'enable': false,
+  'mode': 'push'
+  },
+  'resize': true
+  },
+  'modes': {
+  'grab': {
+  'distance': 140,
+  'line_linked': { 'opacity': 1 }
+  },
+  'bubble': {
+  'distance': 400,
+  'size': 40,
+  'duration': 2,
+  'opacity': 8,
+  'speed': 3
+  },
+  'repulse': {
+  'distance': 200,
+  'duration': 0.4
+  },
+  'push': { 'particles_nb': 4 },
+  'remove': { 'particles_nb': 2 }
+  }
+  },
+  'retina_detect': true
+  });

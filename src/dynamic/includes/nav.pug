@@ -1,0 +1,91 @@
+script(src="/assets/js/me.js")
+#navTop
+nav.navbar.navbar-expand-lg.navbar-dark.p-1.pl-4.pr-4.mainnav(style='background:#262626;')
+  .container
+    a.navbar-brand.logoholder(href='/')
+      img#logoimg(style='height:55px; width:55px;', src='https://media.discordapp.net/attachments/817464926066835486/843438759479345152/circle-cropped.png', alt='Logo')
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor02', aria-controls='navbarColor02', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarColor02.collapse.navbar-collapse
+      ul.navbar-nav.mainlink.mr-auto
+        li.nav-item
+          a.nav-link.nvhome(href='/')
+            i.fas.fa-home.mr-1
+            |  Home
+        li.nav-item
+          a.nav-link(href='/join')
+            i.fab.fa-discord.mr-1
+            |  Discord
+        li.nav-item
+          a.nav-link(href='/add')
+            i.fas.fa-robot.mr-2
+            |  Add Bot  
+  
+
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(data-toggle='dropdown', href='/', role='button', aria-haspopup='true', aria-expanded='false')
+            i.fas.fa-plus.mr-1
+            |  More
+          .dropdown-menu.fade.fade-up
+            a.dropdown-item(href='/about')
+              i.fas.fa-info-circle.mr-2
+              |  About
+            a.dropdown-item(href='/privacy')
+              i.fas.fa-user-secret.mr-2
+              |  Terms & Privacy
+        
+      ul.nav.navbar-nav.navbar-right
+        if (req.user) 
+          li.nav-item.dropdown
+            a.nav-link(data-toggle='dropdown', href='/me', role='button', aria-haspopup='true', aria-expanded='true')
+              i.fas.fa-user-circle.mr-1
+              b #{req.user.username}
+              small ##{req.user.discriminator}
+            .dropdown-menu.dropdown-menu-right.fade.fade-up(style='min-width:200px;')
+                a.dropdown-item(href='/me')
+                  i.fas.fa-id-card.mr-2
+                  |  Profile
+                a.dropdown-item(href='/admin')
+                  i.fas.fa-gavel.text-damp.mr-2
+                  |  Dashboard
+                a.dropdown-item.dropdown-danger(href='/logout')
+                  i.fas.fa-sign-out.mr-2
+                  |  Logout
+        else
+          a.nav-link(href='/login')
+            i.fas.fa-sign-in.mr-1
+            | Login
+
+      // ul.nav.navbar-nav.navbar-right
+      //   li.nav-item
+      //   if (req.user)
+      //     a.nav-link(href='/me')
+      //       i.fas.fa-user-circle.mr-1
+      //       | #{req.user.username}
+      //   else
+      //     a.nav-link(href='/me')
+      //       i.fas.fa-sign-in.mr-1
+      //       | Login
+
+// script(async='', src='https://arc.io/widget.min.js#UoiZsHKf')
+// script.
+//   // disable right click
+//   document.addEventListener('contextmenu', event => event.preventDefault());
+//   document.onkeydown = function (e) {
+//   // disable F12 key
+//   if(e.keyCode == 123) {
+//   return false;
+//   }
+//   // disable I key
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+//   return false;
+//   }
+//   // disable J key
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+//   return false;
+//   }
+//   // disable U key
+//   if(e.ctrlKey && e.keyCode == 85) {
+//   return false;
+//   }
+//   }

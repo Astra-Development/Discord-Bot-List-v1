@@ -1,0 +1,231 @@
+head
+include includes/nav.pug
+head
+  meta(property='og:title', content=bot.username)
+  meta(name='twitter:title', content=bot.username)
+  meta(property='og:description', content=bot.description)
+  meta(name='description', content=bot.description)
+  meta(property='twitter:description', content=bot.description)
+  meta(name='og:image', content=bot.logo)
+  meta(name='twitter:image', content=bot.logo)
+  script(src='/cdn-cgi/apps/head/gNPnKtrHwcCWtwVUctK98NhZqUk.js')
+  meta(name='author', content='Lucky Bots')
+  meta(name='theme-color', content='#171717')
+  meta(name='og:site_name', content='Lucky Bots')
+  meta(property='og:type', content='website')
+  meta(name='revisit-after', content='3 days')
+  meta(name='copyright', content='Lucky Development')
+  meta(name='language', content='EN')
+  meta(name='distribution', content='global')
+  meta(name='rating', content='general')
+  meta(name='PreMiD_details', content='general.viewing')
+  meta(name='PreMiD_state', content=bot.username)
+  meta(name='PreMiD_smallImageText', content='Bot')
+  meta(name='PreMiD_smallImageKey', content='img_icon_robot')
+  meta(name='PreMiD_button_1_Label', content='View Bot')
+  meta(name='PreMiD_button_1_Url', content=`https://luckybots.tk/bots/#{bot.botid}`)
+  title Lucky Bots - #{bot.username}
+
+
+
+  script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
+  script.
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='shortcut icon', type='image/png', href='/assets/img/logo.png')
+  link(rel='stylesheet', href='/assets/css/main.css')
+  link(rel='stylesheet', href='/assets/css/secondary.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
+  link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
+  script(src='https://www.google.com/recaptcha/api.js')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
+  style.
+    .botdesc img {max-width:100% !important;}
+    .botdesc table {max-width:100% !important;}
+    .botlogo {
+    max-width:100%;
+    border-radius:100%;
+    margin:auto 0;
+    max-height:150px;
+    }
+    @media only screen and (max-width: 767px) {
+    .botlogo{
+    margin:0 auto;
+    max-width: 150px;
+    }
+    .maintron {
+    text-align:center;
+    }
+    }
+    #restarts {cursor:pointer;}
+    #gotoReviews {cursor:pointer;}
+    }
+    
+.jumbotron.jumbotron-fluid.maintron
+  .container
+    .row
+      .col-md-auto.42389432dksfm(style='display: flex;align-items: center;')
+        div(style='width:100%;')
+          p.text-center.mb-0
+            img.botlogoimg(width='100px' height='100px' src=bot.logo)
+      .col-md.42389432dksfm(style='display: flex;align-items: center;')
+        div(style='width:100%;')
+          h1.maintron__title.mt-2 #{bot.username}
+          .b
+           p.lead.maintron__subtitle.mb-2
+            | #{bot.description}
+.container
+  .row
+    .col-xl-3.col-lg-4.col-md-4.col-sm-12.leftcards.mb-5
+      .bot__options.w-100.mb-5
+        h5.mb-3
+          span.text-dark.mr-1
+            i.fas.fa-tasks
+          | Tools
+        a.btn.btn-dark.btn-block.btn-icon(target='_blank' href=bot.invite ? bot.invite : `https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0`)
+          .btnicon-icon
+            i.fas.fa-plus-square
+          span.btnicon-content Invite
+        a.btn.btn-success.btn-block.btn-icon(href=`/bots/like/${bot.botid}`)
+          .btnicon-icon
+            i.fas.fa-chevron-up
+          span.btnicon-content Vote
+      .bot__overview.w-100.mb-5
+        h5.mb-3
+          span.text-info.mr-1
+            i.fas.fa-question-circle
+          |  Bot Information
+        
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-exclamation
+          span.common__infocard-content
+            b Prefix
+            span.float-right
+              | #{bot.prefix}
+
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-vote-yea
+          span.common__infocard-content
+            b Votes
+            span.float-right(href=`/bots/like/#{bot.botid}`)
+              | #{bot.likes || 0}
+
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            .sts(class=botUser.presence.status)
+              i.fas.fa-circle(class=botUser.presence.status)
+          span.common__infocard-content
+            b Status
+            span.float-right
+              | #{botUser.presence.status}
+        if (servers)
+         .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-vote-yea
+          span.common__infocard-content
+            b Servers
+            span.float-right
+              | #{`${servers} servers`}
+
+        
+        br
+        .bot__tags.w-100.mb-5
+          h5.mb-3
+            span.text-success.mr-1
+              i.fas.fa-tags
+            |  Tags
+          if (bot.tags)
+            p.tag-holder
+              each tag in bot.tags
+                a.badge.badge-secondary.mb-1(href=`/tag/${tag}`, style='margin-right:3px;') #{tag}
+          else
+            .common__infocard.d-flex
+              .common__infocard-icon.text-damp
+                 i.fas.fa-times
+              span.common__infocard-content
+                b Tags Not Set
+
+      #owners
+      .bot__owners.w-100.mb-5
+        h5.mb-3
+          span.text-warning.mr-1
+            i.fad.fa-crown
+          |  Owner
+        each person in owners
+          a.btn.btn-dark.btn-block.btn-icon(href=`/user/${person.id}`)
+            img(src=person.tag !== 'Unknown User'  ? person.displayAvatarURL({format: "png", size: 256}) : '/assets/default-avatar.png')
+            span.btnicon-content
+              | #{person.username}
+              small.text-muted ##{person.discriminator}
+   
+
+      //  .bot__owners.w-100.mb-5
+      //   h5.mb-3
+      //     span.text-warning.mr-1
+      //       i.fas.fa-user-crown
+      //     | Owner
+      //   each person in owners
+      //           a.btn.btn-dark.btn-block.btn-icon(href=`/user/${person.id}`)
+      //               img(height='30px' src=person.tag !== 'Unknown User'  ? person.displayAvatarURL({format: "png", size: 256}) : '/assets/default-avatar.png')
+      //               span.tag #{person.tag}
+                 
+
+
+      .bot__links.w-100
+        h5.mb-3
+          span.text-danger.mr-1
+            i.fas.fa-link
+          |  Links
+        if (bot.github)
+          a.btn.btn-info.btn-block.btn-icon(target='_blank' href=`${bot.github}`)
+           .btnicon-icon
+            i.fab.fa-github
+           span.btnicon-content Github
+        else 
+         .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-times
+          span.common__infocard-content
+            b Github Not Set
+
+        if (bot.website)
+          a.btn.btn-success.btn-block.btn-icon(target='_blank' href=`${bot.website}`)
+           .btnicon-icon
+            i.fas.fa-Globe
+           span.btnicon-content Website
+        else
+         .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-times
+          span.common__infocard-content
+            b Website Not Set
+        if (bot.support)
+         a.btn.btn-danger.btn-block.btn-icon(target='_blank' href=`${bot.support}`)
+          .btnicon-icon
+            i.fas.fa-mouse
+          span.btnicon-content Discord Server
+        else
+         .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-times
+          span.common__infocard-content
+            b Discord Server Not Set
+        
+  
+    .col-xl-9.col-lg-8.col-md-8.col-sm-12
+      .botdesc.markdown
+       .b !{desc}
+
+include includes/footer.pug
+
+
+style.
+  div.b {
+  width: 100%;
+  }
+  div.b {
+  word-wrap: break-word;
+  }

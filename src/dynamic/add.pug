@@ -1,0 +1,198 @@
+include includes/head.pug
+include includes/nav.pug
+head
+script(src='/assets/js/form.js')
+link(rel="stylesheet" href="/assets/css/tags.css")
+script(src="https://www.google.com/recaptcha/api.js" async defer)
+script(src="/assets/js/me.js")
+  meta(name='theme-color', content='#d2efe6')
+  script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
+  script.
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
+  link(rel='stylesheet', href='/assets/css/main.css')
+  link(rel='stylesheet', href='/assets/css/secondary.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
+  link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
+  script(async='', src='https://arc.io/widget.min.js#kqGtx3tp')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='shortcut icon', type='image/png', href='/assets/img/logo.png')
+  script(src='https://www.google.com/recaptcha/api.js')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
+
+center
+ .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
+  .container.mb-2
+    h1.display-5.mb-0.mt-2.text-boldest #{req.user.username}
+    .mb-2(style='min-height:28px;')
+      p.lead.ml-1.text-damp.text-bold.mb-0 Welcome to your dashboard!
+
+    .container
+              .row
+    .col-md-12
+      
+        .row
+          .col-md-6
+            .form-group
+              label.mb-1 Client ID
+              input#botid.input.form-control(type='text' placeholder=' ')
+              small.form-text.text-muted You can get this ID from the Discord developer docs  
+                span.text-danger (Required)
+
+          .col-md-6
+            .form-group
+              label.mb-1 Bot Owner ID
+              input.form-control(style='cursor: no-drop', value=`${req.user.id}`, disabled='')
+              small.form-text.text-muted This ID is yours!
+
+          .col-md-12
+            hr.mb-3.mt-0
+          
+          .col-md-6
+            .form-group
+              label.mb-1 Prefix
+              input#prefix.input.form-control(type='text' placeholder=' ')
+              small.form-text.text-muted The prefix your bot responds to. 
+                span.text-danger (Required)
+
+        
+          .col-md-6
+            .form-group
+              label.mb-1 Other owners of this bot
+              input#ownerids.input.form-control(type='text' placeholder=' ')
+              small.form-text.text-muted Separate each ID with a space! 
+                span.text-danger (Optional)          
+        
+          .col-md-12
+            hr.mb-3.mt-0
+          .col-md-12
+            .form-group
+              label.mb-1 Short Description
+              input#description.input.form-control(maxlength=max_summary_length type='text' placeholder=' ')
+              small.form-text.text-muted A small description of your bot of max 140 characters. 
+                span.text-danger (Required)
+
+          .col-md-12
+           hr.mb-3.mt-0
+          .col-md-12
+            .form-group
+              label.mb-1 Long Description
+              #editor
+              textarea#longdesc.input.form-control(rows='7')
+              small.form-text.text-muted Max 10.000 length, description of your bot with much details.
+                span.text-danger (Required)
+
+          .col-md-6
+            .form-group
+              label.mb-1 Support Discord Server
+              input#support.form-control(type='text' placeholder=' ')
+              small.form-text.text-muted Invite to the server where users can get support.
+
+          .col-md-6
+            .form-group
+              label.mb-1 Website
+              input#website.form-control(type='text' placeholder=' ')
+              small.form-text.text-muted The website of your bot. Full URLs only.
+
+          .col-md-6
+            .form-group
+              label.mb-1 Github
+              input#github.form-control(type='text' placeholder=' ')
+              small.form-text.text-muted Link to your bot's Github page (if it's open source).
+
+        .container
+          .col-md-12
+          center
+            hr.mb-3.mt-0
+            .col-md-12
+              .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
+              hr.mb-3.mt-0
+              a.btn.btn-sm.btn-purple.btn-block(onclick='submit()') Submit
+
+
+include includes/footer.pug
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js')
+    script(defer='', src='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.min.js')
+    script(defer='', src='https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js')
+    script(src='/assets/js/bootstrap-multiselect.js')
+    script(src='/assets/js/bootstrap-toaster.js')
+    script(src='/assets/js/danloves.js')
+    script(src='/assets/toadloader.js', type='text/javascript')
+    script(defer='', src='/assets/js/confetti.min.js')
+    script.
+      // $("[data-toggle=popover]").popover();
+      $("[data-toggle=tooltip]").tooltip();
+      $('[data-toggle="popover"]').popover({
+      placement : 'top',
+      trigger : 'hover'
+      });
+      $(window).on("load", function () {
+      window.toad.startListening();
+      setTimeout(function(){window.dispatchEvent(new Event('scroll'));}, 200);
+      })
+    script#imagedetection.
+      $("img").on('error', function() {
+      if ($(this) != $(".noerrorspls")) {
+      console.log('An errored has failed to load. Using fallback image. Original Source: ' + $(this).attr('src'))
+      $(this).attr('src', 'https://discord.mx/hcvOiDRmYc.jpg')
+      }
+      });
+script.
+  $("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+  });
+style.
+  .deletebtn:hover {background:#E7432C;}
+script.
+  $(".modaldeletebtn").click(async () => {
+  if(!$(".modaldeletebtn").hasClass('disabled')) {
+  // $('.modaldeletebtn').addClass('disabled');
+  // console.log($(".modaldeletebtn").data('botid'))
+  // await fetch(`/api/bots/delete/${$(".modaldeletebtn").data('botid')}`);
+  // location.reload();
+  const data = {
+  id: $(".modaldeletebtn").data('botid')
+  };
+  console.log(JSON.stringify(data));
+  $.ajax({
+  type: "POST",
+  url: `${window.location.origin}/api/bots/delete`,
+  dataType: "json",
+  contentType: 'application/json',
+  data: JSON.stringify(data),
+  success: function (resp) {
+  window.location = resp.redirect;
+  },
+  error: function (resp) {
+  // window.location = resp.redirect;
+  // console.log(resp)
+  Toast.create(`Error ${resp.responseJSON.code}`, resp.responseJSON.message, TOAST_STATUS.DANGER, 5000);
+  }
+  });
+  }
+  })
+  $('#deleteBot').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal to open
+  var modal = $(this) // Modal jquery stuff.
+  // Set finish button's data-botid to the bot's id
+  modal.find('.modaldeletebtn').data("botid", button.data('botid'));
+  // Do stuff.
+  modal.find('#delbotinput').attr('placeholder', button.data('botname'));
+  modal.find("#delbotname").html(button.data('botname'));
+  })
+  $("#delbotinput").on("input", function() {
+  if($(this).val() == $(this).attr('placeholder')) {
+  $('.modaldeletebtn').removeClass('disabled');
+  } else {
+  $('.modaldeletebtn').addClass('disabled');
+  }
+  });
+  // Clear Input on close/hide modal
+  $('#deleteBot').on('hide.bs.modal', function (e) {
+  $('.modaldeletebtn').addClass('disabled');
+  $("#delbotinput").val("");
+  });

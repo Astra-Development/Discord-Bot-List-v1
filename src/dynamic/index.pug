@@ -1,0 +1,118 @@
+doctype html
+include includes/head.pug
+include includes/nav.pug
+meta(name='copyrighted-site-verification', content='c7818fb6caa904dc')
+head
+  meta(property='og:type', content='website')
+  meta(name='revisit-after', content='3 days')
+  meta(name='language', content='EN')
+  meta(name='distribution', content='global')
+  meta(name='rating', content='general')
+  meta(name='PreMiD_details', content='general.viewHome')
+  meta(name='PreMiD_smallImageText', content='Page')
+  meta(name='PreMiD_smallImageKey', content='img_icon_page')
+  script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
+  script.
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='shortcut icon', type='image/png', href='/assets/img/logo.png')
+  link(rel='stylesheet', href='/assets/css/main.css')
+  link(rel='stylesheet', href='/assets/css/secondary.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
+  link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
+  script(src='https://www.google.com/recaptcha/api.js')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
+
+center
+ .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
+  .container.mb-2
+    h1.display-5.mb-0.mt-2.text-boldest Lucky Bots
+    .mb-2(style='min-height:28px;')
+      p.lead.ml-1.text-damp.text-bold.mb-0
+        span.typed
+<br />
+// .container
+//  .alert.alert-dark.rounded-0.text-center(style='margin-bottom:20px;')
+//   | Under maintenance!
+//   | Fore more info visit our 
+//   a(href='https://discord.com/invite/sQQFSnQhdt') Discord Server
+
+center
+ .col-md-7
+  .row.thesearch
+    .col-md-12
+      .form-group
+        .input-group
+          input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#262626;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots...')
+          .input-group-append
+            a.btn.btn-purple.searchsubmitbtn(style='padding:0 20px;padding-top:15px;')
+              i.fas.fa-search
+center
+    a.btn.btn-outline-tag(href='/tag/Utility')
+      i.fas.fa-tools.text-damp.mr-2
+      |  Utility
+    a.btn.btn-outline-tag(href='/tag/Moderation')
+      i.fas.fa-gavel.text-damp.mr-2
+      |  Moderation
+    a.btn.btn-outline-tag(href='/tag/Social')
+      i.fas.fa-user-friends.text-damp.mr-2
+      |  Social
+    a.btn.btn-outline-tag(href='/tag/Games')
+      i.fas.fa-gamepad-alt.text-damp.mr-2
+      |  Games
+
+<br />
+
+center
+    h2.mb-1
+      span.text-red.mr-1
+        i.fas.fa-star
+      |  Top Voted
+    h5.text-damp Here are some Lucky Bots :)
+hr
+
+body(onload="load()")
+  #cards
+
+style.
+  div.a {
+  display: flex;
+  flex-direction: row;
+  }
+
+include includes/footer.pug
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js')
+script(defer='', src='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.min.js')
+script(defer='', src='https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js')
+script(src='/assets/js/bootstrap-multiselect.js')
+script(src='/assets/js/bootstrap-toaster.js')
+script(src='/assets/js/danloves.js')
+script(src='/assets/toadloader.js', type='text/javascript')
+script(defer='', src='/assets/js/confetti.min.js')
+script(src='/assets/js/jquery-transition.js')
+script(src='https://cdn.jsdelivr.net/npm/typed.js@2.0.9')
+script.
+  var typed = new Typed('.typed', {
+  strings: ["Welcome to Lucky Bot List!",
+  "Make your bots known!",
+  "Fast Advertise!",
+  "Find other Developers!",
+  "Chat with us!",
+  "Earn Users!"],
+  typeSpeed: 70,
+  backSpeed: 50,
+  loop: true,
+  backDelay: 3000,
+  contentType: 'html'
+  });
+
+script.
+  const node = document.getElementById("searchbar");
+  node.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+  location.href = `/bots/search/?q=${node.value}`
+  }
+  });

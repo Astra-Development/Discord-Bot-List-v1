@@ -1,0 +1,192 @@
+doctype html
+include includes/head.pug
+script(src='/assets/js/like.js')
+include includes/nav.pug
+  script.
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='shortcut icon', type='image/png', href='/assets/img/logo.png')
+  link(rel='stylesheet', href='/assets/css/main.css')
+  link(rel='stylesheet', href='/assets/css/secondary.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
+  link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
+#particles-js
+  canvas.particles-js-canvas-el(style='width: 100%; height: 100%;')
+
+  
+center
+ .vcenter-item
+  .innervcen
+    .container
+        .card.mb-1
+          .card-body
+            p.text-center.mb-1
+              img(src=bot.logo, style='width:120px; border-radius:50%;')
+            h3.text-center
+              | Vote for 
+              b #{bot.username}
+            hr
+            .dansaidicant
+              a.btn.btn-block.btn-purple.btn()#like
+                i.fas.fa-chevron-up.mr-1
+                |  Vote
+            center
+              p.mb-0.text-muted(style='font-size:12px;') You may vote once per 12 hours.          
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js')
+script(defer='', src='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.min.js')
+script(defer='', src='https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js')
+script(src='/assets/js/bootstrap-multiselect.js')
+script(src='/assets/js/bootstrap-toaster.js')
+script(src='/assets/js/danloves.js')
+script(src='/assets/toadloader.js', type='text/javascript')
+script(defer='', src='/assets/js/confetti.min.js')
+
+  
+script(type='text/javascript', src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
+style.
+  .vcenter-item {
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 73.38px);
+  }
+  .innervcen {
+  width:100%;
+  }
+  #clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  }
+  #clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #292929;
+  display: inline-block;
+  }
+  #clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  background: #303030;
+  display: inline-block;
+  }
+  .smalltext{
+  padding-top: 5px;
+  font-size: 16px;
+  }
+  .button-hover:hover {
+  border-color: #fff;
+  }
+  #particles-js {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 73.38px);
+  }
+script.
+  particlesJS('particles-js', {
+  'particles': {
+  'number': {
+  'value': 50,
+  'density': {
+  'enable': true,
+  'value_area': 800
+  }
+  },
+  'color': { 'value': '#ffffff' },
+  'shape': {
+  'type': 'star',
+  'stroke': {
+  'width': 0,
+  'color': '#000000'
+  },
+  'polygon': { 'nb_sides': 5 },
+  'image': {
+  'src': 'img/github.svg',
+  'width': 100,
+  'height': 100
+  }
+  },
+  'opacity': {
+  'value': 0.5,
+  'random': false,
+  'anim': {
+  'enable': false,
+  'speed': 1,
+  'opacity_min': 0.1,
+  'sync': false
+  }
+  },
+  'size': {
+  'value': 3,
+  'random': true,
+  'anim': {
+  'enable': false,
+  'speed': 40,
+  'size_min': 0.1,
+  'sync': false
+  }
+  },
+  'line_linked': {
+  'enable': true,
+  'distance': 150,
+  'color': '#aaaaaa',
+  'opacity': 0.4,
+  'width': 1
+  },
+  'move': {
+  'enable': true,
+  'speed': 2,
+  'direction': 'right',
+  'random': false,
+  'straight': false,
+  'out_mode': 'out',
+  'bounce': false,
+  'attract': {
+  'enable': false,
+  'rotateX': 600,
+  'rotateY': 1200
+  }
+  }
+  },
+  'interactivity': {
+  'detect_on': 'canvas',
+  'events': {
+  'onhover': {
+  'enable': true,
+  'mode': 'repulse'
+  },
+  'onclick': {
+  'enable': false,
+  'mode': 'push'
+  },
+  'resize': true
+  },
+  'modes': {
+  'grab': {
+  'distance': 140,
+  'line_linked': { 'opacity': 1 }
+  },
+  'bubble': {
+  'distance': 400,
+  'size': 40,
+  'duration': 2,
+  'opacity': 8,
+  'speed': 3
+  },
+  'repulse': {
+  'distance': 200,
+  'duration': 0.4
+  },
+  'push': { 'particles_nb': 4 },
+  'remove': { 'particles_nb': 2 }
+  }
+  },
+  'retina_detect': true
+  });
