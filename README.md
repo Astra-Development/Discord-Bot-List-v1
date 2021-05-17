@@ -19,6 +19,8 @@ Lucky Bot List is an open-source!nt branch may have newer additions/features, bu
 # Setup
 Rename `example.config.json` to `config.json`
 Fill All the **Values**
+Run `npm i`
+Start the bot-list `npm start` :)
 
 # License Notice
 
