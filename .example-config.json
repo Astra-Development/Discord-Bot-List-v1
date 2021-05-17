@@ -1,19 +1,19 @@
 {
     "mongo_url": "xxxxxxxxxx",
     "server": {
-        "botOwners": "559651275877384193",
-        "id": "793149744847257600",
+        "botOwners": "xxxxxxxxxx",
+        "id": "xxxxxxxxxx",
         "invite": "https://discord.gg/sQQFSnQhdt",
-        "mod_log_id": "808986924727533578",
-        "like_log": "839817679845457931",
-        "admin_user_ids": "559651275877384193",
+        "mod_log_id": "xxxxxxxxxx",
+        "like_log": "xxxxxxxxxx",
+        "admin_user_ids": "xxxxxxxxxx",
         "role_ids": {
-            "bot": "808988027702870037",
-            "unverified": "816638129225596968",
-            "verified": "816650236733685784",
+            "bot": "xxxxxxxxxx",
+            "unverified": "xxxxxxxxxx",
+            "verified": "xxxxxxxxxx",
 
-            "bot_developer": "808682198101262378",
-            "bot_verifier": "822476027824963584"
+            "bot_developer": "xxxxxxxxxx",
+            "bot_verifier": "xxxxxxxxxx"
         }
     },
     "bot_options": {
