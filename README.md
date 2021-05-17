@@ -23,6 +23,7 @@ Run `npm i`
 Start the bot-list `npm start` :)
 
 # Do not change the footer of the website!
+![image](https://user-images.githubusercontent.com/39243722/118507353-d4214800-b736-11eb-8511-19cebb50e0ff.png)
 > If i find your botlist without the footer you are X_X
 
 # License Notice
