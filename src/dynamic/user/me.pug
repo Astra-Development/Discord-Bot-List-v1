@@ -35,6 +35,7 @@ body
   link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
   title Profile - #{req.user.username}
 
+
 .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
   .container
     .row
@@ -46,53 +47,47 @@ body
           h1.maintron__title.mt-2
             | #{req.user.username}
             small.text-muted ##{req.user.discriminator}
- 
+<br />
+<center>
+.card.botcard(style='transform: translate(0px, 0px); opacity: 1;')
+  hr.mt-1.mb-3.bg-secondary
+  .card-body.pt-0.botcard-btnholder
+    a.btn.btn-sm.btn-blue.btn-block(href='/logout') Logout
 
-.container
-    .col-xl-9.col-lg-8.col-md-8.col-sm-12
-      h2.mb-1.mt-5
-        span.text-info.mr-1
-          i.fas.fa-robot
-        |  Bots
-      h5.text-damp.mb-4 Bots that #{req.user.username} owns!
+<br /><br />
 
+.conatainer
+  .alert.alert-dark.rounded-100.text-center(style='margin-bottom:0px;')
+    h5.text-damp.mb-4 Bots that you own!
+
+<br />
+.conatainer
 #cards
 <center>
-.container
- each val, i in cards
-  .card.botcard(style='transform: translate(0px, 0px); opacity: 1;')
-   .card-body.p-3.pb-2.botcard-hassplash(style='border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("https://images-ext-1.discordapp.net/external/ZZNXF44V2pbaXGs1wMgiebscvrzkAsGg7vhlxpMnnVQ/https/cdn.wallpapersafari.com/37/44/ZxvYAN.jpg");')
-    .row
-      .col.pr-0.imgcol
-        .w-100.text-center
-          img.cardimg(src=val.logo, alt='Bot Avatar', onerror='this.src=`https://images-ext-2.discordapp.net/external/vWXYXnl1f7AYkP6q2-iCopajf27SBbSUGgtroNYRKtg/https/discord.mx/hcvOiDRmYc.jpg`')
-      .col.flexcen
-        .w-100
-          .botcount.mb-2.text-damp.text-bold(data-toggle='tooltip', data-placement='left', title='', data-original-title='Votes This Month')
-            span.float-left.text-white.h-100
-              i.fas.fa-chevron-up.pt-1.pb-1
-            | #{val.likes || 0}
-   .card-body.pt-0.pb-0
-    h4.mb-0.text-center.pt-1
-      | #{val.username} 
-      span.certifiedbadge(data-toggle='tooltip', title='', data-original-title='Certified Bot')
-        i.fas.fa-badge-check
-    p.mb-2.text-center.text-muted.botdesc
-      | #{val.description}
-   hr.mt-1.mb-3.bg-secondary
-   .card-body.pt-0.botcard-btnholder
-    a.btn.btn-sm.btn-purple.btn-block(href=`/bots/${val.botid}`) View Bot
+each val, i in cards
+ .card.botcard(style='transform: translate(0px, 0px); opacity: 1;')
+  .card-body.p-3.pb-2.botcard-hassplash(style='border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("https://images-ext-1.discordapp.net/external/ZZNXF44V2pbaXGs1wMgiebscvrzkAsGg7vhlxpMnnVQ/https/cdn.wallpapersafari.com/37/44/ZxvYAN.jpg");')
+    img.cardimg(style='width:150px;height:150px;', alt='Bot Avatar', src=val.logo, loading='lazy', draggable='false')
+    .card-body.pt-0.pb-0
+      h4.mb-0.text-center.pt-1
+        | #{val.username}  
+        span.certifiedbadge(data-toggle='tooltip', title='', data-original-title='Certified Bot')
+          i.fas.fa-check-circle
+      p.mb-2.text-center.text-muted.botdesc #{val.description}
+  hr.mt-1.mb-3.bg-secondary
+  .card-body.pt-0.botcard-btnholder
     .btn-group.btn-block
-      a.btn.btn-sm.btn-secondary(style='width:50%;', href=`/bots/like/${val.botid}`) Vote
-   
-   hr.mt-1.mb-3.bg-secondary
-   .card-body.pt-0.botcard-btnholder
-    a.btn.btn-sm.btn-purple.btn-block(style='border-left:1px solid #2B2B2B; width:100%;', href=`/bots/edit/${val.botid}`) Edit Bot
-   .card-body.pt-0.botcard-btnholder
-    if (val.state == "deleted")
-      a.btn.btn-sm.btn-purple.btn-block(href=`/bots/resubmit/${val.botid}/`) Resubmit
-    else
-      a.btn.btn-sm.btn-purple.btn-block.delete(href="#confirm" data-id=val.botid data-name=val.username) Delete
+      a.btn.btn-sm.btn-secondary(style='width:50%;', href=`https://discord.com/oauth2/authorize?client_id=${val.botid}&scope=bot&permissions=0`) Invite Bot
+  .card-body.pt-0.botcard-btnholder
+    .btn-group.btn-block
+      a.btn.btn-sm.btn-secondary(href=`/bots/${val.botid}/`) View Bot
+  .card-body.pt-0.botcard-btnholder
+      a.btn.btn-sm.btn-blue.btn-block(style='border-left:1px solid #2B2B2B; width:100%;', href=`/bots/edit/${val.botid}`) Edit Bot
+  .card-body.pt-0.botcard-btnholder
+      if (val.state == "deleted")
+        a.btn.btn-sm.btn-blue.btn-block(href=`/bots/resubmit/${val.botid}/`) Resubmit Bot
+      else
+        a.btn.btn-sm.btn-blue.btn-block.delete(href="#confirm" data-id=val.botid data-name=val.username) Delete Bot
 
 </center>
 include ../includes/footer.pug

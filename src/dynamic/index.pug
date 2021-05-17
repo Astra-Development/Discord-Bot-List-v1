@@ -29,6 +29,8 @@ center
     h1.display-5.mb-0.mt-2.text-boldest Lucky Bots
     .mb-2(style='min-height:28px;')
       p.lead.ml-1.text-damp.text-bold.mb-0
+        | Make your bots known
+        br
         span.typed
 <br />
 // .container
@@ -37,16 +39,6 @@ center
 //   | Fore more info visit our 
 //   a(href='https://discord.com/invite/sQQFSnQhdt') Discord Server
 
-center
- .col-md-7
-  .row.thesearch
-    .col-md-12
-      .form-group
-        .input-group
-          input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#262626;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots...')
-          .input-group-append
-            a.btn.btn-purple.searchsubmitbtn(style='padding:0 20px;padding-top:15px;')
-              i.fas.fa-search
 center
     a.btn.btn-outline-tag(href='/tag/Utility')
       i.fas.fa-tools.text-damp.mr-2
@@ -61,9 +53,21 @@ center
       i.fas.fa-gamepad-alt.text-damp.mr-2
       |  Games
 
+center
+ .col-md-7
+  .row.thesearch
+    .col-md-12
+      .form-group
+        .input-group
+          input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#262626;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots...')
+          .input-group-append
+            a.btn.btn-blue.searchsubmitbtn(style='padding:0 20px;padding-top:13px;')
+              i.fas.fa-search
+
 <br />
 
-center
+<center>
+.container
     h2.mb-1
       span.text-red.mr-1
         i.fas.fa-star
