@@ -21,6 +21,13 @@ Fill All the **Values**
 Run `npm i`
 Start the bot-list `npm start` :)
 
+# Dashboard Setup
+- Visit https://discord.com/developers/applications
+- Click on your bot
+- Go on `OAuth2`
+- On `Redirects` add your website `domain/api/callback` [Eg. `https://luckybots.tk/api/callback]
+- Click `Save`
+
 # MongoURL Value
 - Visit https://www.mongodb.com/
 - Create Clutser
