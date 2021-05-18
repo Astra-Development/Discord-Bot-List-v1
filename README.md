@@ -1,5 +1,4 @@
 # Welcome to LuckyBotList
-Fast &amp; Easy to use - New Generation
 
 Lucky Bot List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
 
