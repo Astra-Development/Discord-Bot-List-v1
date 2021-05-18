@@ -46,8 +46,12 @@ Start the bot-list `npm start` :)
 - On Domains, add the domain that you have for the **Bot List** [Eg. `luckybots.tk`] > Click the **+**
 - Click on `Submit` Button
 ### After `Submit` button you will be navigate to a page similar like this
+
+
 ![image](https://user-images.githubusercontent.com/39243722/118610249-3c6a3b00-b7c4-11eb-8eb6-15733fdeb656.png)
 - Copy `Site Key` & `Secret Key` and paste them on `config.json` file
+
+
 ![image](https://user-images.githubusercontent.com/39243722/118610668-aedb1b00-b7c4-11eb-9eb7-a3fe931afb89.png)
 
 
