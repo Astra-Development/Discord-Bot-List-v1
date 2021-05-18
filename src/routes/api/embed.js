@@ -29,7 +29,7 @@ route.get("/:id", async (req, res) => {
       .setTextAlign("left")
       .setTextFont('bold 12px Verdana')
     if (bot.servers[bot.servers.length-1])
-      img.printText(`${bot.servers[bot.servers.length-1].count} servers | ${bot.likes} ❤️`, 30, 125);
+      img.printText(`${bot.servers[bot.servers.length-1].count} servers | ${bot.likes} ⭐`, 30, 125);
     if (discord_verified)
       img.printImage(verified, 420, 55)
     img

@@ -1,33 +1,9 @@
 {
-    "mongo_url": "xxxxxxxxxx",
-    "server": {
-        "botOwners": "xxxxxxxxxx",
-        "id": "xxxxxxxxxx",
-        "invite": "https://discord.gg/sQQFSnQhdt",
-        "mod_log_id": "xxxxxxxxxx",
-        "like_log": "xxxxxxxxxx",
-        "admin_user_ids": "xxxxxxxxxx",
-        "role_ids": {
-            "bot": "xxxxxxxxxx",
-            "unverified": "xxxxxxxxxx",
-            "verified": "xxxxxxxxxx",
 
-            "bot_developer": "xxxxxxxxxx",
-            "bot_verifier": "xxxxxxxxxx"
-        }
-    },
-    "bot_options": {
-        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Social", "Leveling", "Roleplay", "Role Managment", "Logging", "Web Dashboard", "Utility", "Stream", "Games", "Youtube", "Twitch", "Reddit"],
-        "max_bot_tags": 6,
-        "max_owners_count": 3,
-        "max_summary_length": 140,
-        "min_description_length": 300,
-        "max_description_length": 10000
-    },
     "discord_client": {
         "id": "xxxxxxxxxx",
-        "secret": "xxxxxxxxxx",
         "token": "xxxxxxxxxx",
+        "secret": "xxxxxxxxxx",
         "prefix": "lb!"
     },
     "web": {
@@ -38,5 +14,30 @@
             "site_key": "xxxxxxxxxx",
             "secret_key": "xxxxxxxxxx"
         }
+    },
+
+    "mongo_url": "xxxxxxxxxx",
+    "server": {
+        "id": "xxxxxxxxxx",
+        "invite": "https://discord.gg/sQQFSnQhdt",
+        "like_log": "xxxxxxxxxx",
+        "botOwners": "xxxxxxxxxx",
+        "mod_log_id": "xxxxxxxxxx",
+        "admin_user_ids": "xxxxxxxxxx",
+        "role_ids": {
+            "bot": "xxxxxxxxxx",
+            "verified": "xxxxxxxxxx",
+            "unverified": "xxxxxxxxxx",
+            "bot_verifier": "xxxxxxxxxx",
+            "bot_developer": "xxxxxxxxxx"
+        }
+    },
+    "bot_options": {
+        "bot_tags": ["Music", "Moderation", "Fun", "Economy", "Anime", "Game", "Meme", "Social", "Leveling", "Roleplay", "Role Managment", "Logging", "Web Dashboard", "Utility", "Stream", "Games", "Youtube", "Twitch", "Reddit"],
+        "max_bot_tags": 6,
+        "max_owners_count": 3,
+        "max_summary_length": 140,
+        "min_description_length": 300,
+        "max_description_length": 10000
     }
 }
