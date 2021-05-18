@@ -43,9 +43,9 @@ Start the bot-list `npm start` :)
 - On the `label` section you can put whatever you want
 - Select `reCAPTCHA v2`
 - On Domains, add the domain that you have for the **Bot List** [Eg. `luckybots.tk`] > Click the **+**
+- Click on `Submit` Button
 ![image](https://user-images.githubusercontent.com/39243722/118609705-ac2bf600-b7c3-11eb-9378-6770576dad25.png)
 
-- Click on `Submit` Button
 ### After `Submit` button you will be navigate to a page similar like this
 
 ![image](https://user-images.githubusercontent.com/39243722/118610249-3c6a3b00-b7c4-11eb-8eb6-15733fdeb656.png)
