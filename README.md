@@ -22,14 +22,14 @@ Run `npm i`
 Start the bot-list `npm start` :)
 
 # Dashboard Setup
-- Visit https://discord.com/developers/applications
+- Visit [Discord Developer Portal](https://discord.com/developers/applications)
 - Click on your bot
 - Go on `OAuth2`
-- On `Redirects` add your website `domain/api/callback` [Eg. `https://luckybots.tk/api/callback]
+- On `Redirects` add your website `domain/api/callback` [Eg. `https://luckybots.tk/api/callback`]
 - Click `Save`
 
 # MongoURL Value
-- Visit https://www.mongodb.com/
+- Visit [MongoDB](https://www.mongodb.com/)
 - Create Clutser
 - Click connect
 - Connect your application
@@ -43,8 +43,7 @@ Start the bot-list `npm start` :)
 ### **Make sure on `<username>` & `password` to replace them with what you created on the `DataBase Access`**
 
 # Recaptcha_V2 Value
-- Visit https://www.google.com/recaptcha/about/
-- Click on **V3 Admin Console**
+- Visit [Google Recaptcha Website](https://www.google.com/recaptcha/admin/)
 - Click on `Create` button
 - On the `label` section you can put whatever you want
 - Select `reCAPTCHA v2`
