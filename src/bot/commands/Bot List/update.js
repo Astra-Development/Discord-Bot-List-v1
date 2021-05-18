@@ -16,7 +16,7 @@ module.exports = class extends Command {
         try {
             await this.update(message.client);
         } catch (e) { console.error(e) }
-        m.edit(`Updated all bots.`);
+        m.edit(`${message.author}, All bots **Updated**`);
     }
 
     async update(client) {

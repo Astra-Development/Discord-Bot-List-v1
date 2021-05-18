@@ -22,7 +22,7 @@ module.exports = class extends Command {
 
 		reason = reason.length > 0 ? reason.join(' ') : null;
 		await member.kick(reason);
-		return message.sendMessage(`**${member.user.tag}** got kicked by ${message.author}.${reason ? ` With reason of: ${reason}` : ''}`);
+		return message.sendMessage(`Kicked: **${member.user.tag} / ${member.user.id}**\nModerator: ${message.author}.\n${reason ? ` With reason of: ${reason}` : ''}`);
 	}
 
 };
