@@ -8,7 +8,7 @@ Lucky Bot List is an open-source!nt branch may have newer additions/features, bu
 [Server Invite](https://discord.gg/sQQFSnQhdt)
 
 # ScreenShots
-![image](https://user-images.githubusercontent.com/39243722/118495607-06797800-b72c-11eb-851b-669fa98e25ce.png)
+![image](/Setup/home-page.png)
 
 
 ![image](https://user-images.githubusercontent.com/39243722/118495702-1ee99280-b72c-11eb-99cc-aab9f89e0f3f.png)
