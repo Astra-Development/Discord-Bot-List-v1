@@ -1,5 +1,3 @@
-// Copyright (c) 2017-2019 dirigeants. All rights reserved. MIT license.
-// Source: https://github.com/dirigeants/klasa-pieces/blob/master/commands/General/Chat%20Bot%20Info/help.js
 const { Command, RichDisplay, util: { isFunction } } = require('klasa');
 const { MessageEmbed, Permissions } = require('discord.js');
 
