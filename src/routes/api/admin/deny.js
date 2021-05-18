@@ -30,14 +30,14 @@ route.post("/:id", auth, async function (req, res) {
             .addField("Mod", `<@${req.user.id}>`, true)
             .addField("Reason", reason, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
-            .setColor(0x26ff00)
+            .setColor('#ff0000')
         );
     modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
 
     // Update developer roles and send DM
     owners = await req.app.get('client').guilds.cache.get(id).members.fetch({user:owners})
     owners.forEach(o => {
-        o.send(`Your bot <@${bot.botid}> (${bot.botid}) has been declined by reviewer <@${req.user.id}>. Reason: ${reason}\nIf you would like to dispute your decline, please DM <@${req.user.id}> (User ID: ${req.user.id})`)
+        o.send(`Your bot <@${bot.botid}> (${bot.botid}) has been declined by reviewer <@${req.user.id}>.\nReason: ${reason}\nIf you would like to dispute your decline, please DM <@${req.user.id}> (User ID: ${req.user.id})`)
     })
     
     // Kick bot

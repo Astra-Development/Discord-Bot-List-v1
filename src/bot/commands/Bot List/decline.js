@@ -34,7 +34,7 @@ module.exports = class extends Command {
     if (!Member || !Member.bot) return message.channel.send(`You didn't ping a bot to decline.`)
     let e = new MessageEmbed()
       .setTitle('Decline Reasons')
-      .setColor('#FF0000')
+      .setColor('#ff0000')
       .addField(`Removing bot`, `${Member}`)
     let cont = ``;
     for (let k in reasons) {
@@ -75,7 +75,7 @@ module.exports = class extends Command {
 
     owners = await message.guild.members.fetch({ user: owners })
     owners.forEach(o => {
-      o.send(`Your bot <@${bot.botid}> (${bot.botid}) was declined by reviewer ${message.author}. Reason: ${r}\nIf you would like to dispute your decline, please DM ${message.author} (User ID: ${message.author.id})`)
+      o.send(`Your bot <@${bot.botid}> (${bot.botid}) was declined by reviewer ${message.author}.\nReason: ${r}\nIf you would like to dispute your decline, please DM ${message.author} (User ID: ${message.author.id})`)
     })
     if (!message.client.users.cache.find(u => u.id === bot.botid).bot) return;
     try {

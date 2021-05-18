@@ -19,7 +19,7 @@ module.exports = class extends Command {
 			await message.guild.members.unban(user, reason.join(' '));
 		} else throw 'This user was not banned so I can not unban them.';
 
-		return message.sendMessage(`**${user.tag}** was unbanned.${reason ? ` With reason of: ${reason}` : ''}`);
+		return message.sendMessage(`**Un-Banned: ${user.tag} / ${user.id}**\nModerator: ${message.author}.${reason ? ` With reason of: ${reason}` : ''}`);
 	}
 
 };

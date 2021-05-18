@@ -27,7 +27,7 @@ route.post("/:id", auth, async function(req, res) {
       .addField(`Owner(s)`, owners.map(x => x ? `<@${x}>` : ""), true)
       .addField("Reviewer", `<@${req.user.id}>`, true)
   .setThumbnail(botUser.displayAvatarURL({ format: "png", size: 256 }))
-  .setColor(0x26ff00)
+  .setColor('00ff00')
         );
 modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
 

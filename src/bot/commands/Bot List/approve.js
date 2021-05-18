@@ -32,7 +32,7 @@ module.exports = class extends Command {
             .addField(`Bot Owner`, owners.map(x => x ? `<@${x}>` : ""), true)
             .addField("Reviewer", message.author, true)
             .setThumbnail(botUser.displayAvatarURL({format: "png", size: 256}))
-            .setColor('#FF7400')
+            .setColor('00ff00')
         modLog.send(e);
         modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
 
