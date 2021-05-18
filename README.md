@@ -32,7 +32,9 @@ Start the bot-list `npm start` :)
 - Add **New database user**
 - Add a custom username [Eg. `LuckyTarget-username`] and a password [Eg. `LuckyTarget-password`]
 - Click the add user Button
-- Visit `config.json` > Add on `"mongo_url": ""` this -> `mongodb+srv://LuckyTarget-username:LuckyTarget-password@cluster0.yeo01.mongodb.net/myFirstDatabase?retryWrites=true&w=majority` **Make sure on `<username>` & `password` to replace them with what you created on the `DataBase Access`
+- Visit `config.json`
+- Add on `"mongo_url": ""` this -> `mongodb+srv://LuckyTarget-username:LuckyTarget-password@cluster0.yeo01.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+**Make sure on `<username>` & `password` to replace them with what you created on the `DataBase Access`
 
 # Recaptcha_V2 Value
 - Visit https://www.google.com/recaptcha/about/
