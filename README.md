@@ -3,7 +3,7 @@
 Lucky Bot List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
 
 ### Website Preview [Website Link](https://luckybots.tk/)
-###Do you need help? Join our [Discord Server](https://discord.gg/sQQFSnQhdt)
+### Do you need help? Join our [Discord Server](https://discord.gg/sQQFSnQhdt)
 
 # ScreenShots
 ![image](/Setup/home-page.png)
