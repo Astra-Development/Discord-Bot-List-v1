@@ -3878,7 +3878,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
     display: -ms-flexbox;
     display: inline-block;
     width: calc(100vw / 5);
-    margin: 5px;
+    margin: 10px;
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;

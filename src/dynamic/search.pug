@@ -1,16 +1,19 @@
-doctype html
-include includes/head.pug
-include includes/nav.pug
-meta(name='copyrighted-site-verification', content='c7818fb6caa904dc')
 head
+include includes/nav.pug
+include includes/head.pug
+head
+  script(type='text/javascript', async='', src='https://www.gstatic.com/recaptcha/releases/f-bnnOuahiYKuei7dmAd3kgv/recaptcha__en.js', crossorigin='anonymous', integrity='sha384-flviDSD9v4jk/5R8dfmwuv/TjjtrqG71QqiMHXEdc2uJSKVKau85FnvYQXVXEpRR')
+  script(type='text/javascript', async='', src='https://www.google-analytics.com/analytics.js')
+  script(src='/cdn-cgi/apps/head/gNPnKtrHwcCWtwVUctK98NhZqUk.js')
+  link(type='image/png', rel='shortcut icon', href='https://images.cloudflareapps.com/veNvlGxHRvP7/rick%20%2810%29.png')
+  meta(name='theme-color', content='#171717')
   meta(property='og:type', content='website')
   meta(name='revisit-after', content='3 days')
   meta(name='language', content='EN')
   meta(name='distribution', content='global')
   meta(name='rating', content='general')
-  meta(name='PreMiD_details', content='general.viewHome')
-  meta(name='PreMiD_smallImageText', content='Page')
-  meta(name='PreMiD_smallImageKey', content='img_icon_page')
+  meta(name='PreMiD_details', content='general.search')
+  meta(name='PreMiD_smallImageText', content='Searching Bots')
   script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
   script.
     window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
@@ -21,29 +24,42 @@ head
   link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
   link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
   script(src='https://www.google.com/recaptcha/api.js')
-  link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
+  style.
+    .form-inlinedrop {
+    background:rgba(0,0,0,0);
+    color:#ffffff;
+    white-space:nowrap;
+    border:none!important;
+    border-color:#222222;
+    cursor:pointer;
+    outline:0!important;
+    }
+    .form-inlinedrop:focus {
+    outline: 0!important;
+    }
+    .form-inlinedrop option {
+    background:#404040;
+    }
+    mark {
+    background: rgba(191, 89, 255, 0.5);
+    color: white;
+    padding:0 1px;
+    }
 
-center
- .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
+
+.jumbotron.jumbotron-fluid.maintron.maintron-plus
   .container.mb-2
-    h1.display-5.mb-0.mt-2.text-boldest Lucky Bots
-    .mb-2(style='min-height:28px;')
-      p.lead.ml-1.text-damp.text-bold.mb-0
-      h5.text-damp Search for your favourite bots!
-<br />
-
-center
- .col-md-7
-  .row.thesearch
-    .col-md-12
-      .form-group
-        .input-group
-          center
-          input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#262626;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search Bot...')
-          .input-group-append
-            a.btn.btn-blue.searchsubmitbtn(style='padding:0 20px;padding-top:15px;')
-              i.fas.fa-search
-
+    h1.display-5.mb-0.mt-2.text-boldest Search Bots
+    p.lead.ml-1.text-damp.text-bold.mb-0 Find what you are looking for!
+    hr.bg-dark.ml-0.mb-4(style='max-width:400px;')
+    .row
+      .col-md-7
+        .row.thesearch
+          .col-md-12
+            .form-group
+              .input-group
+                input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#262626;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots... [Press Enter]')
 
 #cards
   if (cards.length == 0)
@@ -55,36 +71,29 @@ center
     each card in cards
       .card.botcard(style='transform: translate(0px, 0px); opacity: 1;')
         .card-body.p-3.pb-2.botcard-hassplash(style='border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("https://images-ext-1.discordapp.net/external/ZZNXF44V2pbaXGs1wMgiebscvrzkAsGg7vhlxpMnnVQ/https/cdn.wallpapersafari.com/37/44/ZxvYAN.jpg");')
-            .row
-              .col.pr-0.imgcol
-                .w-100.text-center
-                  img.cardimg(draggable='false', loading='lazy', src=card.logo, alt='Bot Avatar')
-              .col.flexcen
-                 .w-100
-                    .botcount.mb-2.text-damp.text-bold(data-toggle='tooltip', data-placement='left', title='', data-original-title='Votes This Month')
-                      span.float-left.text-white.h-100
-                        i.fas.fa-chevron-up.pt-1.pb-1
-                      | #{card.likes || 0}
-
+          img.cardimg(style='width:150px;height:150px;', alt='Bot Avatar', src=card.logo, loading='lazy', draggable='false')
         .card-body.pt-0.pb-0
-          h4.mb-0.text-center.pt-1
-            | #{card.username}
-            span.certifiedbadge(data-toggle='tooltip', title='', data-original-title='Certified Bot')
-              i.fas.fa-badge-check
-          p.mb-2.text-center.text-muted.botdesc #{card.description}
-        hr.mt-1.mb-3.bg-secondary
+          .w-100
+            .botcount.mb-2.text-damp.text-bold(data-toggle='tooltip', data-placement='left', title='', data-original-title='Votes This Month')
+              span.float-left.text-white.h-100
+                i.fas.fa-star.pt-1.pb-1
+              | #{card.likes || 0}
+            .w-100
+          .card-body.pt-0.pb-0
+            h4.mb-0.text-center.pt-1
+              | #{card.username}  
+              span.certifiedbadge(data-toggle='tooltip', title='', data-original-title='Certified Bot')
+                i.fas.fa-check-circle
+            p.mb-2.text-center.text-muted.botdesc #{card.description}
+            hr.mt-1.mb-3.bg-secondary
         .card-body.pt-0.botcard-btnholder
-          a.btn.btn-sm.btn-blue.btn-block(href=`/bots/${card.botid}`) View Bot
           .btn-group.btn-block
-            a.btn.btn-sm.btn-secondary(style='width:50%;', href=`/bots/like/${card.botid}`) Vote
+            a.btn.btn-sm.btn-secondary(style='width:50%;', href='/bots/like/#{card.botid}') Vote
+          .btn-group.btn-block
+            a.btn.btn-sm.btn-secondary(style='width:50%;', href='https://discord.com/oauth2/authorize?client_id=#{card.botid}&scope=bot&permissions=0') Invite
+          a.btn.btn-sm.btn-blue.btn-block(href='/bots/#{card.botid}/') View Bot
 
-                        // img.icon(src=card.logo)
-                        // h2.title #{card.username}
-                        //     a.likes(href=`/bots/like/${card.botid}`)
-                        //         i.far.fa-heart
-                        //         | #{card.likes || 0}
-                        // p.desc #{card.description}
-                        // a.small.button(href=`/bots/${card.botid}`) View bot info
+
 
 
 script.
