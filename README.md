@@ -11,10 +11,10 @@ Lucky Bot List is an open-source!nt branch may have newer additions/features, bu
 ![image](/Setup/home-page.png)
 
 
-![image](https://user-images.githubusercontent.com/39243722/118495702-1ee99280-b72c-11eb-99cc-aab9f89e0f3f.png)
+![image](/Setup/bot-pae.png)
 
 
-![image](https://user-images.githubusercontent.com/39243722/118496347-b818a900-b72c-11eb-9975-34ff460b713e.png)
+![image](/Setup/profile-page.png)
 
 # Setup
 Rename `example.config.json` to `config.json`
