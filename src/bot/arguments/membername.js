@@ -1,0 +1,70 @@
+/*
+MIT License
+
+Copyright (c) 2017-2018 dirigeants
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+const { Argument, util: { regExpEsc } } = require('klasa');
+const { GuildMember, User } = require('discord.js');
+
+const USER_REGEXP = Argument.regex.userOrMember;
+
+function resolveMember(query, guild) {
+	if (query instanceof GuildMember) return query;
+	if (query instanceof User) return guild.members.fetch(query);
+	if (typeof query === 'string') {
+		if (USER_REGEXP.test(query)) return guild.members.fetch(USER_REGEXP.exec(query)[1]).catch(() => null);
+		if (/\w{1,32}#\d{4}/.test(query)) return guild.members.find(member => member.user.tag.toLowerCase() === query.toLowerCase()) || null;
+	}
+	return null;
+}
+
+module.exports = class extends Argument {
+
+	async run(arg, possible, message) {
+		if (!message.guild) throw 'This command can only be used inside a guild.';
+		const resUser = await resolveMember(arg, message.guild);
+		console.log(resUser);
+		if (resUser) return resUser;
+
+		const results = [];
+		const reg = new RegExp(regExpEsc(arg), 'i');
+		for (const member of message.guild.members.values()) {
+			if (reg.test(member.user.username)) results.push(member);
+		}
+
+		let querySearch = results;
+
+		if (results.length > 0) {
+			const regWord = new RegExp(`\\b${regExpEsc(arg)}\\b`, 'i');
+			const filtered = results.filter(member => regWord.test(member.user.username));
+			querySearch = filtered.length > 0 ? filtered : results;
+		}
+
+		switch (querySearch.length) {
+			case 0: throw `${possible.name} Must be a valid name, id or user mention`;
+			case 1: return querySearch[0];
+			default: throw `Found multiple matches: \`${querySearch.map(user => user.tag).join('`, `')}\``;
+		}
+	}
+
+};

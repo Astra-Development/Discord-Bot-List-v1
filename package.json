@@ -18,6 +18,7 @@
         "is-html": "^2.0.0",
         "is-url": "1.2.4",
         "klasa": "^0.5.0",
+        "module": "^1.2.5",
         "module-alias": "^2.2.2",
         "moment": "^2.29.1",
         "moment-timezone": "^0.5.33",
