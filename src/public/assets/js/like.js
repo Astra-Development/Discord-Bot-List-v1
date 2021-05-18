@@ -8,11 +8,11 @@ $(document).ready(async function () {
       buttonsStyling: true
     })
     let { isConfirmed } = await swalWithBootstrapButtons.fire({
-      title: 'Are you sure you want to vote this bot?',
-      text: "You won't be able to vote for the next 12 hours.",
+      title: 'Are you sure you want to like this bot ?',
+      text: "You won't be able to like for the next 12 hours.",
       icon: 'info',
       showCancelButton: true,
-      confirmButtonText: 'Vote'
+      confirmButtonText: 'Yes, Like'
     })
     if (!isConfirmed) return;
     let botid = location.href.split(location.host)[1].replace('/bots/like/', '').replace('/', '');
@@ -33,7 +33,7 @@ $(document).ready(async function () {
       let minutes = 60 - Math.ceil((req.time  / 60000) % 60);
       await swalWithBootstrapButtons.fire({
         title: 'Error',
-        text: `You can vote again after ${hours} hours and ${minutes} minutes`,
+        text: `You can like again after ${hours} hours and ${minutes} minutes`,
         icon: 'error'
       })
       location.href = `/bots/${botid}`
