@@ -63,10 +63,13 @@ head
 
 #cards
   if (cards.length == 0)
-    h5.text-danger
-      b  No bots found 
-      br
-      | Try searching for something else.
+    .row.mb-4
+      .col-12.pb-5.pt-4.mt-5.mb-5.text-center
+        h1
+          i.far.fa-frown-open
+        h2.mb-1 No Results
+        p.text-damp Try searching for something else!
+
   else
     each card in cards
       .card.botcard(style='transform: translate(0px, 0px); opacity: 1;')

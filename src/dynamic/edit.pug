@@ -1,4 +1,5 @@
 doctype html
+include includes/head.pug
 include includes/nav.pug
   script(src='/assets/js/form.js')
   script(src='/assets/js/edit.js')
@@ -17,28 +18,6 @@ include includes/nav.pug
   link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
   link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
 
-script(src="/assets/js/me.js")
-#navTop
-nav.navbar.navbar-expand-lg.navbar-dark.p-1.pl-4.pr-4.mainnav(style='background:#262626;')
-  .container
-    a.navbar-brand.logoholder(href='/')
-      img#logoimg(style='height:55px; width:55px;', src=bot.logo, alt='Logo')
-    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor02', aria-controls='navbarColor02', aria-expanded='false', aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarColor02.collapse.navbar-collapse
-      ul.navbar-nav.mainlink.mr-auto
-        li.nav-item
-          a.nav-link.nvhome(href='/')
-            i.fas.fa-home.mr-1
-            |  Home
-        li.nav-item
-          a.nav-link(href='/join')
-            i.fab.fa-discord.mr-1
-            |  Discord
-        li.nav-item
-          a.nav-link(href='/add')
-            i.fas.fa-robot.mr-2
-            |  Add Bot 
 #wrapper.d-flex
   #sidebar-wrapper
     #menu-toggle.sidebar-toggler
