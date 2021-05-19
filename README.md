@@ -52,7 +52,7 @@ Start the bot-list `npm start` :)
 
 **10.** Add on `"mongo_url": ""` paste the code you copied from step **4**
 
-### **Make sure on `<username>` & `<password>` to replace them with what you created on **Step 6-8**
+### **Make sure on `<username>` & `<password>` to replace them with what you created on Step 6-8**
 
 # Recaptcha_V2 Value
 **1.** Visit [Google Recaptcha Website](https://www.google.com/recaptcha/admin/)
