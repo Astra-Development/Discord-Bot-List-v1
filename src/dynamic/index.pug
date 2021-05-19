@@ -59,17 +59,25 @@ center
     .col-md-12
       .form-group
         .input-group
-          input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#333333;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots... [Press Enter]')
+          input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#333333;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots... [Press Enter]')          
 
 <br />
 
-<center>
 .container
+ .row.mb-4
+  .col-auto
     h2.mb-1
-      span.text-red.mr-1
-        i.fas.fa-star
+      span.text-blue.mr-1
+        i.fad.fa-chevron-up
       |  Top Voted
-    h5.text-damp Here are some Lucky Bots :)
+    h5.text-damp Bots that have received the most votes this month!
+  .col.align-items-center.d-lg-flex.d-none
+    hr.cardhr.m-0.w-100
+  .col-auto.align-items-center.d-lg-flex.d-none
+    a.btn.btn-secondary.btn-block.btn-icon(href='/bots/search/')
+      .btnicon-icon
+        i.fas.fa-search
+      span.btnicon-content Find More
 hr
 
 body(onload="load()")

@@ -3885,7 +3885,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
     word-wrap: break-word;
     background-color: #303030;
     background-clip: border-box;
-    border:1px solid rgba(0, 0, 0, 0.125);
+    border:px solid rgba(0, 0, 0, 0.125);
     border-radius:0.25rem
 }
 .card:hover {
