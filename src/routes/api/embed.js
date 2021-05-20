@@ -19,7 +19,7 @@ route.get("/:id", async (req, res) => {
     let discord_verified = (await (await req.app.get('client').users.fetch(req.params.id)).fetchFlags()).has("VERIFIED_BOT");
 
     let img = new Canvas(500, 250)
-      .setColor("#404E5C")
+      .setColor("#333333")
       .printRectangle(0, 0, 500, 250)
       .setColor("#DCE2F9")
       .setTextFont('bold 35px sans')

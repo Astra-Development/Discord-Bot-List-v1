@@ -19,7 +19,6 @@ route.get("/:id", async (req, res) => {
         userProfile: user,
         cards: bots,
         admin: admin_user_ids.includes(req.params.id),
-        moderator: req.user?.staff,
         req
     });
 });
