@@ -27,6 +27,8 @@ center
             h3.text-center
               | Vote for 
               b #{bot.username}
+              br
+              small Current Votes: #{`${bot.likes || 0}`}
             hr
             .dansaidicant
               a.btn.btn-block.btn-blue.btn()#like

@@ -91,10 +91,10 @@ head
             hr.mt-1.mb-3.bg-secondary
         .card-body.pt-0.botcard-btnholder
           .btn-group.btn-block
-            a.btn.btn-sm.btn-secondary(style='width:50%;', href='/bots/like/#{card.botid}') Vote
+            a.btn.btn-sm.btn-secondary(style='width:50%;', href=`/bots/like/${card.botid}`) Vote
           .btn-group.btn-block
-            a.btn.btn-sm.btn-secondary(style='width:50%;', href='https://discord.com/oauth2/authorize?client_id=#{card.botid}&scope=bot&permissions=0') Invite
-          a.btn.btn-sm.btn-blue.btn-block(href='/bots/#{card.botid}/') View Bot
+            a.btn.btn-sm.btn-secondary(style='width:50%;', href=`https://discord.com/oauth2/authorize?client_id=${card.botid}&scope=bot&permissions=0`) Invite
+          a.btn.btn-sm.btn-blue.btn-block(href=`/bots/${card.botid}/`) View Bot
 
 
 

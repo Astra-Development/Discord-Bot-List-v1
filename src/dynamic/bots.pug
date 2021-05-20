@@ -91,6 +91,23 @@ head
           .btnicon-icon
             i.fas.fa-chevron-up
           span.btnicon-content Vote
+
+      .bot__tags.w-100.mb-5
+          h5.mb-3
+            span.text-success.mr-1
+              i.fas.fa-tags
+            |  Tags
+          if (bot.tags)
+            p.tag-holder
+              each tag in bot.tags
+                a.badge.badge-secondary.mb-1(href=`/tag/${tag}`, style='margin-right:3px;') #{tag}
+          else
+             .common__infocard.d-flex
+              .common__infocard-icon.text-damp
+                i.fas.fa-tags
+              span.common__infocard-content
+                b Tags Not Set
+                
       .bot__overview.w-100.mb-5
         h5.mb-3
           span.text-info.mr-1
@@ -121,6 +138,7 @@ head
             b Status
             span.float-right
               | #{botUser.presence.status}
+
         if (servers)
          .common__infocard.d-flex
           .common__infocard-icon.text-damp
@@ -130,23 +148,6 @@ head
             span.float-right
               | #{`${servers} servers`}
 
-        
-        br
-        .bot__tags.w-100.mb-5
-          h5.mb-3
-            span.text-success.mr-1
-              i.fas.fa-tags
-            |  Tags
-          if (bot.tags)
-            p.tag-holder
-              each tag in bot.tags
-                a.badge.badge-secondary.mb-1(href=`/tag/${tag}`, style='margin-right:3px;') #{tag}
-          else
-            .common__infocard.d-flex
-              .common__infocard-icon.text-damp
-                 i.fas.fa-times
-              span.common__infocard-content
-                b Tags Not Set
 
       #owners
       .bot__owners.w-100.mb-5
