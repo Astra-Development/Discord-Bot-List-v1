@@ -74,11 +74,5 @@ Start the bot-list `npm start` :)
 
 ![image](https://user-images.githubusercontent.com/39243722/118610668-aedb1b00-b7c4-11eb-9eb7-a3fe931afb89.png)
 
-
-
-# 📝 Do not change the footer of the website!
-![image](https://user-images.githubusercontent.com/39243722/118507353-d4214800-b736-11eb-8511-19cebb50e0ff.png)
-> If i find your botlist without the footer you are X_X
-
 # License Notice
 ![License Notice](https://i.ibb.co/Q8vQDTs/image.png)
