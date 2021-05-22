@@ -127,12 +127,9 @@ head
             i.fas.fa-vote-yea
           span.common__infocard-content
             b Votes
-             if (bot.cert)
-                span.badge
-                    i.fas.fa-badge-check
-                    |  Certified Bot
             span.float-right(href=`/bots/like/#{bot.botid}`)
               | #{bot.likes || 0}
+
         .common__infocard.d-flex
           .common__infocard-icon.text-damp
             .sts(class=botUser.presence.status)
@@ -141,6 +138,24 @@ head
             b Status
             span.float-right
               | #{botUser.presence.status}
+        
+        br
+        h5.mb-3
+          span.text-warning.mr-1
+            i.fad.fa-badge-check
+          |  Certified
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-badge-check
+          span.common__infocard-content
+            b Certified
+            if (bot.certify)
+              span.float-right(href=`/bots/like/#{bot.botid}`)
+                | Yes
+            else
+              span.float-right(href=`/bots/like/#{bot.botid}`)
+                | No
+
 
         if (servers)
          .common__infocard.d-flex
