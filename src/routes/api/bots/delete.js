@@ -24,4 +24,3 @@ route.delete("/:id", auth, async (req, res) => {
 });
 
 module.exports = route;
-1

@@ -21,9 +21,21 @@ const botsSchema = new mongoose.Schema({
   invite: {
     type: String
   },
+  botLibrary: {
+    type: String,
+    required: false
+  },
   description: {
     type: String,
     required: true
+  },
+  botbannerURL: {
+    type: String,
+    default: "https://cdn.discordapp.com/attachments/735022938419363891/754635158958768138/wp4462550.png"
+  },
+  inRecomendationQueue: {
+    type: Boolean,
+    default: false
   },
   long: {
     type: String,
@@ -33,7 +45,7 @@ const botsSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  state:  {
+  state: {
     type: String,
     required: true,
     default: "unverified"
@@ -56,14 +68,14 @@ const botsSchema = new mongoose.Schema({
     default: []
   },
   owners: {
-      primary: {
-        type: String,
-        required: true
-      },
-      additional: {
-        type: Array,
-        default: []
-      }
+    primary: {
+      type: String,
+      required: true
+    },
+    additional: {
+      type: Array,
+      default: []
+    }
   },
   auth: {
     type: String

@@ -22,6 +22,7 @@
         "moment": "^2.29.1",
         "mongoose": "^5.12.7",
         "node-fetch": "^2.6.1",
+        "parse-ms": "^3.0.0",
         "passport": "^0.4.1",
         "passport-discord": "^0.1.4",
         "pug": "^3.0.2",
