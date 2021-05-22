@@ -7,7 +7,8 @@ const { web: {domain_with_protocol} } = require("@root/config.json");
 module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
-            usage: '[User:user]'
+            usage: '[User:user]',
+            description: "See the Widget of a Bot"
         });
     }
 

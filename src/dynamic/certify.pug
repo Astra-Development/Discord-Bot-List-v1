@@ -1,0 +1,97 @@
+doctype html
+include includes/head.pug
+include includes/nav.pug
+script(src="/assets/js/me.js")
+script(src='/assets/js/certify.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js')
+link(href='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.css' rel='stylesheet')
+script(src="https://www.google.com/recaptcha/api.js" async defer)
+script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
+body
+meta(name='theme-color', content='#404040')
+style.
+  .botlogo {
+    max-width:100%;
+    border-radius:100%;
+    margin:auto 0;
+    max-height:150px;
+  }
+  @media only screen and (max-width: 767px) {
+    .botlogo{
+    margin:0 auto;
+    max-width: 150px;
+  }
+  .usertron {
+    text-align:center;
+  }
+  }
+  .usertron {
+    background: linear-gradient(311deg, #1A1A1A 100%, #ffffff 100%);
+  }
+
+script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
+script.
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
+meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+link(rel='shortcut icon', type='image/png', href='/assets/img/logo.png')
+link(rel='stylesheet', href='/assets/css/main.css')
+link(rel='stylesheet', href='/assets/css/secondary.css')
+link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
+link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
+
+center
+ .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
+  .container.mb-2
+    h1.display-5.mb-0.mt-2.text-boldest #{req.user.username}
+    .mb-2(style='min-height:28px;')
+      p.lead.ml-1.text-damp.text-bold.mb-0 Certify your bots
+
+.container
+        .row
+         if (!bots)
+          .col-md-10
+            .form-group
+              label.mb-1 Select Bot
+              select#selected.bot.form-control(required='')
+                option(selected='', disabled='', value='') Looks like you haven't added any bots yet in our list.
+         else
+          .col-md-2
+            .form-group
+              label.mb-1 Choose Your bot
+              select#followtos.form-control(required='')
+                each bot in bots
+                  option(value=bot.botid) #{bot.username}
+
+        .col-md-12
+          hr.mb-3.mt-0
+        .col-md-12
+        .form-group
+              label.mb-1 Why should we certify your bot?
+              input#longdesc.input.form-control(rows='7')
+
+        .form-group
+          label.mb-1 Are you using our API ?
+          select#api.form-control(required='')
+            option(disabled='' selected='' hidden='' value='uwu') Select your option
+            option Yes
+            option No
+        
+        .form-group
+          label.mb-1 Does your bot follow Discord ToS and Discord Bot Directory rules ?
+          select#tos.form-control(required='')
+            option(disabled='' selected='' hidden='' value='uwu') Select your option
+            option Yes
+            option No
+
+        .container
+          .col-md-12
+          center
+            hr.mb-3.mt-0
+            .col-md-12
+              .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
+              hr.mb-3.mt-0
+              a.btn.btn-sm.btn-blue.btn-block(onclick='submit()') Submit
+
+
+
+include includes/footer.pug

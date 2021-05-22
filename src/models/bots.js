@@ -47,9 +47,6 @@ const botsSchema = new mongoose.Schema({
   github: {
     type: String
   },
-  background: {
-    type: String
-  },
   webhook: {
     type: String
   },
@@ -100,6 +97,10 @@ const botsSchema = new mongoose.Schema({
   note: {
     type: String,
     required: false
+  },
+  certify: {
+    type: Boolean,
+    default: false
   }
 });
 

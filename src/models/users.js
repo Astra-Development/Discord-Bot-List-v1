@@ -6,10 +6,6 @@ const usersSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    profdescription: {
-    type: String,
-    required: true
-    },
     botliked: {
         type: String,
         required: true
@@ -17,6 +13,10 @@ const usersSchema = new mongoose.Schema({
     time: {
         type: Date,
         default: () => Date.now()
+    },
+    certdev: {
+      type: Boolean,
+      default: false
     }
 });
 

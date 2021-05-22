@@ -75,7 +75,7 @@ module.exports = class extends Command {
 
     owners = await message.guild.members.fetch({ user: owners })
     owners.forEach(o => {
-      o.send(`Your bot <@${bot.botid}> (${bot.botid}) was declined by reviewer ${message.author}.\nReason: ${r}\nIf you would like to dispute your decline, please DM ${message.author} (User ID: ${message.author.id})`)
+      o.send(`Your bot \`${bot.username}\` / <@${bot.botid}> was declined by reviewer ${message.author}.\nReason: ${r}\nIf you would like to dispute your decline, please DM ${message.author} (User ID: ${message.author.id})`)
     })
     if (!message.client.users.cache.find(u => u.id === bot.botid).bot) return;
     try {
