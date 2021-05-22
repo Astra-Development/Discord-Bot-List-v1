@@ -78,7 +78,7 @@ module.exports = class extends Command {
     owners.forEach(o => {
       Users.updateOne({ userid: o.id }, { $set: { certdev: 0 } }).then();
       o.roles.add(message.guild.roles.cache.get(role_ids.cert_user));
-      o.send(`Your bot \`${bot.username}\` / <@${bot.botid}> has been certified.`)
+      o.send(`Your bot \`${bot.username}\` / <@${bot.botid}> has been Un-certified.`)
     })
     message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid)).then(bot => {
       bot.roles.set([role_ids.cert_bot, role_ids.bot]);
