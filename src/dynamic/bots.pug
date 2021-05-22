@@ -62,6 +62,7 @@ head
     #gotoReviews {cursor:pointer;}
     }
     
+
 .jumbotron.jumbotron-fluid.maintron
   .container
     .row
@@ -122,6 +123,8 @@ head
             span.float-right
               | #{bot.prefix}
 
+        
+
         .common__infocard.d-flex
           .common__infocard-icon.text-damp
             i.fas.fa-vote-yea
@@ -132,13 +135,32 @@ head
 
         .common__infocard.d-flex
           .common__infocard-icon.text-damp
-            .sts(class=botUser.presence.status)
               i.fas.fa-circle(class=botUser.presence.status)
           span.common__infocard-content
             b Status
             span.float-right
               | #{botUser.presence.status}
+
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-user-shield
+          span.common__infocard-content
+            b NSFW
+            if (bot.nsfw)
+              span.float-right(href=`/bots/like/#{bot.botid}`)
+                | Enabled
+            else
+              span.float-right(href=`/bots/like/#{bot.botid}`)
+                | Disabled
         
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-clock
+          span.common__infocard-content
+            b Added
+            span.float-right
+              | #{bot.addedAt}
+
         br
         h5.mb-3
           span.text-warning.mr-1
@@ -151,10 +173,10 @@ head
             b Certified
             if (bot.certify)
               span.float-right(href=`/bots/like/#{bot.botid}`)
-                | Yes
+                | Enabled
             else
               span.float-right(href=`/bots/like/#{bot.botid}`)
-                | No
+                | Disabled
 
 
         if (servers)
@@ -248,3 +270,6 @@ style.
   div.b {
   word-wrap: break-word;
   }
+
+script.
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
