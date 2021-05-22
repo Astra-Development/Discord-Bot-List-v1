@@ -26,51 +26,6 @@ async function load() {
   });
 };
 
-// function loadMore(res) {
-//   res.forEach(function(bot) {
-//     if (bot.state == "unverified") return;
-
-//     let html = `
-// <div class="card botcard" style="transform: translate(0px, 0px); opacity: 1;">
-// 	<div class="card-body p-3 pb-2 botcard-hassplash" style="border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url(&quot;https://images-ext-1.discordapp.net/external/ZZNXF44V2pbaXGs1wMgiebscvrzkAsGg7vhlxpMnnVQ/https/cdn.wallpapersafari.com/37/44/ZxvYAN.jpg&quot;);">
-// 		<div class="row">
-// 			<div class="col pr-0 imgcol">
-// 				<div class="w-100 text-center">
-// 					<img class="cardimg" draggable="false" loading="lazy" src="${bot.logo}" alt="Bot Avatar">
-// 					</div>
-// 				</div>
-// 				<div class="col flexcen">
-// 					<div class="w-100">
-// 						<div class="botcount mb-2 text-damp text-bold" data-toggle="tooltip" data-placement="left" title="" data-original-title="Votes This Month">
-// 							<span class="float-left text-white h-100">
-// 								<i class="fas fa-chevron-up pt-1 pb-1"></i>
-// 							</span>${bot.likes || 0}
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 		<div class="card-body pt-0 pb-0">
-// 			<h4 class="mb-0 text-center pt-1">${bot.username} 
-// 				<span class="certifiedbadge" data-toggle="tooltip" title="" data-original-title="Certified Bot">
-// 					<i class="fas fa-badge-check"></i>
-// 				</span>
-// 			</h4>
-// 			<p class="mb-2 text-center text-muted botdesc">${bot.description}</p>
-// 		</div>
-// 		<hr class="mt-1 mb-3 bg-secondary">
-// 			<div class="card-body pt-0 botcard-btnholder">
-// 				<a class="btn btn-sm btn-blue btn-block" href="/bots/${bot.botid}/">View Bot</a>
-// 				<div class="btn-group btn-block">
-// 					<a class="btn btn-sm btn-secondary" style="width:50%;" href="/bots/like/${bot.botid}">Vote</a>
-// 				</div>
-// 			</div>
-// 		</div>`
-
-//     document.getElementById('cards').insertAdjacentHTML("beforeend", html)
-//   })
-// }
-
 function loadMore(res) {
   res.forEach(function(bot) {
     if (bot.state == "unverified") return;
@@ -81,22 +36,16 @@ function loadMore(res) {
 		<div="" class="row">
 			<div class="col pr-0 imgcol">
 				<div class="w-100 text-center">
-					
-
-
 					</div>
 				</div></div="">
 		<img style="width:150px;height:150px;" alt="Bot Avatar" src="${bot.logo}" loading="lazy" draggable="false" class="cardimg"></div>
 		<div class="card-body pt-0 pb-0">
-			
-			
 		<div class="w-100">
 						<div class="botcount mb-2 text-damp text-bold" data-toggle="tooltip" data-placement="left" title="" data-original-title="Votes This Month">
 							<span class="float-left text-white h-100">
 								<i class="fas fa-star pt-1 pb-1"></i>
 							</span>${bot.likes || 0}</div>
 					<div class="w-100">
-						
 					</div></div><div class="card-body pt-0 pb-0">
 			<h4 class="mb-0 text-center pt-1">${bot.username}  
 				<span class="certifiedbadge" data-toggle="tooltip" title="" data-original-title="Certified Bot">
