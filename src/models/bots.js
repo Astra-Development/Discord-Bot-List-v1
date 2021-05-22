@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const botsSchema = new mongoose.Schema({
   addedAt: {
-    default: () => new Date("<mm-dd-YYYY>"),
+    default: () => new Date(),
     type: Date
   },
   username: {
