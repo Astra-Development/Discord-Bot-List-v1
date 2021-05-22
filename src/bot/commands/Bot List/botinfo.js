@@ -43,7 +43,8 @@ module.exports = class extends Command {
             e.addField(`Prefix`, bot.prefix ? bot.prefix : "Unknown", true)
             e.addField(`Votes`, `${bot.likes || 0} Likes`, true)
             e.addField(`Status`, user.presence.status, true)
-            // e.addField(`Queue`, bot.state, true)
+            e.addField(`Queue`, !bot.state ? "Not Verified" : 'Verified', true)
+            e.addField(`Certified`, !bot.certify ? "False" : 'True', true)
             // e.addField(`Server Count`, `${servers || 0} Servers`, true)
 
             e.addField(`Github`, !bot.github ? "Not Set" : `[Click Here](${bot.github})`, true)
