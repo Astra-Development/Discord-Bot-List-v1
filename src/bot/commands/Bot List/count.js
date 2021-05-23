@@ -24,11 +24,5 @@ module.exports = class extends Command {
         .setColor('ORANGE')
         .setDescription(`**:arrow_right: Bot Count: ** \`${bots.length}\``)
         message.channel.send(embed)
-
-
-
-        
-        // if (bots.length === 1) message.channel.send(`Lucky Bot List has \`1\` bots in the list.`)
-        // else message.channel.send(`Lucky Bot List has \`${bots.length}\` bots in the list.`)
     }
 };

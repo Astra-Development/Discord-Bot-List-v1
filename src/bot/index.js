@@ -19,7 +19,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity('LuckyBots', { type: "WATCHING" });
+    client.user.setActivity(`Astra Bots`, { type: "WATCHING" });
 });
 
 module.exports.init = async (token) => {

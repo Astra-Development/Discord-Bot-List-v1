@@ -34,7 +34,7 @@ module.exports = class extends Command {
             e.addField(`Bot Username`, bot.username ? bot.username : "Unknown", true)
             e.addField(`Bot Owner`, `<@${bot.owners.primary}>`, true)    
 
-            e.addField(`[+] Visit on Lucky Bots`, `[Click Here](${domain_with_protocol}/bots/${bot.botid})`, true)
+            e.addField(`[+] Visit on Astra Bots`, `[Click Here](${domain_with_protocol}/bots/${bot.botid})`, true)
             e.addField(`[+] Invite With 0 Perms`, `[Click Here](https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0)`, true)
             e.addField(`\u200b`, `\u200b`, true)
 
