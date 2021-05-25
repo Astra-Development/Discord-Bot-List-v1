@@ -22,7 +22,7 @@ route.patch("/:id", auth, async (req, res) => {
   let channel = await req.app.get('client').channels.cache.get(server.like_log);
   let webhook = (await channel.fetchWebhooks()).first();
   if (!webhook) 
-    webhook = await channel.createWebhook('Lucky Voter')
+    webhook = await channel.createWebhook('Astra Vote')
   await webhook.send(`<:vote:839818624411500554> ${userProfile.tag} voted for <@${req.params.id}>\n<${domain_with_protocol}/bots/like/${req.params.id}>`);
 
   // Custom webhook

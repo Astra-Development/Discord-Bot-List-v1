@@ -9,7 +9,7 @@ module.exports = class extends Command {
     super(...args, {
       aliases: ["q"],
       permissionLevel: 8,
-      description: "Get the queue list of Lucky's Bot List"
+      description: "Get the queue list of Astra's Bot List"
     });
   }
 
