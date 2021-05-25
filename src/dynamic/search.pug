@@ -73,7 +73,7 @@ head
   else
     each card in cards
       .card.botcard(style='transform: translate(0px, 0px); opacity: 1;')
-        .card-body.p-3.pb-2.botcard-hassplash(style='border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("https://images-ext-1.discordapp.net/external/ZZNXF44V2pbaXGs1wMgiebscvrzkAsGg7vhlxpMnnVQ/https/cdn.wallpapersafari.com/37/44/ZxvYAN.jpg");')
+        .card-body.p-3.pb-2.botcard-hassplash(style='border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("/assets/img/searching-card-bg.jpg");')
           img.cardimg(style='width:150px;height:150px;', alt='Bot Avatar', src=card.logo, loading='lazy', draggable='false')
         .card-body.pt-0.pb-0
           .w-100
@@ -94,7 +94,7 @@ head
             a.btn.btn-sm.btn-secondary(style='width:50%;', href=`/bots/like/${card.botid}`) Vote
           .btn-group.btn-block
             a.btn.btn-sm.btn-secondary(style='width:50%;', href=`https://discord.com/oauth2/authorize?client_id=${card.botid}&scope=bot&permissions=0`) Invite
-          a.btn.btn-sm.btn-blue.btn-block(href=`/bots/${card.botid}/`) View Bot
+          a.btn.btn-sm.btn-danger.btn-block(href=`/bots/${card.botid}/`) View Bot
 
 
 

@@ -23,6 +23,22 @@ head
   script(src=`https://www.google.com/recaptcha/api.js`)
   link(rel=`stylesheet`, href=`https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css`)
 
+// style.
+//   .container {
+//   position: relative;
+//   text-align: center;
+//   color: white;
+//   }
+//   .centered {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   }
+// .container
+//   img(src='https://png.pngtree.com/thumb_back/fh260/background/20190222/ourmid/pngtree-starry-blue-purple-starry-minimalist-dark-background-skybluepurplesimpledarkstarnight-image_56899.jpg', alt='Snow', style='width:100;')
+//   .centered Centered
+
 center
  .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
   .container.mb-2
@@ -33,11 +49,11 @@ center
         br
         span.typed
 <br />
-// .container
-//  .alert.alert-dark.rounded-0.text-center(style=`margin-bottom:20px;`)
-//   | Under maintenance!
-//   | Fore more info visit our 
-//   a(href=`https://discord.com/invite/sQQFSnQhdt`) Discord Server
+.container
+ .alert.alert-blue.rounded-0.text-center(style=`margin-bottom:20px;`)
+  | Under maintenance!
+  | Fore more info visit our 
+  a(href=`https://discord.com/invite/sQQFSnQhdt`) Discord Server
 
 center
     a.btn.btn-outline-tag(href=`/tag/Utility`)
@@ -67,12 +83,12 @@ center
 if (bots)
  .col-auto
     h2.mb-1
-      span.text-blue.mr-1
+      span.text-warning.mr-1
         i.fad.fa-badge-check
       |  Certified Bots
  each val, i in bots
   .card.botcard(style=`transform: translate(0px, 0px); opacity: 1;`)
-   .card-body.p-3.pb-2.botcard-hassplash(style=`border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("https://i.imgur.com/t9l9huX.jpg");`)
+   .card-body.p-3.pb-2.botcard-hassplash(style=`border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("/assets/img/certified-card-bg.jpg");`)
      img.cardimg(style=`width:150px;height:150px;`, alt=`Bot Avatar`, src=val.logo, loading=`lazy`, draggable=`false`)
    .card-body.pt-0.pb-0
      .w-100
@@ -99,14 +115,11 @@ if (bots)
        a.btn.btn-sm.btn-secondary(style=`width:50%;`, href=`https://discord.com/oauth2/authorize?client_id=${val.botid}&scope=bot&permissions=0`) Invite
      a.btn.btn-sm.btn-blue.btn-block(href=`/bots/${val.botid}`) View Bot
 
-
-
-                  // a.badge.badge-secondary.mb-1(href=`/tag/${tag}`, style=`margin-right:3px;`) #{tag}
 <br /><br />
 <center>
  .col-auto
     h2.mb-1
-      span.text-blue.mr-1
+      span.text-danger.mr-1
         i.fad.fa-chevron-up
       |  Top Voted
     h5.text-damp Bots that have received the most votes this month!

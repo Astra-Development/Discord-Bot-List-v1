@@ -26,12 +26,12 @@ include includes/nav.pug
       img.sidebar-header-img(src=`${bot.logo}`)
       h4 #{bot.username}
     .list-group.list-group-flush
+     center
       a.list-group-item.onpage(data-target="#edit")
         i.fas.fa-edit
         |  Edit Details
-      a.list-group-item.delete(href="#confirm" data-id=bot.botid data-name=bot.username)
-        i.fas.fa-user-times
-        |  Delete Bot
+      hr
+      a.btn.btn-sm.btn-danger.btn-block.delete(href="#confirm" data-id=bot.botid data-name=bot.username) Delete Bot
   #page-content-wrapper
     .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
       .container

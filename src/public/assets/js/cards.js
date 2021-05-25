@@ -32,7 +32,7 @@ function loadMore(res) {
 
     let html = `
 <div class="card botcard" style="transform: translate(0px, 0px); opacity: 1;">
-	<div class="card-body p-3 pb-2 botcard-hassplash" style="border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url(&quot;https://images-ext-1.discordapp.net/external/ZZNXF44V2pbaXGs1wMgiebscvrzkAsGg7vhlxpMnnVQ/https/cdn.wallpapersafari.com/37/44/ZxvYAN.jpg&quot;);">
+	<div class="card-body p-3 pb-2 botcard-hassplash" style="border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url(&quot;/assets/img/normal-card-bg.jpg&quot;);">
 		<div="" class="row">
 			<div class="col pr-0 imgcol">
 				<div class="w-100 text-center">
