@@ -21,7 +21,6 @@ head
   link(rel=`stylesheet`, href=`/assets/css/bootstrap-multiselect.css`)
   link(rel=`stylesheet`, href=`https://pro.fontawesome.com/releases/v5.14.0/css/all.css`, crossorigin=`anonymous`)
   script(src=`https://www.google.com/recaptcha/api.js`)
-  link(rel=`stylesheet`, href=`https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css`)
 
 // style.
 //   .container {
@@ -39,36 +38,27 @@ head
 //   img(src='https://png.pngtree.com/thumb_back/fh260/background/20190222/ourmid/pngtree-starry-blue-purple-starry-minimalist-dark-background-skybluepurplesimpledarkstarnight-image_56899.jpg', alt='Snow', style='width:100;')
 //   .centered Centered
 
-center
- .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
-  .container.mb-2
-    h1.display-5.mb-0.mt-2.text-boldest Astra Bots
-    .mb-2(style=`min-height:28px;`)
-      p.lead.ml-1.text-damp.text-bold.mb-0
-        | Make your bots known
-        br
-        span.typed
-<br />
-.container
- .alert.alert-blue.rounded-0.text-center(style=`margin-bottom:20px;`)
-  | Under maintenance!
-  | Fore more info visit our 
-  a(href=`https://discord.com/invite/sQQFSnQhdt`) Discord Server
+style.
+  .dropdown-item:hover{
+  background:linear-gradient(90deg, rgba(92, 92, 214) 0%, rgba(229,46,100,1) 100%) !important;
+  }
+.bg-dark.hugething.text-center(style='box-shadow:0 5px 10px #1b1b1b;')
+  br
+  br
+  br
+  img.bot-img(src='/assets/img/logo.png', height="150")
+  br
+  h1#fat.mb-0 Astra
+  span Find Your Maching Bots
+  br
+  span This site is a list of publicly available for Discord bots!
+  br
+  br
+  br
 
-center
-    a.btn.btn-outline-tag(href=`/tag/Utility`)
-      i.fas.fa-tools.text-damp.mr-2
-      |  Utility
-    a.btn.btn-outline-tag(href=`/tag/Moderation`)
-      i.fas.fa-gavel.text-damp.mr-2
-      |  Moderation
-    a.btn.btn-outline-tag(href=`/tag/Social`)
-      i.fas.fa-user-friends.text-damp.mr-2
-      |  Social
-    a.btn.btn-outline-tag(href=`/tag/Games`)
-      i.fas.fa-gamepad-alt.text-damp.mr-2
-      |  Games
-<br />
+
+
+<br /><br /><br />
 
 <center>
  .col-md-7
@@ -138,7 +128,6 @@ include includes/footer.pug
 script(src=`https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js`)
 script(src=`https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js`)
 script(src=`https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js`)
-script(defer=``, src=`https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.min.js`)
 script(defer=``, src=`https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js`)
 script(src=`/assets/js/bootstrap-multiselect.js`)
 script(src=`/assets/js/bootstrap-toaster.js`)
@@ -169,3 +158,163 @@ script.
   location.href = `/bots/search/?q=${node.value}`
   }
   });
+
+style.
+  .featuresec {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  }
+  .featuresec img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 10px 15px rgb(22, 22, 22);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  }
+  .featurecon {
+  width: 100%;
+  }
+  .hugething,
+  .navbar {
+  background: linear-gradient(90deg, #3366ff, #303030, #303030, #3366ff);
+  background-size: 600% 600%;
+  -webkit-animation: jumboani 10s ease infinite;
+  -moz-animation: jumboani 10s ease infinite;
+  animation: jumboani 10s ease infinite;
+  }
+  .dumbfuckingimage {
+  height: 100%;
+  }
+  @-webkit-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @-moz-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @media (max-width: 991px) {
+  .featuresec {
+  text-align: center !important;
+  height: auto;
+  }
+  hr {
+  margin: 50px 0;
+  }
+  .dumbfuckingimage {
+  height: auto;
+  }
+  }
+  .display-4 {
+  font-size: 30px !important;
+  }
+  .dank {
+  background: linear-gradient(90deg, rgba(248, 72, 61, 1) 0%, rgba(228, 46, 103, 1) 100%);
+  color: #fff !important;
+  transition: .3s;
+  }
+  .dank:hover {
+  background: #fff !important;
+  color: #7495e6 !important;
+  transition: .3s;
+  }
+  @keyframes hover {
+  0% {
+  transform: translateY(0px);
+  box-shadow: 0 10px 15px rgba(22, 22, 22, 0.5);
+  }
+  50% {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px rgba(22, 22, 22, 0.5);
+  }
+  100% {
+  transform: translateY(0px);
+  box-shadow: 0 10px 15px rgba(22, 22, 22, 0.5);
+  }
+  }
+  .bot-img {
+  border-radius: 100%;
+  animation: hover 5s ease-in-out infinite;
+  }
+  @-webkit-keyframes blink {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  @-moz-keyframes blink {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  li {
+  color: #fff !important;
+  }
+  .sub {
+  font-size: 18px;
+  color: #fff !important;
+  }
+  .lead {
+  color: #fff !important;
+  }
+  h2,
+  h3,
+  h4,
+  h5 {
+  color: #fff !important;
+  }
+  .smol {
+  width: 200px;
+  }
+  #fat {
+  font-weight: 700;
+  }
+  .jumbotron {
+  border-radius: 0px !important;
+  background: url(https://dscord.ga/i/wxq6p.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-bottom: 5px solid #fff;
+  }
+  small {
+  color: #969696;
+  }

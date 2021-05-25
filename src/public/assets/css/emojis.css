@@ -1,0 +1,111 @@
+/* ////////////////////////////// */
+/* Emoji Picker Designed by AshMW */
+/* ////////////////////////////// */
+
+#emojis img {
+    display: block;
+}
+
+.emoji-picker {
+    background-color: #373737;
+    width: 100%;
+    height: 335px;
+    display: flex;
+    border-radius:0 0 6px 6px;
+}
+
+#emoji-info.active {
+    display:block;
+    flex-wrap:nowrap;
+}
+.emoji-info {
+    color:#aaa;
+}
+.emoji-info.active, .emoji-info:hover {
+    color:#fff;
+}
+
+.emoji-selectables {
+    background-color: #2A2A2A;
+    width: 45px;
+    height: 100%;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:0 0 0 6px;
+}
+
+.emoji-selectables span {
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+.emoji-selectables span.active img, .emoji-selectables span:hover img {
+    filter: none;
+}
+
+.emoji-selectables span img {
+    width: 25px;
+    display: block;
+    display: flex;
+    align-items: center;
+    filter: grayscale(100%)
+}
+
+.emoji-content div {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 5px;
+}
+
+.emoji-content span {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    max-height:40px;
+}
+
+.emoji-content span:hover {
+    transform: scale(1.1);
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+.picker-emoji-content {
+    display: none;
+    
+}
+
+.picker-emoji-sel.face {
+    color: aliceblue;
+    font-size: 10px;
+}
+
+.picker-emoji-content.active {
+    display: flex;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+.emoji-content span img {
+    width: 32px;
+    height: 32px;
+}
+
+
+.picker-emoji-content::-webkit-scrollbar-thumb {
+    height: 10px;
+    background: linear-gradient(180deg, rgba(248,72,61,1) 0%, rgba(228,46,103,1) 100%);
+    border-radius: 100px;
+}
+
+.picker-emoji-content::-webkit-scrollbar-track {
+    margin-top:2px;
+    background-color:transparent;
+}
+
+.picker-emoji-content::-webkit-scrollbar {
+    width: 6px;
+}
