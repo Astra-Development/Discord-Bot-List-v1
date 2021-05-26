@@ -3,6 +3,7 @@ include includes/nav.pug
 include includes/head.pug
 head
   script(type='text/javascript', async='', src='https://www.gstatic.com/recaptcha/releases/f-bnnOuahiYKuei7dmAd3kgv/recaptcha__en.js', crossorigin='anonymous', integrity='sha384-flviDSD9v4jk/5R8dfmwuv/TjjtrqG71QqiMHXEdc2uJSKVKau85FnvYQXVXEpRR')
+  link(rel='stylesheet', href='/public/css/darkly.css')
   script(type='text/javascript', async='', src='https://www.google-analytics.com/analytics.js')
   script(src='/cdn-cgi/apps/head/gNPnKtrHwcCWtwVUctK98NhZqUk.js')
   link(type='image/png', rel='shortcut icon', href='https://images.cloudflareapps.com/veNvlGxHRvP7/rick%20%2810%29.png')
@@ -47,20 +48,25 @@ head
     padding:0 1px;
     }
 
-
-.jumbotron.jumbotron-fluid.maintron.maintron-plus
-  .container.mb-2
-    h1.display-5.mb-0.mt-2.text-boldest Search Bots
-    p.lead.ml-1.text-damp.text-bold.mb-0 Find what you are looking for!
-    hr.bg-dark.ml-0.mb-4(style='max-width:400px;')
-    .row
-      .col-md-7
-        .row.thesearch
-          .col-md-12
-            .form-group
-              .input-group
-                input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#262626;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots... [Press Enter]')
-
+style.
+  .dropdown-item:hover{
+  background:linear-gradient(90deg, rgba(92, 92, 214) 0%, rgba(229,46,100,1) 100%) !important;
+  }
+.bg-dark.hugething.text-center(style='box-shadow:0 5px 10px #1b1b1b;')
+  br
+  br
+  img.bot-img(src='/assets/img/logo.png', height="150")
+  br
+  h1#fat.mb-0 Search Bots
+  span Find what you are looking for!
+  br
+  br
+  .container
+    .form-group
+      .input-group
+        input#searchbar.form-control.form-control-lg.dark_cancel(style='background:#262626;color:#ffffff;', type='search', autocomplete='off', value='', placeholder='Search for specific bots... [Press Enter]')
+  br
+br
 #cards
   if (cards.length == 0)
     .row.mb-4
@@ -106,6 +112,162 @@ script.
         location.href = `/bots/search/?q=${node.value}`
         }
         });
+
+style.
+  .featuresec {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  }
+  .featuresec img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 10px 15px rgb(22, 22, 22);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  }
+  .featurecon {
+  width: 100%;
+  }
+  .hugething,
+  .navbar {
+  background: linear-gradient(90deg, #3366ff, #303030, #303030, #3366ff);
+  background-size: 600% 600%;
+  -webkit-animation: jumboani 10s ease infinite;
+  -moz-animation: jumboani 10s ease infinite;
+  animation: jumboani 10s ease infinite;
+  }
+  .dumbfuckingimage {
+  height: 100%;
+  }
+  @-webkit-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @-moz-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @media (max-width: 991px) {
+  .featuresec {
+  text-align: center !important;
+  height: auto;
+  }
+  hr {
+  margin: 50px 0;
+  }
+  .dumbfuckingimage {
+  height: auto;
+  }
+  }
+  .display-4 {
+  font-size: 30px !important;
+  }
+  .dank {
+  background: linear-gradient(90deg, rgba(248, 72, 61, 1) 0%, rgba(228, 46, 103, 1) 100%);
+  color: #fff !important;
+  transition: .3s;
+  }
+  .dank:hover {
+  background: #fff !important;
+  color: #7495e6 !important;
+  transition: .3s;
+  }
+  @keyframes hover {
+  0% {
+  transform: translateY(0px);
+  box-shadow: 0 10px 15px rgba(22, 22, 22, 0.5);
+  }
+  50% {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px rgba(22, 22, 22, 0.5);
+  }
+  100% {
+  transform: translateY(0px);
+  box-shadow: 0 10px 15px rgba(22, 22, 22, 0.5);
+  }
+  }
+  .bot-img {
+  border-radius: 50%;
+  animation: hover 5s ease-in-out infinite;
+  }
+  /*Removes cursor that comes with typed.js*/
+  /*Custom cursor animation*/
+  @-webkit-keyframes blink {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  @-moz-keyframes blink {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  li {
+  color: #fff !important;
+  }
+  .cont {
+  border: 1px solid #2C2F33;
+  border-radius: 2px;
+  }
+  .jumbotron h1 {
+  font-weight: 700;
+  color: #fff !important;
+  font-size: 100px;
+  }
+  .sub {
+  font-size: 18px;
+  color: #fff !important;
+  }
+  .lead {
+  color: #fff !important;
+  }
+  .smol {
+  width: 200px;
+  }
+  #fat {
+  font-weight: 700;
+  }
+  small {
+  color: #969696;
+  }
 
 
 include includes/footer.pug
