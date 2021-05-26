@@ -16,36 +16,17 @@ nav.navbar.navbar-expand-lg.navbar-dark.p-1.pl-4.pr-4.mainnav(style='background:
           a.nav-link(href='/join')
             i.fab.fa-discord.mr-1
             |  Discord
-        li.nav-item.dropdown
-          a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
-            i.fas.fa-paper-plane
-            |  Submit
-          .dropdown-menu.fade.fade-up
-            a.dropdown-item(href='/add')
-              i.fas.fa-plus
-              |  Add Bot
-            // a.dropdown-item(href='/certify')
-            //   i.fas.fa-badge-check
-            //   |  Add bot to Certifications
-
-        li.nav-item.dropdown
-          a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
-            i.fas.fa-plus.mr-1
-            |  More
-          .dropdown-menu.fade.fade-up
-            a.dropdown-item(href='/about')
-              i.fas.fa-info-circle.mr-2
-              |  About
-            a.dropdown-item(href='/privacy')
-              i.fas.fa-user-secret.mr-2
-              |  Terms & Privacy
+        li.nav-item
+          a.nav-link(href='/add')
+            i.fas.fa-plus-circle
+            |  Add Bot
         
       ul.nav.navbar-nav.navbar-right
         if (req.user) 
           li.nav-item
             a.nav-link(href='/me')
-              i.fas.fa-user-circle.mr-1
-              b #{req.user.username}
+              i.fas.fa-user-alt
+              b  #{req.user.username}
               small ##{req.user.discriminator}     
         else
           a.nav-link(href='/login')
