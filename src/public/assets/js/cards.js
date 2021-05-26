@@ -47,7 +47,7 @@ function loadMore(res) {
 							</span>${bot.likes || 0}</div>
 					<div class="w-100">
 					</div></div><div class="card-body pt-0 pb-0">
-			<h4 class="mb-0 text-center pt-1">${bot.username}  
+			<h4 class="mb-0 text-center pt-1"><b>${bot.username}</b>  
 				<span class="certifiedbadge" data-toggle="tooltip" title="" data-original-title="Certified Bot">
 					<i class="fas fa-check-circle"></i>
 				</span>
