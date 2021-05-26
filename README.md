@@ -2,7 +2,7 @@
 
 Astra Not List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
 
-### Website Preview [Website Link](https://luckybots.tk/)
+### Website Preview [Website Link](https://astrabots.xyz/)
 ### Do you need help? Join our [Discord Server](https://discord.gg/sQQFSnQhdt)
 
 ## New Features added!
@@ -44,7 +44,7 @@ Start the bot-list `npm start` :)
 
 **3.** Go on `OAuth2`
 
-**4.** On `Redirects` add your website `domain/api/callback` [Eg. `https://luckybots.tk/api/callback`]
+**4.** On `Redirects` add your website `domain/api/callback` [Eg. `https://astrabots.xyz/api/callback`]
 
 **5.** Click `Save`
 
@@ -80,7 +80,7 @@ Start the bot-list `npm start` :)
 
 **4.** Select `reCAPTCHA v2`
 
-**5.** On Domains, add the domain that you have for the **Bot List** [Eg. `luckybots.tk`] > Click the **+**
+**5.** On Domains, add the domain that you have for the **Bot List** [Eg. `astrabots.xyz`] > Click the **+**
 
 **6.** Click on `Submit` Button
 

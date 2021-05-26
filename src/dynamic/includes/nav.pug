@@ -1,7 +1,8 @@
 head(cfapps-selector='head')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')
-  link(rel='stylesheet', href='/public/css/darkly.css')
+  meta(property='og:url', content='https://astrabots.xyz/fr?updateLanguage=true')
   link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet', href='https://voiddevs.com/public/css/darkly.css')
   link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin='anonymous')
   script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js')
@@ -25,17 +26,23 @@ nav.navbar.navbar-expand-lg.navbar-dark.p-2.pl-4.pr-4.mainnav(style='background:
         a(style='text-decoration:none!important;', href='/join', target='_blank')
           li.nav-item
             span.nav-link Support
-      ul.nav.navbar-nav.navbar-right
         if (req.user) 
+         a(style='text-decoration:none!important;', href='/me')
           li.nav-item.active
-            a.nav-link(href='/me')
-              i.fas.fa-user-alt.active
-              b  #{req.user.username}
-              small ##{req.user.discriminator}     
+            span.nav-link #{req.user.username}##{req.user.discriminator}    
         else
-          a.nav-link(href='/login')
-            i.fas.fa-sign-in.mr-1
-            | Login
+         a(style='text-decoration:none!important;', href='/login')
+          li.nav-item
+            span.nav-link Login
+      #google_translate_element
+        script(type='text/javascript').
+          function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          }
+
+  script(type='text/javascript', src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit')
+
+
 style.
   .nav-item {
   padding:15px 25px;

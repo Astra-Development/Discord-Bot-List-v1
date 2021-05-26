@@ -49,7 +49,9 @@ function loadMore(res) {
 					</div></div><div class="card-body pt-0 pb-0">
 			<h4 class="mb-0 text-center pt-1"><b>${bot.username}</b>  
 				<span class="certifiedbadge" data-toggle="tooltip" title="" data-original-title="Certified Bot">
+         <span class="text-danger mr-1">
 					<i class="fas fa-check-circle"></i>
+         </span>
 				</span>
 			</h4>
 			<p class="mb-2 text-center text-muted botdesc">${bot.description}</p>

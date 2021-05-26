@@ -22,21 +22,6 @@ head
   link(rel=`stylesheet`, href=`https://pro.fontawesome.com/releases/v5.14.0/css/all.css`, crossorigin=`anonymous`)
   script(src=`https://www.google.com/recaptcha/api.js`)
 
-// style.
-//   .container {
-//   position: relative;
-//   text-align: center;
-//   color: white;
-//   }
-//   .centered {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   }
-// .container
-//   img(src='https://png.pngtree.com/thumb_back/fh260/background/20190222/ourmid/pngtree-starry-blue-purple-starry-minimalist-dark-background-skybluepurplesimpledarkstarnight-image_56899.jpg', alt='Snow', style='width:100;')
-//   .centered Centered
 
 style.
   .dropdown-item:hover{
@@ -55,10 +40,14 @@ style.
   br
   br
   br
+<br />
+.container.mt-2.pb-5
+  .row.justify-content-center
+    .alert.alert-dark.mb-0.text-center
+      b Attention!
+      |  This website is still in early beta! &nbsp;
+      a.btn.btn-sm.btn-blue(href='/join', target='_blank') Support
 
-
-
-<br /><br /><br />
 
 <center>
  .col-md-7
@@ -82,6 +71,7 @@ if (bots)
      img.cardimg(style=`width:150px;height:150px;`, alt=`Bot Avatar`, src=val.logo, loading=`lazy`, draggable=`false`)
    .card-body.pt-0.pb-0
      .w-100
+     span.text-warning.mr-1
        i.fas.fa-badge-check
        a.badge.badge-secondary.mb-1(style=`margin-right:3px;`) CERTIFIED
        <br /><br />
@@ -95,7 +85,8 @@ if (bots)
          b #{val.username}  
          
          span.certifiedbadge(data-toggle=`tooltip`, title=``, data-original-title=`Certified Bot`)
-           i.fas.fa-badge-check
+         span.text-warning.mr-1
+           i.fas.fa-check-circle
        p.mb-2.text-center.text-muted.botdesc #{val.description}
    hr.mt-1.mb-3.bg-secondary
    .card-body.pt-0.botcard-btnholder
@@ -117,13 +108,18 @@ if (bots)
 body(onload="load()")
   #cards
 
-.row
-  .col-lg-12.featuresec.text-center
-    .featurecon
-      a.btn.btn-blue.btn-lg(href='/add', style='margin-bottom:15px;', role='button')
-        | Add Bots
-        i.fa.fa-fw.fa-chevron-circle-right(aria-hidden='true')
-
+<br /><br /><br /><br />
+.section-gray.section-toptrim
+  .container
+    .row
+      .col-md-12.textcol.text-center.pl-4
+        .w-100
+          h1.mb-1.text-bold(style='background:url(https://discord.mx/KIZPA9viBC.svg);background-position:top;background-repeat:no-repeat;') Ay, You!
+          p
+            a.btn.btn-lg.btn-dark.btn-getstarted.mt-1.ml-1.btn-icon-split(href='/add', style='z-index:100;')
+              span.icon.text-blue-50
+                i.fas.fa-paper-plane
+              span.text  Add Your Bots
 
 style.
   div.a {
@@ -140,7 +136,7 @@ script.
         location.href = `/bots/search/?q=${node.value}`
         }
         });
-        
+
 style.
   .featuresec {
   height: 300px;

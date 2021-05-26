@@ -29,10 +29,6 @@ const botsSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  botbannerURL: {
-    type: String,
-    default: "https://cdn.discordapp.com/attachments/735022938419363891/754635158958768138/wp4462550.png"
-  },
   inRecomendationQueue: {
     type: Boolean,
     default: false
