@@ -6,7 +6,7 @@ Astra Not List is an open-source!nt branch may have newer additions/features, bu
 ### Do you need help? Join our [Discord Server](https://discord.gg/sQQFSnQhdt)
 
 # ScreenShots
-![image]https://i.gyazo.com/64f9c7edb30070b6f4bcd6d49ded39d2.mp4
+![image](https://i.gyazo.com/64f9c7edb30070b6f4bcd6d49ded39d2.mp4)
 
 
 ![image](/Setup/bot-page.png)
