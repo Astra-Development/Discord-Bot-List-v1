@@ -5,6 +5,15 @@ Astra Not List is an open-source!nt branch may have newer additions/features, bu
 ### Website Preview [Website Link](https://luckybots.tk/)
 ### Do you need help? Join our [Discord Server](https://discord.gg/sQQFSnQhdt)
 
+## New Features added!
+14+ Changes [Some of them]
++ Profile Changes
++ Animated Banner
++ New Home Screen 
++ Different Bot Cards
++ New Navigation Bar
+
+- Fixed navigation bugs
 # ScreenShots
 <p align="center">
   <img src="https://user-images.githubusercontent.com/39243722/119623542-f428c980-be10-11eb-90e1-79025102b715.png">
