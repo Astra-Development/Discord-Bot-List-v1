@@ -78,7 +78,7 @@ if (bots)
       |  Certified Bots
  each val, i in bots
   .card.botcard(style=`transform: translate(0px, 0px); opacity: 1;`)
-   .card-body.p-3.pb-2.botcard-hassplash(style=`border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("/assets/img/certified-card-bg.jpg");`)
+   .card-body.p-3.pb-2.botcard-hassplash(style=`border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("/assets/img/certified-card-bg.png");`)
      img.cardimg(style=`width:150px;height:150px;`, alt=`Bot Avatar`, src=val.logo, loading=`lazy`, draggable=`false`)
    .card-body.pt-0.pb-0
      .w-100
@@ -132,40 +132,6 @@ style.
   }
 
 include includes/footer.pug
-
-script(src=`https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js`)
-script(src=`https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js`)
-script(src=`https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js`)
-script(defer=``, src=`https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js`)
-script(src=`/assets/js/bootstrap-multiselect.js`)
-script(src=`/assets/js/bootstrap-toaster.js`)
-script(src=`/assets/js/danloves.js`)
-script(src=`/assets/toadloader.js`, type=`text/javascript`)
-script(defer=``, src=`/assets/js/confetti.min.js`)
-script(src=`/assets/js/jquery-transition.js`)
-script(src=`https://cdn.jsdelivr.net/npm/typed.js@2.0.9`)
-script.
-  var typed = new Typed(`.typed`, {
-  strings: ["Welcome to Astra Bot List!",
-  "Make your bots known!",
-  "Fast Advertise!",
-  "Find other Developers!",
-  "Chat with us!",
-  "Earn Users!"],
-  typeSpeed: 70,
-  backSpeed: 50,
-  loop: true,
-  backDelay: 3000,
-  contentType: `html`
-  });
-
-script.
-  const node = document.getElementById("searchbar");
-  node.addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
-  location.href = `/bots/search/?q=${node.value}`
-  }
-  });
 
 style.
   .featuresec {
@@ -267,9 +233,11 @@ style.
   }
   }
   .bot-img {
-  border-radius: 100%;
+  border-radius: 50%;
   animation: hover 5s ease-in-out infinite;
   }
+  /*Removes cursor that comes with typed.js*/
+  /*Custom cursor animation*/
   @-webkit-keyframes blink {
   0% {
   opacity: 1;
@@ -295,6 +263,15 @@ style.
   li {
   color: #fff !important;
   }
+  .cont {
+  border: 1px solid #2C2F33;
+  border-radius: 2px;
+  }
+  .jumbotron h1 {
+  font-weight: 700;
+  color: #fff !important;
+  font-size: 100px;
+  }
   .sub {
   font-size: 18px;
   color: #fff !important;
@@ -302,26 +279,11 @@ style.
   .lead {
   color: #fff !important;
   }
-  h2,
-  h3,
-  h4,
-  h5 {
-  color: #fff !important;
-  }
   .smol {
   width: 200px;
   }
   #fat {
   font-weight: 700;
-  }
-  .jumbotron {
-  border-radius: 0px !important;
-  background: url(https://dscord.ga/i/wxq6p.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-bottom: 5px solid #fff;
   }
   small {
   color: #969696;

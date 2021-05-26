@@ -1,6 +1,5 @@
 head
 include includes/nav.pug
-head
   meta(property='og:title', content=bot.username)
   meta(name='twitter:title', content=bot.username)
   meta(property='og:description', content=bot.description)
@@ -25,8 +24,6 @@ head
   meta(name='PreMiD_button_1_Label', content='View Bot')
   meta(name='PreMiD_button_1_Url', content=`https://Astrabots.tk/bots/#{bot.botid}`)
   title Astra Bots - #{bot.username}
-
-
 
   script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
   script.
@@ -62,20 +59,18 @@ head
     #gotoReviews {cursor:pointer;}
     }
     
-
-.jumbotron.jumbotron-fluid.maintron
-  .container
-    .row
-      .col-md-auto.42389432dksfm(style='display: flex;align-items: center;')
-        div(style='width:100%;')
-          p.text-center.mb-0
-            img.botlogoimg(width='100px' height='100px' src=bot.logo)
-      .col-md.42389432dksfm(style='display: flex;align-items: center;')
-        div(style='width:100%;')
-          h1.maintron__title.mt-2 #{bot.username}
-          .b
-           p.lead.maintron__subtitle.mb-2
-            | #{bot.description}
+.bg-dark.hugething.text-center(style='box-shadow:0 5px 10px #1b1b1b;')
+  br
+  br
+  img.botlogoimg(width='100px' height='100px' src=bot.logo)
+  br
+  h1#fat.mb-0 #{bot.username}
+  span #{bot.description}
+  br
+  br
+  br
+br
+br
 .container
   .row
     .col-xl-3.col-lg-4.col-md-4.col-sm-12.leftcards.mb-5
@@ -272,3 +267,67 @@ style.
 
 script.
   window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
+
+style.
+  .featuresec {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  }
+  .featuresec img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 10px 15px rgb(22, 22, 22);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  }
+  .featurecon {
+  width: 100%;
+  }
+  .hugething,
+  .navbar {
+  background: linear-gradient(90deg, #ff5050, #303030, #303030, #3366ff);
+  background-size: 600% 600%;
+  -webkit-animation: jumboani 10s ease infinite;
+  -moz-animation: jumboani 10s ease infinite;
+  animation: jumboani 10s ease infinite;
+  }
+  #fat {
+    font-weight: 700;
+  }
+  .dumbfuckingimage {
+  height: 100%;
+  }
+  @-webkit-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @-moz-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
