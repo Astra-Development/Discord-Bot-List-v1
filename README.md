@@ -6,16 +6,21 @@ Astra Not List is an open-source!nt branch may have newer additions/features, bu
 ### Do you need help? Join our [Discord Server](https://discord.gg/sQQFSnQhdt)
 
 # ScreenShots
-![image](https://user-images.githubusercontent.com/39243722/119623542-f428c980-be10-11eb-90e1-79025102b715.png)
-
-![image](https://user-images.githubusercontent.com/39243722/119623605-04d93f80-be11-11eb-92f6-1c094c4096e6.png)
-
-![image](https://user-images.githubusercontent.com/39243722/119623644-0efb3e00-be11-11eb-8165-8ba55c33f546.png)
-
-![image](https://user-images.githubusercontent.com/39243722/119623679-191d3c80-be11-11eb-9191-5f8bbd8d7bbc.png)
-
-![image](https://user-images.githubusercontent.com/39243722/119623756-29cdb280-be11-11eb-8bd0-d5e56a588c68.png)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/39243722/119623542-f428c980-be10-11eb-90e1-79025102b715.png">
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/39243722/119623605-04d93f80-be11-11eb-92f6-1c094c4096e6.png">
+</p>
+<p align="center">
+  <src="(https://user-images.githubusercontent.com/39243722/119623644-0efb3e00-be11-11eb-8165-8ba55c33f546.png">
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/39243722/119623679-191d3c80-be11-11eb-9191-5f8bbd8d7bbc.png">
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/39243722/119623756-29cdb280-be11-11eb-8bd0-d5e56a588c68.png">
+</p>
 
 # Setup
 Rename `example.config.json` to `config.json`
