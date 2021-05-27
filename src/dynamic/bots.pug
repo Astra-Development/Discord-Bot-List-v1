@@ -196,19 +196,6 @@ br
             span.btnicon-content
               | #{person.username}
               small.text-muted ##{person.discriminator}
-   
-
-      //  .bot__owners.w-100.mb-5
-      //   h5.mb-3
-      //     span.text-warning.mr-1
-      //       i.fas.fa-user-crown
-      //     | Owner
-      //   each person in owners
-      //           a.btn.btn-dark.btn-block.btn-icon(href=`/user/${person.id}`)
-      //               img(height='30px' src=person.tag !== 'Unknown User'  ? person.displayAvatarURL({format: "png", size: 256}) : '/assets/default-avatar.png')
-      //               span.tag #{person.tag}
-                 
-
 
       .bot__links.w-100
         h5.mb-3
@@ -221,33 +208,30 @@ br
             i.fab.fa-github
            span.btnicon-content Github
         else 
-         .common__infocard.d-flex
-          .common__infocard-icon.text-damp
+          a.btn.btn-dark.btn-block.btn-icon
+           .btnicon-icon
             i.fas.fa-times
-          span.common__infocard-content
-            b Github Not Set
+           span.btnicon-content Github Not Set
         if (bot.website)
           a.btn.btn-success.btn-block.btn-icon(target='_blank' href=`${bot.website}`)
            .btnicon-icon
             i.fas.fa-Globe
            span.btnicon-content Website
         else
-         .common__infocard.d-flex
-          .common__infocard-icon.text-damp
+          a.btn.btn-dark.btn-block.btn-icon
+           .btnicon-icon
             i.fas.fa-times
-          span.common__infocard-content
-            b Website Not Set
+           span.btnicon-content Website Not Set
         if (bot.support)
           a.btn.btn-danger.btn-block.btn-icon(target='_blank' href=`${bot.support}`)
             .btnicon-icon
               i.fas.fa-mouse
             span.btnicon-content Discord Server
         else
-         .common__infocard.d-flex
-          .common__infocard-icon.text-damp
+          a.btn.btn-dark.btn-block.btn-icon
+           .btnicon-icon
             i.fas.fa-times
-          span.common__infocard-content
-            b Discord Server Not Set
+           span.btnicon-content Discord Server Not Set
         
   
     .col-xl-9.col-lg-8.col-md-8.col-sm-12
