@@ -1,4 +1,3 @@
-
 const { Client, Schema } = require('klasa');
 const {server: {role_ids: {bot_verifier}}, discord_client: {prefix}} = require("@root/config.json");
 
@@ -19,7 +18,7 @@ const client = new Client({
 
 //Bot Status
 client.once('ready', () => {
-    client.user.setActivity(`astrabots.xyz`, { type: "LISTENING" });
+    client.user.setActivity(`astrabots.xyz`, { type: "WATCHING" });
 });
 
 module.exports.init = async (token) => {
