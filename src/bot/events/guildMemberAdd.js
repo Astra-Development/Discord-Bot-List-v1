@@ -7,6 +7,7 @@ module.exports = class extends Event {
         if (member.user.bot) {
             member.roles.add(member.guild.roles.cache.get(role_ids.bot));
             member.roles.add(member.guild.roles.cache.get(role_ids.unverified));
+						console.log(`New bot has joined the server!`);
         }
     }
 };

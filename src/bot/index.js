@@ -9,7 +9,7 @@ const client = new Client({
     prefix: prefix,
     production: true,
     consoleEvents: {
-        log: false,
+        log: true,
         error: false,
         warn: false
     },
