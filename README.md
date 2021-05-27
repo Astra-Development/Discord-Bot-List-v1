@@ -50,6 +50,7 @@ Start the bot-list `npm start` :)
 
 # All Image location
 `src/public/assets/img/`
+[Make sure to keep names as it is]
 
 # MongoURL Value
 **1.** Visit [MongoDB](https://www.mongodb.com/)
