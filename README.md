@@ -11,7 +11,6 @@ Astra Bot List is an open-source!nt branch may have newer additions/features, bu
 + Some Home Screen Changes
 + Navigation bar is fixed on all pages
 + Theme color changed
-
 - Bot commands updated
 - Bot Theme Color Updated
 - Bot **certify**/**uncertify** added!
@@ -21,8 +20,9 @@ Astra Bot List is an open-source!nt branch may have newer additions/features, bu
 - Custom Bot's page theme
 - Profile (**/me**) custom bio
 + Bot Comments
-
 - Fixed navigation bugs
+
+
 # ScreenShots
 <p align="center">
   <img src="https://user-images.githubusercontent.com/39243722/119623542-f428c980-be10-11eb-90e1-79025102b715.png">
