@@ -18,6 +18,10 @@ const botsSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  cardbanner: {
+    type: String,
+    required: true
+  },
   invite: {
     type: String
   },

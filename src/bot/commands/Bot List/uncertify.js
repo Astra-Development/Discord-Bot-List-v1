@@ -4,12 +4,14 @@ const Bots = require("@models/bots");
 const Users = require("@models/users");
 const { server: { mod_log_id, role_ids, admin_user_ids } } = require("@root/config.json");
 const reasons = {
-  "1": `Your bot was offline when we tried to certify it.`,
-  "2": `Your bot is a clone of another bot`,
-  "3": `Your bot responds to other bots`,
-  "4": `Your bot doesn't have any/enough working commands. (Minimum: 7)`,
-  "5": `Your bot has NSFW commands that work in non-NSFW marked channels`,
-  "6": `Your bot doesn't have a working help command or commands list`
+  "1": `Your bot went offline during testing.`,
+  "2": `Your bot seems to be an unmodified. We don't allow unmodified clones of other bots.`,
+  "3": `Your bot was **offline** when we tried to review it. For that reason, we are unable to test it. Please get your bot online and re-apply.`,
+  "4": `The majority of your commands listed on your bot's page, or help command do not provide a response, or do not seem to function/work.`,
+  "5": `Your bot doesn't have any/enough working commands. (Minimum: 7)`,
+  "6": `The long description on your bot's page is filled out with spam/junk to reach the 300 character minimum requirement. Please rewrite your description to include more useful information about your bot.`,
+  "7": `Your bot doesn't have a (working) help command or obvious point of entry. Please make sure your bot has a help command or has an explanation in the bot description.`,
+  "8": `Your bot's commands have emojis or gifs that could cause epileptic seizures due to its flashy and flickering nature. Please remove all content of such nature in your commands.`
 }
 var modLog;
 
@@ -58,12 +60,13 @@ module.exports = class extends Command {
     let owners = [bot.owners.primary].concat(bot.owners.additional)
     let e = new MessageEmbed()
       .setTitle('Bot Un-Certified')
-      .addField(`Bot`, `<@${bot.botid}>`, true)
-      .addField(`Owner(s)`, owners.map(x => x ? `<@${x}>` : ""), true)
-      .addField("Mod", message.author, true)
-
+      .addField(`Bot ID`, `${bot.botid}`, true)
+      .addField(`Bot Owner`, owners.map(x => x ? `<@${x}>` : ""), true)
+      .addField("Reviewer", message.author, true)
       .setThumbnail(botUser.displayAvatarURL({ format: "png", size: 256 }))
       .setTimestamp()
+      .setColor('#FF4200')
+      .setThumbnail(botUser.displayAvatarURL({ format: "png", size: 256 }))
       .setColor("RED")
     modLog.send(e);
     modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
