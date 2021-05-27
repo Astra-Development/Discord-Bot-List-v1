@@ -72,9 +72,11 @@ module.exports = class extends Command {
 		const color = message.member.displayColor;
 		for (const [category, list] of commands) {
 			display.addPage(new MessageEmbed()
-				.setTitle(`🍥 ${category} Commands`)
+				.setAuthor(`${category} Commands`, "https://media.discordapp.net/attachments/846824301676068874/847413435129135124/logo.png")
 				.setColor(color)
 				.setDescription(list.map(this.formatCommand.bind(this, message, prefix, true)).join('\n'))
+        .setThumbnail("https://media.discordapp.net/attachments/846824301676068874/847413435129135124/logo.png")
+        .setImage("https://media.discordapp.net/attachments/846824301676068874/847409881707315220/standard.gif")
 			);
 		}
 
