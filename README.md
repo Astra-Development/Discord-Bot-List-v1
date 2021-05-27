@@ -48,6 +48,9 @@ Start the bot-list `npm start` :)
 
 **5.** Click `Save`
 
+# All Image location
+`src/public/assets/img/`
+
 # MongoURL Value
 **1.** Visit [MongoDB](https://www.mongodb.com/)
 
