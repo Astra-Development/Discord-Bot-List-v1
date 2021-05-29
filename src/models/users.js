@@ -21,6 +21,10 @@ const usersSchema = new mongoose.Schema({
   certdev: {
     type: Boolean,
     default: false
+  },
+  blacklisted: {
+    type: Boolean,
+    default: false
   }
 });
 
