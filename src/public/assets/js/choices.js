@@ -1,3 +1,4 @@
+/*! choices.js v9.0.1 | © 2019 Josh Johnson | https://github.com/jshjohnson/Choices#readme */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -700,6 +701,13 @@ function createStore(reducer, preloadedState, enhancer) {
       type: ActionTypes.REPLACE
     });
   }
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+
 
   function observable() {
     var _ref;
@@ -2551,7 +2559,7 @@ function () {
       includeMatches: true
     });
     var fuse = new fuse_js_1.default(haystack, options);
-    var results = fuse.search(needle);
+    var results = fuse.search(needle); // see https://github.com/krisk/Fuse/issues/303
 
     this._currentValue = newValue;
     this._highlightPosition = 0;
@@ -3635,6 +3643,7 @@ function isSpecial(value) {
 		|| isReactElement(value)
 }
 
+// see https://github.com/facebook/react/blob/b5ac963fb791d1298e7f396236383bc955f916c1/src/isomorphic/classic/element/ReactElement.js#L21-L25
 var canUseSymbol = typeof Symbol === 'function' && Symbol.for;
 var REACT_ELEMENT_TYPE = canUseSymbol ? Symbol.for('react.element') : 0xeac7;
 
