@@ -18,7 +18,7 @@ head
         .card.mb-1
           .card-body
             p.text-center.mb-1
-              img(src='https://media.discordapp.net/attachments/817464926066835486/843457017737510932/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711429-removebg-preview.png' width='200' height='200')
+              img(src='/assets/img/logo.png' width='200' height='200')
             h5.text-center
               | Thank you for submitting your bot!
               p.mb-0.text-center.text-muted(style='font-size:12px;') You have added your bot to the list. Please wait for it to be verified.
@@ -26,6 +26,12 @@ head
             .dansaidicant
               .g-daddy
                 .g-recaptcha(data-size='invisible', data-theme='dark', data-sitekey='6LcGJPUZAAAAAE-JL52A3QLe8vwSbmXQxWRL7W23', data-callback='saveChanges')
+            a.btn.btn-outline-tag(href='javascript:window.history.back()')
+              i.fas.fa-arrow-left.text-damp.mr-2
+              |  Back
+            a.btn.btn-outline-tag(href='/')
+              i.fas.fa-home.text-damp.mr-2
+              |  Go Home
 
         // a.btn.btn-secondary.btn-icon(href='/')
         //   .btnicon-icon
