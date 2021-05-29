@@ -28,7 +28,8 @@
 			"unverified": "xxxxxxxxxx",
 			"bot_verifier": "xxxxxxxxxx",
 			"bot_developer": "xxxxxxxxxx",
-			"cert_user": "xxxxxxxxxx"
+			"cert_user": "xxxxxxxxxx",
+			"cert_bot": "xxxxxxxxxx"
 		},
 		"botreviewer": [
             "user-id","user-id"
