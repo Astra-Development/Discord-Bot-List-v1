@@ -30,7 +30,7 @@ function submit() {
         }
     }
 
-    let form_items = ["botid", "prefix", "description", "invite", "support", "website", "github", "tags", "owner-ids", "note", "webhook", "donation"]
+    let form_items = ["botid", "prefix", "description", "invite", "support", "website", "github", "tags", "owner-ids", "note", "webhook"]
     let data = {}
     for (let form_item of form_items) {
         data[form_item] = $(`#${form_item}`).val()
@@ -231,12 +231,11 @@ $( document ).ready(async function() {
     $(document).on('click', '.selectMultiple', function(e) {
         $(this).toggleClass('open');
     });
-    
-    CKEDITOR.instances.longdesc.on('mode', () => {
-        let bg = window.getComputedStyle(document.body).getPropertyValue('--background-color')
-        let color = window.getComputedStyle(document.body).getPropertyValue('--color')
-        $(".cke_wysiwyg_frame ").contents().find('body').css({'background-color' : bg, color})
-        $(".cke_source ").css({'background-color' : bg, color})
-    })
+})
+
+CKEDITOR.on('instanceReady', () => {
+    let bg = window.getComputedStyle(document.body).getPropertyValue('--background-color')
+    let color = window.getComputedStyle(document.body).getPropertyValue('--color')
+    $(".cke_wysiwyg_frame ").contents().find('body').css({'background-color' : bg, color});;
 })
 CKEDITOR.disableAutoInline = true;
