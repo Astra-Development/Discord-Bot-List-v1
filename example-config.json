@@ -27,8 +27,12 @@
 			"verified": "xxxxxxxxxx",
 			"unverified": "xxxxxxxxxx",
 			"bot_verifier": "xxxxxxxxxx",
-			"bot_developer": "xxxxxxxxxx"
-		}
+			"bot_developer": "xxxxxxxxxx",
+			"cert_user": "xxxxxxxxxx"
+		},
+		"botreviewer": [
+            "user-id","user-id"
+        ]
 	},
 	"bot_options": {
 		"bot_tags": [
