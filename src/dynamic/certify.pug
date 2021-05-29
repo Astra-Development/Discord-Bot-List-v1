@@ -1,14 +1,25 @@
-doctype html
 include includes/head.pug
 include includes/nav.pug
-script(src="/assets/js/me.js")
+head
+script(src='/assets/js/form.js')
+script(src='/assets/js/me.js')
 script(src='/assets/js/certify.js')
-script(src='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js')
-link(href='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.css' rel='stylesheet')
+link(rel="stylesheet" href="/assets/css/tags.css")
 script(src="https://www.google.com/recaptcha/api.js" async defer)
-script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
-body
-meta(name='theme-color', content='#404040')
+script(src="/assets/js/me.js")
+  meta(name='theme-color', content='#d2efe6')
+  script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
+  script.
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
+  link(rel='stylesheet', href='/assets/css/main.css')
+  link(rel='stylesheet', href='/assets/css/secondary.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
+  link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
+  link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='shortcut icon', type='image/png', href='/assets/img/logo.png')
+  script(src='https://www.google.com/recaptcha/api.js')
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
 style.
   .botlogo {
     max-width:100%;
@@ -29,23 +40,20 @@ style.
     background: linear-gradient(311deg, #1A1A1A 100%, #ffffff 100%);
   }
 
-script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-109410618-4')
-script.
-  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','UA-109410618-4');
-meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-link(rel='shortcut icon', type='image/png', href='/assets/img/logo.png')
-link(rel='stylesheet', href='/assets/css/main.css')
-link(rel='stylesheet', href='/assets/css/secondary.css')
-link(rel='stylesheet', href='/assets/css/bootstrap-multiselect.css')
-link(rel='stylesheet', href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css', crossorigin='anonymous')
-
-center
- .jumbotron.jumbotron-fluid.maintron.maintron-plus.mb-0
-  .container.mb-2
-    h1.display-5.mb-0.mt-2.text-boldest #{req.user.username}
-    .mb-2(style='min-height:28px;')
-      p.lead.ml-1.text-damp.text-bold.mb-0 Certify your bots
-
+style.
+  .dropdown-item:hover{
+  background:linear-gradient(90deg, rgba(92, 92, 214) 0%, rgba(229,46,100,1) 100%) !important;
+  }
+.bg-dark.hugething.text-center(style='box-shadow:0 5px 10px #1b1b1b;')
+  br
+  br
+  img.bot-img(src='/assets/img/logo.png', height="150")
+  br
+  h1#fat.mb-0 Astra
+  span Certifications
+  br
+  br
+<br /><br />	
 .container
         .row
          if (!bots)
@@ -95,3 +103,160 @@ center
 
 
 include includes/footer.pug
+
+
+style.
+  .featuresec {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  }
+  .featuresec img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 10px 15px rgb(22, 22, 22);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  }
+  .featurecon {
+  width: 100%;
+  }
+  .hugething,
+  .navbar {
+  background: linear-gradient(90deg, #3366ff, #8000ff, #4d79ff, #0039e6);
+  background-size: 600% 600%;
+  -webkit-animation: jumboani 10s ease infinite;
+  -moz-animation: jumboani 10s ease infinite;
+  animation: jumboani 10s ease infinite;
+  }
+  .dumbfuckingimage {
+  height: 100%;
+  }
+  @-webkit-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @-moz-keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @keyframes jumboani {
+  0% {
+  background-position: 0% 50%
+  }
+  50% {
+  background-position: 100% 50%
+  }
+  100% {
+  background-position: 0% 50%
+  }
+  }
+  @media (max-width: 991px) {
+  .featuresec {
+  text-align: center !important;
+  height: auto;
+  }
+  hr {
+  margin: 50px 0;
+  }
+  .dumbfuckingimage {
+  height: auto;
+  }
+  }
+  .display-4 {
+  font-size: 30px !important;
+  }
+  .dank {
+  background: linear-gradient(90deg, rgba(248, 72, 61, 1) 0%, rgba(228, 46, 103, 1) 100%);
+  color: #fff !important;
+  transition: .3s;
+  }
+  .dank:hover {
+  background: #fff !important;
+  color: #7495e6 !important;
+  transition: .3s;
+  }
+  @keyframes hover {
+  0% {
+  transform: translateY(0px);
+  box-shadow: 0 10px 15px rgba(22, 22, 22, 0.5);
+  }
+  50% {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px rgba(22, 22, 22, 0.5);
+  }
+  100% {
+  transform: translateY(0px);
+  box-shadow: 0 10px 15px rgba(22, 22, 22, 0.5);
+  }
+  }
+  .bot-img {
+  border-radius: 50%;
+  animation: hover 5s ease-in-out infinite;
+  }
+  /*Removes cursor that comes with typed.js*/
+  /*Custom cursor animation*/
+  @-webkit-keyframes blink {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  @-moz-keyframes blink {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
+  li {
+  color: #fff !important;
+  }
+  .cont {
+  border: 1px solid #2C2F33;
+  border-radius: 2px;
+  }
+  .jumbotron h1 {
+  font-weight: 700;
+  color: #fff !important;
+  font-size: 100px;
+  }
+  .sub {
+  font-size: 18px;
+  color: #fff !important;
+  }
+  .lead {
+  color: #fff !important;
+  }
+  .smol {
+  width: 200px;
+  }
+  #fat {
+  font-weight: 700;
+  }
+  small {
+  color: #969696;
+  }

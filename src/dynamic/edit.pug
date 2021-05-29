@@ -73,7 +73,10 @@ include includes/nav.pug
                 input#owner-ids.input.xinput.form-control(type='text' placeholder=' ' value=String(bot.owners.additional.join(" ")) disabled)
                 .placeholder Only the primary owner can edit additional owners
             br
-
+            .input-holder
+              input#banner.input.form-control(type='text' placeholder=' ' value=bot.banner)
+              .placeholder Custom bot card banner
+            br
             .input-holder
               input#invite.input.form-control(type='text' placeholder=' ' value=bot.invite)
               .placeholder Custom Invite

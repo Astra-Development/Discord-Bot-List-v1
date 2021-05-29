@@ -19,6 +19,10 @@ const botsSchema = new mongoose.Schema({
     required: true,
     default: "https://media.pocketgamer.biz/2021/5/110514/discord-new-logo-2021-r225x.jpg"
   },
+	banner: {
+    type: String,
+    required: false
+  },
   invite: {
     type: String
   },
