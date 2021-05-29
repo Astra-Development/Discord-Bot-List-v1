@@ -51,6 +51,7 @@ module.exports = class extends Command {
             // e.addField(`Server Count`, `${servers || 0} Servers`, true)
 
             e.addField(`Github`, !bot.github ? "Not Set" : `[Click Here](${bot.github})`, true)
+						e.addField(`Donation`, !bot.donation ? "Not Set" : `[Click Here](${bot.donation})`, true)
             e.addField(`Website`, !bot.website ? "Not Set" : `[Click Here](${bot.website})`, true)
             e.addField(`Support Server`, !bot.support ? "Not Set" : `[Click Here](${bot.support})`, true)
 

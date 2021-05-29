@@ -67,6 +67,7 @@ route.post("/:id", auth, async (req, res) => {
             github: data.github,
             tags: data.tags,
             note: data.note,
+						donation: data.donation,
             owners
         });
     } else {
@@ -84,6 +85,7 @@ route.post("/:id", auth, async (req, res) => {
             github: data.github,
             tags: data.tags,
             note: data.note,
+						donation: data.donation,
             owners
         }).save();
     }
