@@ -94,11 +94,5 @@
 		"max_summary_length": 140,
 		"min_description_length": 300,
 		"max_description_length": 10000
-	},
-	"users": {
-		"blacklisted": [
-			"user-id",
-			"user-id"
-		]
 	}
 }
