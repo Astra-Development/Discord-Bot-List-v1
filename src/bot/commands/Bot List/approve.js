@@ -3,19 +3,26 @@ const { MessageEmbed } = require('discord.js');
 const Bots = require("@models/bots");
 
 const { server: {mod_log_id, role_ids} } = require("@root/config.json");
-
+const perms = require("@root/config.json");
 var modLog;
 
 module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
-            permissionLevel: 8,
             usage: '[User:user]',
             description: 'Approve a bot'
         });
     }
 
     async run(message, [user]) {
+        if (!perms.server.botreviewer.includes(message.author.id)) 
+        return message.channel.send({
+                embed: {
+                    color: 'RED',
+                    description: `> you do not have enough permissions to run this command.`,
+                    timestamp: new Date(),
+                }
+            });
         if (!user || !user.bot) return message.channel.send(`To approve a bot please mention it!`);
         let bot = await Bots.findOne({botid: user.id}, { _id: false });
 

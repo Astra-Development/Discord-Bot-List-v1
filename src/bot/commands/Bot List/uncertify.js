@@ -3,6 +3,7 @@ const { MessageEmbed } = require('discord.js');
 const Bots = require("@models/bots");
 const Users = require("@models/users");
 const { server: { mod_log_id, role_ids, admin_user_ids } } = require("@root/config.json");
+const perms = require("@root/config.json");
 const reasons = {
   "1": `Your bot went offline during testing.`,
   "2": `Your bot seems to be an unmodified. We don't allow unmodified clones of other bots.`,
@@ -22,13 +23,19 @@ module.exports = class extends Command {
       runIn: ['text'],
       aliases: ["uncert"],
       description: "Uncertify's a bot",
-      permissionLevel: 8,
       usage: '[User:user]'
     });
   }
 
   async run(message, [user]) {
-
+    if (!perms.server.botreviewer.includes(message.author.id)) 
+    return message.channel.send({
+            embed: {
+                color: 'RED',
+                description: `> you do not have enough permissions to run this command.`,
+                timestamp: new Date(),
+            }
+        });
 
 
 

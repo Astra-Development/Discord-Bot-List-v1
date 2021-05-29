@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 const Bots = require("@models/bots");
 
 const { server: { mod_log_id, role_ids } } = require("@root/config.json");
-
+const perms = require("@root/config.json");
 const reasons = {
   "1": `Your bot went offline during testing.`,
   "2": `Your bot seems to be an unmodified. We don't allow unmodified clones of other bots.`,
@@ -23,7 +23,6 @@ module.exports = class extends Command {
       name: 'decline',
       aliases: ["deny"],
       runIn: ['text'],
-      permissionLevel: 8,
       botPerms: ["SEND_MESSAGES"],
       description: "Decline a bot from the botlist",
       usage: '[Member:user]'
@@ -31,6 +30,14 @@ module.exports = class extends Command {
   }
 
   async run(message, [Member]) {
+    if (!perms.server.botreviewer.includes(message.author.id)) 
+        return message.channel.send({
+                embed: {
+                    color: 'RED',
+                    description: `> you do not have enough permissions to run this command.`,
+                    timestamp: new Date(),
+                }
+            });
     if (!Member || !Member.bot) return message.channel.send(`You didn't ping a bot to decline.`)
     let e = new MessageEmbed()
       .setTitle('Decline Reasons')

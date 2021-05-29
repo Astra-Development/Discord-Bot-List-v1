@@ -1,11 +1,10 @@
 const { Command } = require('klasa');
 const Bots = require("@models/bots");
-
+const perms = require("@root/config.json");
 module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             runIn: ['text'],
-            permLevel: 8,
             botPerms: ["SEND_MESSAGES"],
             description: "Update the bots in the server.",
         });
@@ -19,7 +18,15 @@ module.exports = class extends Command {
         m.edit(`${message.author}, All bots **Updated**`);
     }
 
-    async update(client) {
+    async update(client,message) {
+        if (!perms.server.botreviewer.includes(message.author.id)) 
+        return message.channel.send({
+                embed: {
+                    color: 'RED',
+                    description: `> you do not have enough permissions to run this command.`,
+                    timestamp: new Date(),
+                }
+            });
         let bots = await Bots.find({}, { _id: false })
         let updates = []
         for (let bot of bots) {
