@@ -1,4 +1,7 @@
-# Welcome to Astra Bot List
+<p align="center">
+  <img src="https://media.discordapp.net/attachments/846824301676068874/847413435129135124/logo.png" width="300">
+</p>
+ # Welcome to Astra Bot List
 
 Astra Bot List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
 
