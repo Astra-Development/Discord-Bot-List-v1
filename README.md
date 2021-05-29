@@ -1,30 +1,13 @@
 <p align="center">
   <img src="https://media.discordapp.net/attachments/846824301676068874/847413435129135124/logo.png" width="300">
 </p>
+
 # Welcome to Astra Bot List
 
 Astra Bot List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
 
 ### Website Preview [Website Link](https://astrabots.xyz/)
 ### Do you need help? Join our [Discord Server](https://astrabots.xyz/join)
-
-## New Features added!
-+ Footer Changed
-+ Readme Updated
-+ Some Home Screen Changes
-+ Navigation bar is fixed on all pages
-+ Theme color changed
-- Bot commands updated
-- Bot Theme Color Updated
-- Bot **certify**/**uncertify** added!
-
-**[Feature additions]**
-- Custom Bot's banner card
-- Custom Bot's page theme
-- Profile (**/me**) custom bio
-+ Bot Comments
-- Fixed navigation bugs
-
 
 # ScreenShots
 <p align="center">
