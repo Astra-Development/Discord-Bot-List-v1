@@ -9,7 +9,6 @@ const avatar = require("@routes/api/avatar");
 const embed = require("@routes/api/embed");
 const theme = require("@routes/api/theme");
 const callback = require("@routes/api/callback");
-const cert = require("@routes/api/cert");
 
 const route = Router();
 
@@ -31,5 +30,5 @@ route.use("/theme", theme);
 route.use("/avatar", avatar);
 route.use("/embed", embed);
 route.use("/callback", callback);
-route.use("/cert", cert);
+
 module.exports = route;

@@ -1,5 +1,9 @@
 const { Command } = require('klasa');
 const { User } = require('discord.js');
+const Bots = require("@models/bots");
+const Users = require("@models/users");
+const { server: { mod_log_id, role_ids, admin_user_ids} } = require("@root/config.json");
+var modLog;
 
 module.exports = class extends Command {
 	constructor(...args) {
@@ -45,3 +49,5 @@ module.exports = class extends Command {
 		return message.sendLocale('COMMAND_BLACKLIST_SUCCESS', changes);
 	}
 };
+
+
