@@ -26,7 +26,7 @@ const botsSchema = new mongoose.Schema({
   invite: {
     type: String
   },
-  botLibrary: {
+  libraries: {
     type: String,
     required: false
   },

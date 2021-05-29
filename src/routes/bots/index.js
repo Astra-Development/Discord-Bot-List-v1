@@ -94,7 +94,6 @@ route.get('/:id', async (req, res) => {
     desc,
     isUrl,
     activity,
-		banner,
     discord_verified,
     bcolour: b,
     req
