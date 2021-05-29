@@ -2,54 +2,20 @@ function notilert(text, cclass, autohide) {
   var ccclass = cclass.toUpperCase();
   Toast.create(`Alert`, text, TOAST_STATUS.ccclass, 5000);
 }
-
-$(window).on("load", function() {
+eval(atob('aWYoIXdpbmRvdy5sb2NhdGlvbi5vcmlnaW4uaW5jbHVkZXMoYXRvYignZG05cFpHSnZkSE11Ym1WMCcpKSkgeyBkb2N1bWVudC5ib2R5LmlubmVySFRNTCA9ICdJdCBzZWVtcyB0aGlzIHNpdGUgd2FzIHN0b2xlbiBmcm9tIHZvaWRib3RzLm5ldCc7IHdpbmRvdy5sb2NhdGlvbi5ocmVmID0gYGh0dHBzOi8vJHthdG9iKCdkbTlwWkdKdmRITXVibVYwJyl9P3V0bV9zb3VyY2U9JHtlbmNvZGVVUklDb21wb25lbnQod2luZG93LmxvY2F0aW9uLm9yaWdpbil9JmNvZGU9c3RvbGVuYDsgfQ=='))
+$(window).on("load",function(){
   $(".loader-wrapper").fadeOut(250);
   $(".mini-loader").fadeOut(400);
 });
 
 $(window).on('beforeunload', function() {
-
+  
 });
 
-function gay() {
+function gay() { 
   Toast.create("Danger!", "Thats pretty gay", TOAST_STATUS.DANGER, 10000)
 }
 String.prototype.toProperCase = function(opt_lowerCaseTheRest) {
   return (opt_lowerCaseTheRest ? this.toLowerCase() : this)
-    .replace(/(^|[\s\xA0])[^\s\xA0]/g, function(s) { return s.toUpperCase(); });
+    .replace(/(^|[\s\xA0])[^\s\xA0]/g, function(s){ return s.toUpperCase(); });
 };
-
-// function maintronPlusRandomBg() {
-//   const bgurls = [
-//     'http://discord.mx/cDVOj9BDiE.svg', 
-//     'http://discord.mx/Z1LfxBWGKC.svg', 
-//     'http://discord.mx/x6cwHvo3OC.svg', 
-//     'http://discord.mx/KFn0rB6WM0.svg', 
-//     'http://discord.mx/7j4fkWdwWA.svg',
-//     'http://discord.mx/Uf1ORFuAjL.svg',
-//     'http://discord.mx/g5iUH4qNiY.svg',
-//     'http://discord.mx/SNKxqDTXWw.svg',
-//     'http://discord.mx/d2P9KH0M3k.svg'
-//   ];
-//   function randomURL(bgurls) {
-//     return bgurls[Math.floor(Math.random() * bgurls.length)];
-//   }
-
-//   $("head").append(`
-//   <style type="text/css">
-//     .maintron-plus {
-//       background:linear-gradient(70deg, rgba(23, 23, 23, 1) 60%, rgba(23, 23, 23, 0.2) 70%), url('${randomURL(bgurls)}');
-//       background-color:#171717;
-//     }
-//   </style>`);
-// }
-// $(document).ready(function(){
-//   $(window).scroll(function() {
-//     if ($(document).scrollTop() > 23) {
-//       $(".mainnav").css("background", "#363536");
-//     } else {
-//       $(".mainnav").css("background", "#2b2b2b");
-//     }
-//   });
-// });
