@@ -208,7 +208,7 @@ br
             i.fab.fa-github
            span.btnicon-content Github
         else 
-          a.btn.btn-dark.btn-block.btn-icon
+          a.btn.btn-info.btn-block.btn-icon
            .btnicon-icon
             i.fas.fa-times
            span.btnicon-content Github Not Set
@@ -218,7 +218,7 @@ br
             i.fas.fa-Globe
            span.btnicon-content Website
         else
-          a.btn.btn-dark.btn-block.btn-icon
+          a.btn.btn-success.btn-block.btn-icon
            .btnicon-icon
             i.fas.fa-times
            span.btnicon-content Website Not Set
@@ -228,10 +228,20 @@ br
               i.fas.fa-mouse
             span.btnicon-content Discord Server
         else
-          a.btn.btn-dark.btn-block.btn-icon
+          a.btn.btn-danger.btn-block.btn-icon
            .btnicon-icon
             i.fas.fa-times
            span.btnicon-content Discord Server Not Set
+        if (bot.donation)
+          a.btn.btn-blue.btn-block.btn-icon(target='_blank' href=`${bot.donation}`)
+            .btnicon-icon
+              i.fas.fa-donation
+            span.btnicon-content Donation Link
+        else
+          a.btn.btn-blue.btn-block.btn-icon
+           .btnicon-icon
+            i.fas.fa-times
+           span.btnicon-content Donation Link Not Set
         
   
     .col-xl-9.col-lg-8.col-md-8.col-sm-12
