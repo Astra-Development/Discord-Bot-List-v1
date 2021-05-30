@@ -17,7 +17,7 @@ const botsSchema = new mongoose.Schema({
   logo: {
     type: String,
     required: true,
-    default: "https://media.discordapp.net/attachments/846824301676068874/848568909581254656/discord-icon-new-2021-logo-09772BF096-seeklogo.png"
+    default: "https:discord.mx/hcvOiDRmYc.jpg"
   },
   invite: {
     type: String
