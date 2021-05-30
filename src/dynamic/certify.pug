@@ -1,8 +1,8 @@
 include includes/head.pug
 include includes/nav.pug
-script(src='/assets/js/me.js')
 head
 script(src='/assets/js/form.js')
+script(src='/assets/js/me.js')
 script(src='/assets/js/certify.js')
 link(rel="stylesheet" href="/assets/css/tags.css")
 script(src="https://www.google.com/recaptcha/api.js" async defer)
@@ -67,8 +67,8 @@ style.
             .form-group
               label.mb-1 Choose Your bot
               select#followtos.form-control(required='')
-                each val, i in bots
-                  option(value=bot.botid) #{bot.username}
+                
+                  option(value=bots.botid) #{bots.username}
 
         .col-md-12
           hr.mb-3.mt-0
