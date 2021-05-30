@@ -22,7 +22,7 @@ style.
   br
   img.bot-img(src=bot.logo, height="150")
   br
-  h1#fat.mb-0 #{bot.username}
+  h1#fat.mb-0 Vote For #{bot.username}
   br
   br
   br
@@ -35,18 +35,11 @@ style.
     .w-100
       .botcount.mb-2.text-damp.text-bold(data-toggle='tooltip', data-placement='left', title='', data-original-title='Votes This Month')
         span.float-left.text-white.h-100
-          i.fas.fa-star.pt-1.pb-1
-        | #{bot.likes || 0}
-      .w-100
-    .card-body.pt-0.pb-0
-      h4.mb-0.text-center.pt-1
-        | #{bot.username}  
-  hr.mt-1.mb-3.bg-secondary
+        <center>
+          | Total votes: #{bot.likes || 0}
+    <br />
   .card-body.pt-0.botcard-btnholder
-    a.btn.btn-lg.btn-dark.btn-getstarted.mt-1.ml-1.btn-icon-split()#like
-      span.icon.text-blue-50
-        i.fas.fa-paper-plane
-      span.text  Vote
+    a.btn.btn-sm.btn-blue#like() Vote Bot
 
 include includes/footer.pug
 
