@@ -26,6 +26,24 @@ module.exports = class extends Command {
         if (!user || !user.bot) return message.channel.send(`Ping a **bot**.`);
         let bot = await Bots.findOne({botid: user.id}, { _id: false });
 
+        if(bot === null)
+        return message.channel.send({
+            embed: {
+                color: 'RED',
+                description: `this bot is not on our botlist`,
+                timestamp: new Date(),
+            }
+        });
+
+        if(bot.state === 'verified')
+        return message.channel.send({
+            embed: {
+                color: 'RED',
+                description: `\`${bot.username}\` already verified`,
+                timestamp: new Date(),
+            }
+        });
+
         const botUser = await this.client.users.fetch(user.id);
         if (bot.logo !== botUser.displayAvatarURL({format: "png", size: 256}))
             await Bots.updateOne({ botid: user.id }, {$set: {state: "verified", logo: botUser.displayAvatarURL({format: "png", size: 256})}});

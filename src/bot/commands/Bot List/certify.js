@@ -27,7 +27,14 @@ module.exports = class extends Command {
             });
         if (!user || !user.bot) return message.channel.send(`Ping a **bot**.`);
         let bot = await Bots.findOne({botid: user.id}, { _id: false });
-
+        if(bot.certify === true)
+        return message.channel.send({
+            embed: {
+                color: 'RED',
+                description: `\`${bot.username}\` already certify`,
+                timestamp: new Date(),
+            }
+        });
         const botUser = await this.client.users.fetch(user.id);
         if (bot.logo !== botUser.displayAvatarURL({format: "png", size: 256}))
             await Bots.updateOne({ botid: user.id }, {$set: { certify: true, logo: botUser.displayAvatarURL({format: "png", size: 256}) }});
@@ -54,7 +61,7 @@ module.exports = class extends Command {
         message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid)).then(bot => {
             bot.roles.set([role_ids.cert_bot, role_ids.bot, role_ids.verified]);
         })
-        message.channel.send(`<@${bot.botid}> has been certified successfully!`);
+        message.channel.send(`Certified \`${bot.username}\``);
     }
     async init() {
         modLog = this.client.channels.cache.get(mod_log_id);

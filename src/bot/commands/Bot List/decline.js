@@ -30,6 +30,17 @@ module.exports = class extends Command {
   }
 
   async run(message, [Member]) {
+
+    let bot1 = await Bots.findOne({ botid: Member.id }, { _id: false });
+
+    if(bot1 === null)
+        return message.channel.send({
+            embed: {
+                color: 'RED',
+                description: `this bot is not on our botlist`,
+                timestamp: new Date(),
+            }
+        });
     if (!perms.server.botreviewer.includes(message.author.id)) 
         return message.channel.send({
                 embed: {
@@ -62,6 +73,7 @@ module.exports = class extends Command {
     }
 
     let bot = await Bots.findOne({ botid: Member.id }, { _id: false });
+
     await Bots.updateOne({ botid: Member.id }, { $set: { state: "deleted", owners: { primary: bot.owners.primary, additional: [] } } });
     const botUser = await this.client.users.fetch(Member.id);
 
@@ -78,7 +90,7 @@ module.exports = class extends Command {
       .setColor('#FF4200')
     modLog.send(e)
     modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
-    message.channel.send(`<@${bot.botid}> has been declined successfully.`)
+    message.channel.send(`Bot <@${bot.botid}> has been declined successfully.`)
 
     owners = await message.guild.members.fetch({ user: owners })
     owners.forEach(o => {
