@@ -67,8 +67,6 @@ module.exports = async (req, b = null) => {
         return { success: false, message: "Invalid Github repository" }
     if (data.webhook && !isValidUrl(data.webhook))
         return { success: false, message: "Invalid Webhook URL" }
-		if (data.donation && !isValidUrl(data.donation))
-        return { success: false, message: "Invalid Donation Link" }
 
     // Check bot tags are valid
     if (data.tags) {

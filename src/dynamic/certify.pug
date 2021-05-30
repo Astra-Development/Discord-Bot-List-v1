@@ -49,13 +49,19 @@ style.
   br
   img.bot-img(src='/assets/img/logo.png', height="150")
   br
-  h1#fat.mb-0 Astra
-  span Certifications
+  h1#fat.mb-0 Astra Certificaions
+  span Requirements
+  h5#fat.mb-0 100+ servers
+  h5#fat.mb-0 Must have 90% uptime
+  h5#fat.mb-0 Must be verified on this botlist
+  h5#fat.mb-0 Must have  botinfo, help, ping, uptime commands
+  
   br
   br
 <br /><br />	
 .container
         .row
+        <center>
          if (!bots)
           .col-md-10
             .form-group
@@ -67,38 +73,27 @@ style.
             .form-group
               label.mb-1 Choose Your bot
               select#followtos.form-control(required='')
-                
                   option(value=bots.botid) #{bots.username}
 
-        .col-md-12
-          hr.mb-3.mt-0
-        .col-md-12
-        .form-group
-              label.mb-1 Why should we certify your bot?
-              input#longdesc.input.form-control(rows='7')
 
-        .form-group
-          label.mb-1 Are you using our API ?
-          select#api.form-control(required='')
-            option(disabled='' selected='' hidden='' value='certify') Select your option
-            option Yes
-            option No
+
+        // .form-group
+        //   label.mb-1 Are you using our API ?
+        //   select#api.form-control(required='')
+        //     option(disabled='' selected='' hidden='' value='certify') Select your option
+        //     option Yes
+        //     option No
         
-        .form-group
-          label.mb-1 Does your bot follow Discord ToS and Discord Bot Directory rules ?
-          select#tos.form-control(required='')
-            option(disabled='' selected='' hidden='' value='certify') Select your option
-            option Yes
-            option No
+        // .form-group
+        //   label.mb-1 Does your bot follow Discord ToS and Discord Bot Directory rules ?
+        //   select#tos.form-control(required='')
+        //     option(disabled='' selected='' hidden='' value='certify') Select your option
+        //     option Yes
+        //     option No
 
-        .container
-          .col-md-12
-          center
-            hr.mb-3.mt-0
-            .col-md-12
-              .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
-              hr.mb-3.mt-0
-              a.btn.btn-sm.btn-blue.btn-block(onclick='submit()') Submit
+        .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
+            <br />
+            a.btn.btn-sm.btn-blue.btn-block(onclick='submit()') Submit
 
 
 
