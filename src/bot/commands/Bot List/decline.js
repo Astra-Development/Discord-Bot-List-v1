@@ -78,11 +78,11 @@ module.exports = class extends Command {
       .setColor('#FF4200')
     modLog.send(e)
     modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
-    message.channel.send(`Bot <@${bot.botid}> had been declined successfully.`)
+    message.channel.send(`<@${bot.botid}> has been declined successfully.`)
 
     owners = await message.guild.members.fetch({ user: owners })
     owners.forEach(o => {
-      o.send(`Your bot \`${bot.username}\` / <@${bot.botid}> was declined by reviewer ${message.author}.\nReason: ${r}\nIf you would like to dispute your decline, please DM ${message.author} (User ID: ${message.author.id})`)
+      o.send(`Your bot \`${bot.username}\` / <@${bot.botid}> has been declined by reviewer ${message.author}.\nReason: ${r}\nIf you would like to dispute your decline, please DM ${message.author} (User ID: ${message.author.id})`)
     })
     if (!message.client.users.cache.find(u => u.id === bot.botid).bot) return;
     try {

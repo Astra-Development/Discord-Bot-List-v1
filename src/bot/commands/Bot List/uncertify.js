@@ -37,26 +37,9 @@ module.exports = class extends Command {
             }
         });
 
-
-
-
-
     //if (!admin_user_ids.includes(message.author.id)) return
-
-
-
-
-
-
-
-
-
     if (!user || !user.bot) return message.channel.send(`Ping a **bot**.`);
-
-
     let bot = await Bots.findOne({ botid: user.id }, { _id: false });
-
-
 
     const botUser = await this.client.users.fetch(user.id);
     if (bot.logo !== botUser.displayAvatarURL({ format: "png", size: 256 }))
@@ -75,12 +58,6 @@ module.exports = class extends Command {
     modLog.send(e);
     modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
 
-
-
-
-
-
-
     owners = await message.guild.members.fetch({ user: owners })
     owners.forEach(o => {
       Users.updateOne({ userid: o.id }, { $set: { certdev: 0 } }).then();
@@ -90,12 +67,7 @@ module.exports = class extends Command {
     message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid)).then(bot => {
       bot.roles.set([role_ids.bot, role_ids.verified]);
     })
-    message.channel.send(`Uncertified \`${bot.username}\``);
-
-
-
-
-
+    message.channel.send(`<@${bot.botid}> has been un-certified successfully.`);
 
   }
 

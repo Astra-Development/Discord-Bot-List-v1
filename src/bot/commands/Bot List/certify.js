@@ -54,7 +54,7 @@ module.exports = class extends Command {
         message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid)).then(bot => {
             bot.roles.set([role_ids.cert_bot, role_ids.bot, role_ids.verified]);
         })
-        message.channel.send(`Certified \`${bot.username}\``);
+        message.channel.send(`<@${bot.botid}> has been certified successfully!`);
     }
     async init() {
         modLog = this.client.channels.cache.get(mod_log_id);
