@@ -49,7 +49,7 @@ const botsSchema = new mongoose.Schema({
   },
   support: {
     type: String,
-    required: true
+    required: false
   },
   website: {
     type: String
