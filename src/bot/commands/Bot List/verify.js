@@ -19,8 +19,7 @@ module.exports = class extends Command {
         return message.channel.send({
                 embed: {
                     color: 'RED',
-                    description: `> you do not have enough permissions to run this command.`,
-                    timestamp: new Date(),
+                    description: `${message.author}, You do not have enough permissions to run this command.`,
                 }
             });
         if (!user || !user.bot) return message.channel.send(`Ping a **bot**.`);
@@ -39,8 +38,7 @@ module.exports = class extends Command {
         return message.channel.send({
             embed: {
                 color: 'RED',
-                description: `\`${bot.username}\` already verified`,
-                timestamp: new Date(),
+                description: `${message.author}, \`${bot.username}\` is already verified`,
             }
         });
 

@@ -33,7 +33,6 @@
       "cert_bot": "xxxxxxxxxx"
     },
     "botreviewer": [
-      // You can add more bot reviewerd by following the below format
       "user-id-1",
       "user-id-2"
     ]

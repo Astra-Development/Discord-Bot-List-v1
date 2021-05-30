@@ -3881,7 +3881,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
     margin: 10px;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
+    min-width: 50;
     word-wrap: break-word;
     background-color: #303030;
     background-clip: border-box;

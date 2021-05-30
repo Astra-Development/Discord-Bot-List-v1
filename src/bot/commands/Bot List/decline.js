@@ -37,7 +37,7 @@ module.exports = class extends Command {
         return message.channel.send({
             embed: {
                 color: 'RED',
-                description: `this bot is not on our botlist`,
+                description: `${message.author} This bot is not on our botlist`,
                 timestamp: new Date(),
             }
         });
@@ -45,7 +45,7 @@ module.exports = class extends Command {
         return message.channel.send({
                 embed: {
                     color: 'RED',
-                    description: `> you do not have enough permissions to run this command.`,
+                    description: `${message.author}, You do not have enough permissions to run this command.`,
                     timestamp: new Date(),
                 }
             });
