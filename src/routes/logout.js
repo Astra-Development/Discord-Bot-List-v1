@@ -10,9 +10,9 @@ route.get("/", async (req, res) => {
         }else{
         let embed = new MessageEmbed()
         .setAuthor(`${req.user.username}#${req.user.discriminator}`, `https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png?size=256`)
-        .setColor('BLUE')
+        .setColor('RED')
         .setThumbnail(`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png?size=256`)
-        .setDescription(`<@${req.user.id}>, Goodbye`);
+        .setDescription(`<@${req.user.id}> (${req.user.id}), Logged out!`);
         req.app.get('client').channels.cache.get(server.website_logs).send(embed)
             req.logout();
             res.redirect(`/`);
