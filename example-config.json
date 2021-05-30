@@ -21,6 +21,7 @@
     "like_log": "xxxxxxxxxx",
     "botOwners": "xxxxxxxxxx",
     "mod_log_id": "xxxxxxxxxx",
+    "website_logs": "xxxxxxxxxx",
     "admin_user_ids": "xxxxxxxxxx",
     "role_ids": {
       "bot": "xxxxxxxxxx",
