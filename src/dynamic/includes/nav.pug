@@ -7,221 +7,56 @@ head(cfapps-selector='head')
   script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js')
   script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js')
-nav.navbar.navbar-expand-lg.navbar-dark.p-2.pl-4.pr-4.mainnav(style='background:#111111;height:75px;position:fixed;top:0;left:0;right:0;z-index:10000;')
+
+nav.navbar.navbar-expand-lg.navbar-dark.p-1.pl-4.pr-4.mainnav(style='background:#111111;')
   .container
-    a.navbar-brand(href='/')
-      img#logoimg(style='height:48px; width:48px;', src='/assets/img/logo.png')
-      span.pl-2(style='font-size:16px;font-weight:900;') Astra Bots
-    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor02', aria-controls='navbarColor02', aria-expanded='true', aria-label='Toggle navigation')
+    a.navbar-brand.logoholder(href='/')
+      img#logoimg(style='height:55px; width:55px;' src='/assets/img/logo.png' alt='VB-Logo')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarColor02' aria-controls='navbarColor02' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
-    #navbarColor02.navbar-collapse.collapse(style='background: rgb(17, 17, 17);')
-      ul.navbar-nav.mr-auto
-      ul.nav.navbar-nav.navbar-right.mainlink
-        a(style='text-decoration:none!important;', href='/')
-          li.nav-item.nv
-            span.nav-link Home
-        a(style='text-decoration:none!important;', href='/add')
-          li.nav-item.nv
-            span.nav-link Add Bot
-        a(style='text-decoration:none!important;', href='/join', target='_blank')
-          li.nav-item
-            span.nav-link Support
-        if (req.user) 
-         a(style='text-decoration:none!important;', href='/me')
-          li.nav-item.active
-            span.nav-link #{req.user.username}##{req.user.discriminator}    
-        else
-         a(style='text-decoration:none!important;', href='/login')
-          li.nav-item
-            span.nav-link Login
-
-            
-      #google_translate_element
-        script(type='text/javascript').
-          function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-          }
-
-  script(type='text/javascript', src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit')
-
-
-style.
-  .nav-item {
-  padding:15px 25px;
-  border-bottom:2px solid #111111;
-  transition:0.2s;
-  }
-  .nav-item:hover, .nav-item.active {
-  border-bottom:2px solid #DDDDDD;
-  }
-  .nav-link {
-  color:#ffffff!important;
-  font-weight:lighter!important;
-  }
-  @media only screen and (max-width: 991px) {
-  .nav-item:hover, .nav-item.active {
-  border-bottom:none;
-  }
-  }
-  .moredrop:after { content: none }
-  /* DISCORD BUTTON */
-  .btn-discord {
-  color: #fff;
-  background-color: #6F85D2;
-  border-color: #6F85D2;
-  }
-  .btn-discord:hover {
-  color: #fff;
-  background-color: #5B6CAB;
-  border-color: #5B6CAB;
-  }
-  .btn-discord:focus, .btn-discord.focus {
-  color: #fff;
-  background-color: #5B6CAB;
-  border-color: #5B6CAB;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(111, 133, 210, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(111, 133, 210, 0.5);
-  }
-  .btn-discord.disabled, .btn-discord:disabled {
-  color: #fff;
-  background-color: #39446B;
-  border-color: #39446B;
-  }
-  .btn-discord:not(:disabled):not(.disabled):active, .btn-discord:not(:disabled):not(.disabled).active,
-  .show > .btn-discord.dropdown-toggle {
-  color: #fff;
-  background-color: #5B6CAB;
-  border-color: #5B6CAB;
-  }
-  .btn-discord:not(:disabled):not(.disabled):active:focus, .btn-discord:not(:disabled):not(.disabled).active:focus,
-  .show > .btn-discord.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(111, 133, 210, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(111, 133, 210, 0.5);
-  }
-  .btn-purple{
-  color:#fff;
-  background-color:#B04BEC;
-  border-color:#B04BEC
-  }
-  .btn-purple:hover{
-  color:#fff;
-  background-color:#8639B2;
-  border-color:#8639B2
-  }
-  .btn-purple.focus,.btn-purple:focus{
-  color:#fff;
-  background-color:#8639B2;
-  border-color:#8639B2;
-  -webkit-box-shadow:0 0 0 0.2rem rgba(176, 75, 236, 0.5);
-  box-shadow:0 0 0 0.2rem rgba(176, 75, 236, 0.5)
-  }
-  .btn-purple.disabled,.btn-purple:disabled{
-  color:#fff;
-  background-color:#733199;
-  border-color:#733199
-  }
-  .btn-purple:not(:disabled):not(.disabled).active,.btn-purple:not(:disabled):not(.disabled):active,.show > .btn-purple.dropdown-toggle{
-  color:#fff;
-  background-color:#733199;
-  border-color:#733199
-  }
-  .btn-purple:not(:disabled):not(.disabled).active:focus,.btn-purple:not(:disabled):not(.disabled):active:focus,.show > .btn-purple.dropdown-toggle:focus{
-  -webkit-box-shadow:0 0 0 0.2rem rgba(176, 75, 236, 0.5);
-  box-shadow:0 0 0 0.2rem rgba(176, 75, 236, 0.5)
-  }
-  /* ---------------------------------------- */
-  .jumbotron {
-  background:url("https://discord.mx/QpwAeOeqkg.png");
-  background-repeat:repeat;
-  background-position:0 0;
-  /* background-attachment:fixed; */
-  background-color:#181818;
-  animation:animatedBackground 70s linear infinite;
-  animation-direction:alternate
-  }
-  @keyframes animatedBackground{
-  from{
-  background-position:0 0
-  }
-  to{
-  background-position:100% 0
-  }
-  }
-
-style.
-  body {
-  background:url("/assets/img/particles.png");
-  background-repeat:repeat;
-  background-position:0 0;
-  background-attachment:fixed;
-  background-color:#222222;
-  animation:animatedBackground 50s linear infinite;
-  animation-direction:alternate
-  }
-  .wrapper {
-  min-height: 100vh;
-  }
-  .vcenter-item {
-  display: flex;
-  align-items: center;
-  }
-  #home {
-  width:100%;
-  }
-  .title {
-  font-family: Arial;
-  height: 350px;
-  z-index: 3;
-  color: #fff;
-  text-align: center;
-  }
-  .title .desc {
-  font-size: 15px;
-  font-weight: 400;
-  margin-top: 5px;
-  text-shadow:0 5px 5px #000;
-  }
-  .logo {
-  width: 180px;
-  height: 180px;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-name: shadoww;
-  margin-top: 10px;
-  border-radius:100%;
-  top:0;
-  }
-  @keyframes shadoww {
-  0%   {box-shadow:0 10px 10px #0A0A0A;}
-  /*   25%  {box-shadow:10px 0 10px #0A0A0A;}
-  50%  {box-shadow:0 -10px 10px #0A0A0A;}
-  75%  {box-shadow:-10px 0 10px #0A0A0A;}
-  100% {box-shadow:0 10px 10px #0A0A0A;} */
-  }
-
-script.
-  $('.nvhome').addClass('active');
-
-script.
-  // disable right click
-  document.addEventListener('contextmenu', event => event.preventDefault());
-  document.onkeydown = function (e) {
-  // disable F12 key
-  if(e.keyCode == 123) {
-  return false;
-  }
-  // disable I key
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
-  return false;
-  }
-  // disable J key
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-  return false;
-  }
-  // disable U key
-  if(e.ctrlKey && e.keyCode == 85) {
-  return false;
-  }
-  }
+    #navbarColor02.collapse.navbar-collapse
+      ul.navbar-nav.mainlink.mr-auto
+        li.nav-item
+          a.nav-link.nvhome(href='/')
+            i.fad.fa-home.mr-1
+            |  Home
+        //
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fad fa-search mr-1"></i> Search</a>
+          <div class="dropdown-menu fade">
+          <a class="dropdown-item" href="/bot/search">Search Bots</a>
+          <a class="dropdown-item" href="/pack/search">Search Packs</a>
+          </div>
+          </li>
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false')
+            i.fad.fa-paper-plane.mr-1
+            |  Submit
+          .dropdown-menu.fade.fade-up
+            a.dropdown-item(href='/add')
+              i.fad.fa-robot.mr-2
+              |  Add Bot
+        li.nav-item
+          a.nav-link(href='/join')
+            i.fab.fa-discord.mr-1
+            |  Discord
+      ul.nav.navbar-nav.navbar-right
+       if (req.user)
+        li.nav-item.dropdown
+          a.nav-link(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false')
+            img.nav-userimg(src=`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}`)
+            b #{ req.user.username}
+            small ##{req.user.discriminator}
+          .dropdown-menu.dropdown-menu-right.fade.fade-up(style='min-width:200px;')
+            a.dropdown-item(href='/me')
+              i.fad.fa-tachometer-alt.mr-2
+              |  Dashboard
+            .dropdown-divider
+            a.dropdown-item.dropdown-danger(href='/logout')
+              i.fad.fa-sign-out.mr-2
+              |  Logout
+       else
+            li.nav-item
+             a.nav-link(href='/login')
+              i.fab.fa-user.mr-1
+              |  Login

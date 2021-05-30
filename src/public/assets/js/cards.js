@@ -48,7 +48,7 @@ function loadMore(res) {
 					<div class="w-100">
 					</div></div><div class="card-body pt-0 pb-0">
 			<h4 class="mb-0 text-center pt-1"><b>${bot.username}</b>  
-				<span class="certifiedbadge" data-toggle="tooltip" title="" data-original-title="Certified Bot">
+				<span class="verifiedbadge" data-toggle="tooltip" title="" data-original-title="verified Bot">
          <span class="text-danger mr-1">
 					<i class="fas fa-check-circle"></i>
          </span>
@@ -57,16 +57,8 @@ function loadMore(res) {
 			<p class="mb-2 text-center text-muted botdesc">${bot.description}</p>
 		</div></div>
 		<hr class="mt-1 mb-3 bg-secondary">
-			<div class="card-body pt-0 botcard-btnholder">
-	<div class="btn-group btn-block">
-		<a class="btn btn-sm btn-secondary" style="width:50%;" href="/bots/like/${bot.botid}">Vote</a>
-	</div>
-	<div class="btn-group btn-block">
-		<a class="btn btn-sm btn-secondary" style="width:50%;" href="https://discord.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0">Invite</a>
-	</div>
-	<a class="btn btn-sm btn-blue btn-block" href="/bots/${bot.botid}/">View Bot</a>
-</div>
-		</div>`
+			<div class="card-body pt-0 botcard-btnholder"><div class="btn-group btn-sm"><a class="btn btn-sm btn-secondary" style="width:50%;" href="/bots/like/${bot.botid}/">Vote Bot</a></div><div class="btn-group btn-sm"><a class="btn btn-sm btn-secondary" style="width:50%;" href="https://discord.com/oauth2/authorize?client_id=${bot.botid}&amp;scope=bot&amp;permissions=0"> Invite Bot</a></div><div class="btn-group btn-sm"><a class="btn btn-sm btn-blue" style="width:50%;" href="/bots/${bot.botid}/">View Bot</a></div></div>
+		</div`
 
     document.getElementById('cards').insertAdjacentHTML("beforeend", html)
   })

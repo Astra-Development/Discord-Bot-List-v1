@@ -10,9 +10,9 @@ route.get("/", passport.authenticate('discord', {
 }), function(req, res) {
         res.redirect(req.session.url || "/me");
     let embed = new MessageEmbed()
-    .setAuthor(`${req.user.username}#${req.user.discriminator}`, `https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png?size=256`)
+    .setAuthor(`${req.user.username}#${req.user.discriminator}`, `https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}`)
     .setColor('#4d79ff')
-    .setThumbnail(`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}.png?size=256`)
+    .setThumbnail(`https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}`)
     .setDescription(`<@${req.user.id}> (${req.user.id}), Welcome to our Bot List!`)    
     req.app.get('client').channels.cache.get(server.website_logs).send(embed)
 });
