@@ -1,22 +1,9 @@
 const { Router } = require("express");
-const sanitizeHtml = require('sanitize-html');
 const { auth } = require("@utils/discordApi");
-const checkFields = require('@utils/checkFields');
+const { MessageEmbed } = require("discord.js");
 const Bots = require("@models/bots");
-const { web: {domain_with_protocol}, server: {id} } = require("@root/config.json");
+const checkFields = require('@utils/checkFields');
 const { server } = require("@root/config.json");
-
-const opts = {
-    allowedTags: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'p', 'a', 'ul', 'ol',
-    'nl', 'li', 'b', 'i', 'strong', 'em', 'strike', 'hr', 'br',
-    'table', 'thead', 'caption', 'tbody', 'tr', 'th', 'td', 'pre', 'img', 's', 'u'],
-    disallowedTagsMode: 'discard',
-    allowedAttributes: {
-        a: [ 'href' ],
-        img: [ 'src' ]
-    },
-    allowedSchemes: [ 'https' ]
-}
 
 const route = Router();
 

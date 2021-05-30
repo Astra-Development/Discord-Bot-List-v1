@@ -38,7 +38,7 @@ function loadMore(res) {
 				<div class="w-100 text-center">
 					</div>
 				</div></div="">
-		<img style="width:150px;height:150px;" alt="Bot Avatar" src="${bot.logo}" loading="lazy" draggable="false" class="cardimg"></div>
+		<img style="width:150px;height:150px;border-radius:50%;" alt="Bot Avatar" src="${bot.logo}" loading="lazy" draggable="false" class="cardimg"></div>
 		<div class="card-body pt-0 pb-0">
 		<div class="w-100">
 						<div class="botcount mb-2 text-damp text-bold" data-toggle="tooltip" data-placement="left" title="" data-original-title="Votes This Month">

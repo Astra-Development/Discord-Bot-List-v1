@@ -84,12 +84,12 @@ style.
         //     option Yes
         //     option No
         
-        // .form-group
-        //   label.mb-1 Does your bot follow Discord ToS and Discord Bot Directory rules ?
-        //   select#tos.form-control(required='')
-        //     option(disabled='' selected='' hidden='' value='certify') Select your option
-        //     option Yes
-        //     option No
+        .form-group
+          label.mb-1 Does your bot follow Discord ToS and Discord Bot Directory rules ?
+          select#tos.form-control(required='')
+            option(disabled='' selected='' hidden='' value='certify') Select your option
+            option Yes
+            option No
 
         .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
             <br />
