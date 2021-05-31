@@ -11,13 +11,13 @@ Astra Bot List is an open-source!nt branch may have newer additions/features, bu
 
 # ScreenShots
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/39243722/119623542-f428c980-be10-11eb-90e1-79025102b715.png">
+  <img src="https://user-images.githubusercontent.com/39243722/120173269-8a436200-c20c-11eb-84cc-18115a4be76c.png">
 </p>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/39243722/119623605-04d93f80-be11-11eb-92f6-1c094c4096e6.png">
+  <img src="https://user-images.githubusercontent.com/39243722/120173403-acd57b00-c20c-11eb-8b2e-e5e3b09dcc69.png">
 </p>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/39243722/119623644-0efb3e00-be11-11eb-8165-8ba55c33f546.png">
+  <img src="https://user-images.githubusercontent.com/39243722/120173517-c5459580-c20c-11eb-96e3-2683d73c456f.png">
 </p>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/39243722/119623679-191d3c80-be11-11eb-9191-5f8bbd8d7bbc.png">
