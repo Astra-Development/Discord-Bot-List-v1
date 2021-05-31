@@ -29,11 +29,6 @@ module.exports = async (req, b = null) => {
         return { success: false, message: "Invalid Captcha" }
 
     // Validate captcha
-    try {
-        await recaptcha.validate(data.recaptcha_token)
-    } catch (e) {
-        return { success: false, message: "Invalid Captcha" }
-    }
 
     // Check that all the fields are filled in
     if (!data.long.length || !data.description.length || !data.prefix.length)
