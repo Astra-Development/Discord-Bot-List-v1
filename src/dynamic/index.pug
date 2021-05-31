@@ -84,13 +84,9 @@ if (bots)
  each val, i in bots
   .card.botcard(style=`transform: translate(0px, 0px); opacity: 1;`)
    .card-body.p-3.pb-2.botcard-hassplash(style=`border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("/assets/img/certified-card-bg.png");`)
-     img.cardimg(style='width:150px;height:150px; border-radius:50%;', alt='Bot Avatar', src=val.logo, loading='lazy', draggable='false')
+     img.cardimg(style='width:130px;height:130px; border-radius:50%;', alt='Bot Avatar', src=val.logo, loading='lazy', draggable='false')
    .card-body.pt-0.pb-0
      .w-100
-     span.text-warning.mr-1
-       i.fas.fa-badge-check
-       a.badge.badge-secondary.mb-1(style=`margin-right:3px;`) CERTIFIED
-       <br /><br />
        .botcount.mb-2.text-damp.text-bold(data-toggle=`tooltip`, data-placement=`left`, title=``, data-original-title=`Votes This Month`)
          span.float-left.text-white.h-100
            i.fas.fa-star.pt-1.pb-1
