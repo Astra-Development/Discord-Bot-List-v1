@@ -15,13 +15,13 @@ async function load() {
 
   $('#loading').css("display", "none");
 
-  let selection = BotList.slice(n, n + 10);
+  let selection = BotList.slice(n, n + 8); // Card Displaying (8 cards per scroll)
   loadMore(selection);
 
   $(window).scroll(function() {
     if ($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
-      n += 10;
-      loadMore(BotList.slice(n, n + 10));
+      n += 0;
+      loadMore(BotList.slice(n, n + 0));
     }
   });
 };

@@ -151,6 +151,7 @@ $( document ).ready(async function() {
             { name: 'tools', groups: [ 'tools' ] },
             { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
             { name: 'others', groups: [ 'others' ] },
+            { name: 'markdown', groups: [ 'markdown' ] },
             { name: 'about', groups: [ 'about' ] }
         ],
         uiColor: window.getComputedStyle(document.body).getPropertyValue('--background-2').replace(" ", ""),
