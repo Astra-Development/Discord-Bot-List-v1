@@ -41,10 +41,6 @@ function loadMore(res) {
 		<img style="width:150px;height:150px;border-radius:50%;" alt="Bot Avatar" src="${bot.logo}" loading="lazy" draggable="false" class="cardimg"></div>
 		<div class="card-body pt-0 pb-0">
 		<div class="w-100">
-						<div class="botcount mb-2 text-damp text-bold" data-toggle="tooltip" data-placement="left" title="" data-original-title="Votes This Month">
-							<span class="float-left text-white h-100">
-								<i class="fas fa-star pt-1 pb-1"></i>
-							</span>${bot.likes || 0}</div>
 					<div class="w-100">
 					</div></div><div class="card-body pt-0 pb-0">
 			<h4 class="mb-0 text-center pt-1"><b>${bot.username}</b>  
