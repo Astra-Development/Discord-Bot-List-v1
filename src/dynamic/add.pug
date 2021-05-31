@@ -37,19 +37,19 @@ style.
 .container
           .row
 .col-md-12
-      
+      <center>
         .row
           .col-md-6
             .form-group
               label.mb-1 Client ID
-              input#botid.input.form-control(type='text' placeholder=' ')
+              input#botid.input.form-control(style='width:70%;', type='text' placeholder=' ')
               small.form-text.text-muted You can get this ID from the Discord developer docs  
                 span.text-danger (Required)
 
           .col-md-6
             .form-group
               label.mb-1 Bot Owner ID
-              input.form-control(style='cursor: no-drop', value=`${req.user.id}`, disabled='')
+              input.form-control(style='cursor: no-drop; width:70%', value=`${req.user.id}`, disabled='')
               small.form-text.text-muted This ID is yours!
           
           .col-md-6
@@ -95,7 +95,7 @@ style.
               label.mb-1 Website
               input#website.form-control(type='text' placeholder=' ')
               small.form-text.text-muted The website of your bot. Full URLs only.
-
+        <center>
           .col-md-6
             .form-group
               label.mb-1 Github
