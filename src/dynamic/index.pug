@@ -33,13 +33,12 @@ style.
   img.bot-img(src='/assets/img/logo.png', height="150")
   br
   h1#fat.mb-0 Astra
-  span Find the Bots that suit you best
-  br
-  span It's available and public for everyone
+  span.typed
   center
    .col-lg-6.featuresec
     .featurecon
       img(src='/assets/img/home-banner.gif', height="60")
+      <br /><br />
 <br /><br />
 .container.mt-2.pb-5
   .row.justify-content-center
@@ -47,8 +46,6 @@ style.
       b Attention!
       |  This website is still in early beta! &nbsp;
       a.btn.btn-sm.btn-blue(href='/join', target='_blank') Support
-
-<br />
 <center>
  .col-md-7
   .row.thesearch
@@ -159,6 +156,8 @@ style.
 
 include includes/footer.pug
 
+
+// SEARCH BAR
 script.
         const node = document.getElementById("searchbar");
         node.addEventListener("keyup", function(event) {
@@ -167,6 +166,34 @@ script.
         }
         });
 
+// AUTOMATIC TYPING 
+script(src='https://cdn.jsdelivr.net/npm/typed.js@2.0.9')
+script.
+  var typed = new Typed('.typed', {
+  strings: ["Find the Bots that suit you best!",
+  "It's available and public for everyone!",
+  "Have FUN!",
+  "Do whatever you like without any interruptions!"],
+  typeSpeed: 70,
+  backSpeed: 50,
+  loop: true,
+  backDelay: 3000,
+  contentType: 'html'
+  });
+  $('.nvhome').addClass('active');
+  function get(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+  results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\\+/g, ' '));
+  }
+  if(get('party') == "time") {$(window).on("load", function () {confetti.start()})}
+
+
+// HEADER ANIMATIONS
 style.
   .featuresec {
   height: 200px;
