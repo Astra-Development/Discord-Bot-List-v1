@@ -87,7 +87,7 @@ if (bots)
      img.cardimg(style='width:130px;height:130px; border-radius:50%;', alt='Bot Avatar', src=val.logo, loading='lazy', draggable='false')
    .card-body.pt-0.pb-0
      .w-100
-       .botcount.mb-2.text-damp.text-bold(data-toggle=`tooltip`, data-placement=`left`, title=``, data-original-title=`Votes This Month`)
+       .botcount.mb-2.text-damp.text-bold(style='width:50%;', data-toggle=`tooltip`, data-placement=`left`, title=``, data-original-title=`Votes This Month`)
          span.float-left.text-white.h-100
            i.fas.fa-star.pt-1.pb-1
          | #{val.likes || 0}
