@@ -36,27 +36,17 @@ include includes/nav.pug
   script(src='https://www.google.com/recaptcha/api.js')
   link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css')
   link(rel='stylesheet', href='/assets/css/bootstrap-toaster.css')
-  style.
-    .botdesc img {max-width:100% !important;}
-    .botdesc table {max-width:100% !important;}
-    .botlogo {
-    max-width:100%;
-    border-radius:100%;
-    margin:auto 0;
-    max-height:150px;
-    }
-    @media only screen and (max-width: 767px) {
-    .botlogo{
-    margin:0 auto;
-    max-width: 150px;
-    }
-    .maintron {
-    text-align:center;
-    }
-    }
-    #restarts {cursor:pointer;}
-    #gotoReviews {cursor:pointer;}
-    }
+style.
+  .botdesc img {max-width:100% !important;}
+  .botdesc table {max-width:100% !important;}
+  .botlogo {
+  max-width:100%;
+  border-radius:100%;
+  margin:auto 0;
+  max-height:150px;
+  }
+  @media only screen and (max-width: 767px)
+
     
 .bg-dark.hugething.text-center(style='box-shadow:0 5px 10px #1b1b1b;')
   br
@@ -245,10 +235,11 @@ br
             i.fas.fa-times
            span.btnicon-content Discord Server Not Set
         
-  
     .col-xl-9.col-lg-8.col-md-8.col-sm-12
       .botdesc.markdown
         .b !{desc}
+
+
 
 include includes/footer.pug
 
