@@ -23,7 +23,7 @@ module.exports = class extends Command {
         return message.channel.send({
                 embed: {
                     color: 'RED',
-                    description: `> you do not have enough permissions to run this command.`,
+                    description: `${message.author}, You do not have enough permissions to run this command.`,
                     timestamp: new Date(),
                 }
             });
