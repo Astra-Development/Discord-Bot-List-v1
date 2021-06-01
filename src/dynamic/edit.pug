@@ -32,89 +32,113 @@ style.
   br
   br
 <br />
-    .container
-      body(onload="load()")
-        .main-section
-          form.center
-            .input-holder
+.container
+          .row
+.col-md-12
+      <center>
+        .row
+          .col-md-6
+            .form-group
               label.mb-1 Client ID
-              input#botid.input.form-control(style='cursor: no-drop', type='text' placeholder=' ' value=bot.botid readonly='', disabled='')
+              input#botid.input.form-control(style='cursor: no-drop; width:70%;', type='text' placeholder=' ' value=bot.botid readonly='', disabled='')
               small.form-text.text-muted You can get this ID from the Discord developer docs  
                 span.text-danger (Required)
-            br
-            .input-holder
+          
+          .col-md-6
+            .form-group
+              label.mb-1 Bot Owner ID
+              input.form-control(style='cursor: no-drop; width:70%', value=`${req.user.id}`, disabled='')
+              small.form-text.text-muted This ID is yours!
+
+          .col-md-6
+            .form-group
               label.mb-1 Prefix
-              input#prefix.input.form-control(type='text' placeholder=' ')
+              input#prefix.input.form-control(type='text' placeholder=' ' value=bot.prefix)
               small.form-text.text-muted The prefix your bot responds to. 
                 span.text-danger (Required)
-            br
-            .input-holder
-              label.mb-1 Bot Owner ID
-              input.form-control(value=`${req.user.id}`, disabled='')
-              small.form-text.text-muted This ID is yours!
-            br
-            .input-holder
+
+
+          .col-md-6
+            .form-group
+              label.mb-1 Other owners of this bot
               if (bot.owners.primary == req.user.id)
                 input#owner-ids.input.xinput.form-control(type='text' placeholder=' ' value=String(bot.owners.additional.join(" ")))
-                .placeholder Additional Owner IDs
               else
                 input#owner-ids.input.xinput.form-control(type='text' placeholder=' ' value=String(bot.owners.additional.join(" ")) disabled)
-                .placeholder Only the primary owner can edit additional owners
-            br
-            .input-holder
+              small.form-text.text-muted Separate each ID with a space! 
+                span.text-danger (Optional)
+
+          .col-md-12
+            hr.mb-3.mt-0
+          .col-md-12
+            .form-group
               label.mb-1 Short Description
               input#description.input.form-control(maxlength=max_summary_length type='text' placeholder=' ' value=bot.description)
               small.form-text.text-muted A small description of your bot of max 140 characters. 
                 span.text-danger (Required)
-            br
-            .input-holder
+
+          .col-md-12
+            .form-group
               label.mb-1 Detailed Description
               textarea#longdesc.input.form-control(rows='7') #{bot.long}
               small.form-text.text-muted Max 10.000 length, description of your bot with much details.
                 span.text-danger (Required)
-            br
-            .input-holder
-              select#tags(data-placeholder="Select tags" multiple)
-                each tag of bot_tags
-                  if (bot.tags && bot.tags.includes(tag))
-                    option(selected) #{tag}
-                  else
-                    option #{tag}
 
-            .input-holder
-              input#invite.input.form-control(type='text' placeholder=' ' value=bot.invite)
-              .placeholder Custom Invite
-            br
-            .input-holder
+          // .input-holder
+          //     select#tags(data-placeholder="Select tags" multiple)
+          //       each tag of bot_tags
+          //         if (bot.tags && bot.tags.includes(tag))
+          //           option(selected) #{tag}
+          //         else
+          //           option #{tag}
+
+          .col-md-6
+            .form-group
+              label.mb-1 Support Discord Server
               input#support.input.form-control(type='text' placeholder=' ' value=bot.support)
-              .placeholder Support Server
-            br
-            .input-holder
+              small.form-text.text-muted Invite to the server where users can get support.
+
+          .col-md-6
+            .form-group
+              label.mb-1 Website
               input#website.input.form-control(type='text' placeholder=' ' value=bot.website)
-              .placeholder Website
-            br
-            .input-holder
+              small.form-text.text-muted The website of your bot. Full URLs only.
+          
+          .col-md-6
+            .form-group
+              label.mb-1 Github
               input#github.input.form-control(type='text' placeholder=' ' value=bot.github)
-              .placeholder Github Repository
-            br
-            .input-holder
+              small.form-text.text-muted Link to your bot's Github page (if it's open source).
+         
+          .col-md-6
+            .form-group
+              label.mb-1 Custom Banner
               input#banner.input.form-control(type='text' placeholder=' ' value=bot.banner)
-              .placeholder Custom banner. 
-              span.text-danger (only imgur supported) as example https://imgur.com/IJjThr2.png
-            br
-            // .input-holder
-            //   input#webhook.input.form-control(type='text' placeholder=' ' value=bot.webhook)
-            //   .placeholder Likes Webhook
-            br
+              small.form-text.text-muted (only imgur supported) as example https://imgur.com/IJjThr2.png
+
+          // .col-md-6
+          //  <center>
+          //   .form-group
+          //     label.mb-1 Vote Webhook
+          //     input#webhook.input.form-control(type='text' placeholder=' ' value=bot.webhook)
+
+<br /><br />
+        .container
+          .col-md-12
           center
+            hr.mb-3.mt-0
+            .col-md-12
             a#auth.btn.btn-sm.btn-blue.btn-block(style='width:30%;') Get Authorization token
             a#reset.btn.btn-sm.btn-blue.btn-block(style='width:30%') Reset Authorization token
             br
             br
           
-
+        .container
+          .col-md-12
           center
-            .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
+            hr.mb-3.mt-0
+            .col-md-12
+              .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
             <br />
             a.btn.btn-sm.btn-blue.btn-block(onclick='submit()') Submit
 
