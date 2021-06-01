@@ -107,6 +107,13 @@ style.
             //   .placeholder Likes Webhook
             br
           center
+            a#auth.btn.btn-sm.btn-blue.btn-block(style='width:30%;') Get Authorization token
+            a#reset.btn.btn-sm.btn-blue.btn-block(style='width:30%') Reset Authorization token
+            br
+            br
+          
+
+          center
             .center-inline.g-recaptcha(data-callback='update_token' data-sitekey=site_key data-theme=req.cookies["theme"] || "dark")
             <br />
             a.btn.btn-sm.btn-blue.btn-block(onclick='submit()') Submit

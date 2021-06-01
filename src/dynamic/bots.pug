@@ -131,8 +131,6 @@ br
             span.float-right
               | #{bot.prefix}
 
-        
-
         .common__infocard.d-flex
           .common__infocard-icon.text-damp
             i.fas.fa-vote-yea
@@ -141,6 +139,18 @@ br
             span.float-right(href=`/bots/like/#{bot.botid}`)
               | #{bot.likes || 0}
 
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-clock
+          span.common__infocard-content
+            b Servers
+            if (servers)
+              span.float-right
+                | #{`${servers} servers`}
+            else
+              span.float-right(href=`/bots/like/#{bot.botid}`)
+                | -
+        hr.mt-1.mb-3.bg-secondary
         .common__infocard.d-flex
           .common__infocard-icon.text-damp
               i.fas.fa-circle(class=botUser.presence.status)
@@ -185,17 +195,6 @@ br
             else
               span.float-right(href=`/bots/like/#{bot.botid}`)
                 | Disabled
-
-
-        if (servers)
-         .common__infocard.d-flex
-          .common__infocard-icon.text-damp
-            i.fas.fa-vote-yea
-          span.common__infocard-content
-            b Servers
-            span.float-right
-              | #{`${servers} servers`}
-
 
       #owners
       .bot__owners.w-100.mb-5
