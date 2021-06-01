@@ -78,7 +78,7 @@ style.
 
           .col-md-12
             .form-group
-              label.mb-1 Long Description
+              label.mb-1 Detailed Description
               #editor
               textarea#longdesc.input.form-control(rows='7')
               small.form-text.text-muted Max 10.000 length, description of your bot with much details.
@@ -95,12 +95,18 @@ style.
               label.mb-1 Website
               input#website.form-control(type='text' placeholder=' ')
               small.form-text.text-muted The website of your bot. Full URLs only.
-        <center>
+
           .col-md-6
             .form-group
               label.mb-1 Github
               input#github.form-control(type='text' placeholder=' ')
               small.form-text.text-muted Link to your bot's Github page (if it's open source).
+          
+          .col-md-6
+            .form-group
+              label.mb-1 Custom Banner
+              input#banner.input.form-control(ype='text' placeholder=' ')
+              span.text-danger (only imgur supported) as example https://imgur.com/IJjThr2.png
 
         .container
           .col-md-12

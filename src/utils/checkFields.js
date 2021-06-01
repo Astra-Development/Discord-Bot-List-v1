@@ -21,8 +21,9 @@ function isValidUrl(string) {
     return true;
 }
 
-const allowed = 'https://i.imgur.com/'
+const allowed = 'https://imgur.com/'
 const isValidUrlimgur = (string) => string.substr(0, allowed.length) === allowed
+
 
 module.exports = async (req, b = null) => {
     let data = req.body;
@@ -43,7 +44,7 @@ module.exports = async (req, b = null) => {
         return { success: false, message: "Invalid submission. Check you filled all the fields." }
     
     // Max length for summary and note
-    if (data.description.length > max_summary_length) return { success: false, message: "Your summary is too long." };
+    if (data.description.length > max_summary_length) return { success: false, message: "Your short description is too long." };
     if (String(data.note).length > max_summary_length) return { success: false, message: "Your note is too long." };
 
     // Check if summary or note has HTML.
@@ -55,9 +56,9 @@ module.exports = async (req, b = null) => {
     // Check that the bot's HTML description isn't too long
     let stripped = data.long.replace("/<[^>]*>/g")
     if (stripped.length < min_description_length)
-        return { success: false, message: "Your HTML description is too short" }
+        return { success: false, message: "Your detailed description is too short" }
     if (stripped.length > max_description_length)
-        return { success: false, message: "Your HTML description is too long" }
+        return { success: false, message: "Your detailed description is too long" }
     
     // Check that all the links are valid
     if (data.invite && !isValidUrl(data.invite)) 
