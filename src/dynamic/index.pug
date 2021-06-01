@@ -33,12 +33,13 @@ style.
   img.bot-img(src='/assets/img/logo.png', height="150")
   br
   h1#fat.mb-0 Astra
-  span.typed
+  span Find the Bots that suit you best
+  br
+  span It's available and public for everyone
   center
    .col-lg-6.featuresec
     .featurecon
       img(src='/assets/img/home-banner.gif', height="60")
-      <br /><br />
 <br /><br />
 .container.mt-2.pb-5
   .row.justify-content-center
@@ -46,6 +47,8 @@ style.
       b Attention!
       |  This website is still in early beta! &nbsp;
       a.btn.btn-sm.btn-blue(href='/join', target='_blank') Support
+
+<br />
 <center>
  .col-md-7
   .row.thesearch
@@ -77,10 +80,10 @@ if (bots)
     h2.mb-1
       span.text-warning.mr-1
         i.fad.fa-badge-check
-      h3#fat.mb-0  Certified Bots
+      h1#fat.mb-0  Certified Bots
  each val, i in bots
   .card.botcard(style=`transform: translate(0px, 0px); opacity: 1;`)
-   .card-body.p-3.pb-2.botcard-hassplash(style=`border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("/assets/img/certified-card-bg.png");`)
+   .card-body.p-3.pb-2.botcard-hassplash(style=`border-radius: 4px 4px 0px 0px; background: linear-gradient(rgba(48, 48, 48, 0.3) 50%, rgb(48, 48, 48) 98%), url("${val.banner}");`)
      img.cardimg(style='width:130px;height:130px; border-radius:50%;', alt='Bot Avatar', src=val.logo, loading='lazy', draggable='false')
    .card-body.pt-0.pb-0
      .w-100
@@ -108,7 +111,7 @@ if (bots)
     h2.mb-1
       span.text-danger.mr-1
         i.fad.fa-chevron-up
-      h3#fat.mb-0  Top Voted
+      h1#fat.mb-0  Top Voted
     h5.text-damp Bots that have received the most votes this month!
 
 body(onload="load()")
@@ -156,8 +159,6 @@ style.
 
 include includes/footer.pug
 
-
-// SEARCH BAR
 script.
         const node = document.getElementById("searchbar");
         node.addEventListener("keyup", function(event) {
@@ -166,34 +167,6 @@ script.
         }
         });
 
-// AUTOMATIC TYPING 
-script(src='https://cdn.jsdelivr.net/npm/typed.js@2.0.9')
-script.
-  var typed = new Typed('.typed', {
-  strings: ["Find the Bots that suit you best!",
-  "It's available and public for everyone!",
-  "Have FUN!",
-  "Do whatever you like without any interruptions!"],
-  typeSpeed: 70,
-  backSpeed: 50,
-  loop: true,
-  backDelay: 3000,
-  contentType: 'html'
-  });
-  $('.nvhome').addClass('active');
-  function get(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\\[\]]/g, '\\$&');
-  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-  results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\\+/g, ' '));
-  }
-  if(get('party') == "time") {$(window).on("load", function () {confetti.start()})}
-
-
-// HEADER ANIMATIONS
 style.
   .featuresec {
   height: 200px;

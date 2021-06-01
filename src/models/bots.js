@@ -57,6 +57,9 @@ const botsSchema = new mongoose.Schema({
   github: {
     type: String
   },
+  banner: {
+    type: String
+  },
   webhook: {
     type: String
   },

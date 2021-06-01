@@ -21,6 +21,9 @@ function isValidUrl(string) {
     return true;
 }
 
+const allowed = 'https://i.imgur.com/'
+const isValidUrlimgur = (string) => string.substr(0, allowed.length) === allowed
+
 module.exports = async (req, b = null) => {
     let data = req.body;
 
@@ -65,6 +68,8 @@ module.exports = async (req, b = null) => {
         return { success: false, message: "Invalid Website" }
     if (data.github && !isValidUrl(data.github))
         return { success: false, message: "Invalid Github repository" }
+    if (data.banner && !isValidUrlimgur(data.banner))
+        return { success: false, message: "Invalid banner" }
     if (data.webhook && !isValidUrl(data.webhook))
         return { success: false, message: "Invalid Webhook URL" }
 
