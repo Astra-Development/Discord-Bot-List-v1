@@ -100,4 +100,41 @@ route.get('/:id', async (req, res) => {
   });
 })
 
+route.get('/:id/botinfo', async (req, res) => {
+  const botID = `${req.params.id}`;
+  const botDB = await Bots.findOne({ botid: req.params.id }, { _id: false, auth: false });
+  if (!botDB) return res.status(400).send({
+    code: 400,
+    msg: 'No valid bot id was found within the request headers.',
+  });
+  // if (req.user.id !== botDB.dataValues.ownerID) return res.redirect('/404');
+  const bot = (await req.app.get('client').users.fetch(req.params.id).catch(() => {})) || null;
+  if (!bot) {
+    return res.redirect('/404');
+  }
+  res.status(200).send({
+    code: 200,
+    status: 'success',
+    data: [
+      {
+        BotID: botID,
+        BotTag: bot.tag,
+        OwnerID: botDB.ownerID,
+        BotPrefix: botDB.prefix,
+        'Support server': `${botDB.support}`,
+        Website: botDB.website,
+        Github: botDB.github,
+        certify: botDB.certify,
+        likes: botDB.likes,
+        nsfw: botDB.nsfw,
+        createdAt: botDB.createdAt,
+        'Bot invite': botDB.invite,
+        'Bot Tags': botDB.tags,
+        'Short description': botDB.description,
+        'Long description': botDB.long,
+      },
+    ],
+  });
+});
+
 module.exports = route;

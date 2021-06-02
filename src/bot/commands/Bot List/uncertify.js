@@ -28,14 +28,14 @@ module.exports = class extends Command {
   }
 
   async run(message, [user]) {
-    if (!perms.server.botreviewer.includes(message.author.id)) 
-    return message.channel.send({
-            embed: {
-                color: 'RED',
-                description: `${message.author}, You do not have enough permissions to run this command.`,
-                timestamp: new Date(),
-            }
-        });
+    if (!perms.server.botreviewer.includes(message.author.id))
+      return message.channel.send({
+        embed: {
+          color: 'RED',
+          description: `${message.author}, You do not have enough permissions to run this command.`,
+          timestamp: new Date(),
+        }
+      });
 
 
 
@@ -53,23 +53,23 @@ module.exports = class extends Command {
 
     if (!user || !user.bot) return message.channel.send(`Ping a **bot**.`);
 
-   
-    let bot = await Bots.findOne({ botid: user.id }, { _id: false });
-    if(bot === null)
-    return message.channel.send({
-        embed: {
-            color: 'RED',
-            description: `${message.author} This bot is not on our botlist`,
-        }
-    });
 
-    if(bot.certify === false)
-    return message.channel.send({
+    let bot = await Bots.findOne({ botid: user.id }, { _id: false });
+    if (bot === null)
+      return message.channel.send({
         embed: {
-            color: 'RED',
-            description: `${message.author}, \`${bot.username}\` is already un-certify`,
+          color: 'RED',
+          description: `${message.author} This bot is not on our botlist`,
         }
-    });
+      });
+
+    if (bot.certify === false)
+      return message.channel.send({
+        embed: {
+          color: 'RED',
+          description: `${message.author}, \`${bot.username}\` is already un-certify`,
+        }
+      });
 
 
     const botUser = await this.client.users.fetch(user.id);

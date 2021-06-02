@@ -33,22 +33,22 @@ module.exports = class extends Command {
 
     let bot1 = await Bots.findOne({ botid: Member.id }, { _id: false });
 
-    if(bot1 === null)
-        return message.channel.send({
-            embed: {
-                color: 'RED',
-                description: `${message.author} This bot is not on our botlist`,
-                timestamp: new Date(),
-            }
-        });
-    if (!perms.server.botreviewer.includes(message.author.id)) 
-        return message.channel.send({
-                embed: {
-                    color: 'RED',
-                    description: `${message.author}, You do not have enough permissions to run this command.`,
-                    timestamp: new Date(),
-                }
-            });
+    if (bot1 === null)
+      return message.channel.send({
+        embed: {
+          color: 'RED',
+          description: `${message.author} This bot is not on our botlist`,
+          timestamp: new Date(),
+        }
+      });
+    if (!perms.server.botreviewer.includes(message.author.id))
+      return message.channel.send({
+        embed: {
+          color: 'RED',
+          description: `${message.author}, You do not have enough permissions to run this command.`,
+          timestamp: new Date(),
+        }
+      });
     if (!Member || !Member.bot) return message.channel.send(`You didn't ping a bot to decline.`)
     let e = new MessageEmbed()
       .setTitle('Decline Reasons')

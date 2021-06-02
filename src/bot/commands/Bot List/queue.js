@@ -20,9 +20,9 @@ module.exports = class extends Command {
     if (bots.length === 0) cont = "\```Oops! It seems like nobody applied a new bot!\```";
 
     let embed = new MessageEmbed()
-        .setAuthor(`${message.author.tag} here is the botlist queue`, message.author.displayAvatarURL({format: "png", size: 256}))
-        .setColor('ORANGE')
-        .setDescription(cont)
-        message.channel.send(embed)
-    }
+      .setAuthor(`${message.author.tag} here is the botlist queue`, message.author.displayAvatarURL({ format: "png", size: 256 }))
+      .setColor('ORANGE')
+      .setDescription(cont)
+    message.channel.send(embed)
+  }
 };
