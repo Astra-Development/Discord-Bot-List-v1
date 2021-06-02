@@ -92,7 +92,7 @@ Botlist'i başlatmak için `npm start` bu komutu kullan :)
 
 
 # 📝 Web sitesinin alt bilgisini/footer kısmını değiştirmeyin!
-![image](https://user-images.githubusercontent.com/39243722/118507353-d4214800-b736-11eb-8511-19cebb50e0ff.png)
+![image](https://user-images.githubusercontent.com/39243722/120484241-8c97ee80-c3bb-11eb-9555-a9f7db4aa6ed.png)
 > Botlistinizi altbilgi/footer olmadan bulursam, haklarımızı savunmaktan çekinmeyeceğim.
 
 # Lisans Bildirimi
