@@ -83,8 +83,10 @@ style.
               textarea#longdesc.input.form-control(rows='7') #{bot.long}
               small.form-text.text-muted Max 10.000 length, description of your bot with much details.
                 span.text-danger (Required)
-
-          // .input-holder
+          
+          // .col-md-12
+          //   .form-group
+          //     label.mb-1 Tags
           //     select#tags(data-placeholder="Select tags" multiple)
           //       each tag of bot_tags
           //         if (bot.tags && bot.tags.includes(tag))
@@ -97,6 +99,8 @@ style.
               label.mb-1 Custom Invite
               input#invite.input.form-control(type='text' placeholder=' ' value=bot.invite)
               small.form-text.text-muted A place where users can install your bot on their Discord server.
+                a(target='_blank', href='https://discordapi.com/permissions.html')  Invite Generator
+
 
           .col-md-6
             .form-group
