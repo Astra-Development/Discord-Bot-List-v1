@@ -55,7 +55,7 @@ style.
           .col-md-6
             .form-group
               label.mb-1 Prefix
-              input#prefix.input.form-control(type='text' placeholder=' ')
+              input#prefix.input.form-control(type='text' maxlength="5" placeholder=' ')
               small.form-text.text-muted The prefix your bot responds to. 
                 span.text-danger (Required)
 
@@ -104,9 +104,17 @@ style.
           
           .col-md-6
             .form-group
+              label.mb-1 Donation Link
+              input#donation.input.form-control(type='text' placeholder=' ')
+              small.form-text.text-muted Only [https://donatebot.io/] is allowed!
+                span.text-danger  (Eg: https://donatebot.io/checkout/793149744847257600)
+
+          .col-md-6
+            .form-group
               label.mb-1 Custom Banner
-              input#banner.input.form-control(ype='text' placeholder=' ')
+              input#banner.input.form-control(type='text' maxlength="48" placeholder=' ')
               small.form-text.text-muted (only imgur supported) as example https://imgur.com/IJjThr2.png
+              
         .container
           .col-md-12
           center

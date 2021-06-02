@@ -205,35 +205,45 @@ br
             i.fas.fa-link
           |  Links
         if (bot.github)
-          a.btn.btn-info.btn-block.btn-icon(target='_blank' href=`${bot.github}`)
+          a.btn.btn-blue.btn-block.btn-icon(target='_blank' href=`${bot.github}`)
            .btnicon-icon
             i.fab.fa-github
            span.btnicon-content Github
-        else 
-          a.btn.btn-info.btn-block.btn-icon
-           .btnicon-icon
-            i.fas.fa-times
-           span.btnicon-content Github Not Set
+        // else 
+        //   a.btn.btn-blue.btn-block.btn-icon
+        //    .btnicon-icon
+        //     i.fas.fa-times
+        //    span.btnicon-content Github Not Set
+        if (bot.donation)
+          a.btn.btn-info.btn-block.btn-icon(target='_blank' href=`${bot.donation}`)
+            .btnicon-icon
+              i.fas.fa-donate
+            span.btnicon-content Donate
+        // else
+        //   a.btn.btn-info.btn-block.btn-icon
+        //    .btnicon-icon
+        //     i.fas.fa-times
+        //    span.btnicon-content Discord Server Not Set
         if (bot.website)
           a.btn.btn-success.btn-block.btn-icon(target='_blank' href=`${bot.website}`)
            .btnicon-icon
-            i.fas.fa-Globe
+            i.fas.fa-globe
            span.btnicon-content Website
-        else
-          a.btn.btn-success.btn-block.btn-icon
-           .btnicon-icon
-            i.fas.fa-times
-           span.btnicon-content Website Not Set
+        // else
+        //   a.btn.btn-success.btn-block.btn-icon
+        //    .btnicon-icon
+        //     i.fas.fa-times
+        //    span.btnicon-content Website Not Set
         if (bot.support)
           a.btn.btn-danger.btn-block.btn-icon(target='_blank' href=`${bot.support}`)
             .btnicon-icon
               i.fas.fa-mouse
             span.btnicon-content Discord Server
-        else
-          a.btn.btn-danger.btn-block.btn-icon
-           .btnicon-icon
-            i.fas.fa-times
-           span.btnicon-content Discord Server Not Set
+        // else
+        //   a.btn.btn-danger.btn-block.btn-icon
+        //    .btnicon-icon
+        //     i.fas.fa-times
+        //    span.btnicon-content Discord Server Not Set
         
     .col-xl-9.col-lg-8.col-md-8.col-sm-12
       .botdesc.markdown
