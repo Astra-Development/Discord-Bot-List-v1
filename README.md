@@ -7,6 +7,13 @@
 </p>
 
 <p align="center">
+    <br/><br/>
+    <a href="https://discord.gg/sQQFSnQhdt" target="_blank">
+        <img src="https://img.shields.io/discord/793149744847257600?label=SUPPORT%20SERVER&style=for-the-badge" alt="Discord" />
+    </a>
+</p>
+
+<p align="center">
   Astra Bot List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
 </p>
 
