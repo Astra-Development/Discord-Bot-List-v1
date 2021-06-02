@@ -3,92 +3,97 @@
 </p>
 
 <p align="center">
-  <b>Welcome to Astra Bot List</b>
+  <b>Astra Bot List'e Hoşgeldiniz</b>
 </p>
 
 <p align="center">
     <br/><br/>
     <a href="https://discord.gg/sQQFSnQhdt" target="_blank">
-        <img src="https://img.shields.io/discord/793149744847257600?label=SUPPORT%20SERVER&style=for-the-badge" alt="Discord" />
+        <img src="https://img.shields.io/discord/793149744847257600?label=DESTEK%20SUNUCUSU&style=for-the-badge" alt="Discord" />
     </a>
 </p>
 
 <p align="center">
-  Astra Bot List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
+ Astra Botlist açık bir kaynaktır. NT dalı yeni eklemeler/özelliklere sahip olabilir, ama aynı zamanda hataları daha fazla hatta güvensiz. Kendin bu riski göz önünde bulundurarak kullan. Eğer soruların varsa, sıkça sorulan sorular kısmına bak lütfen..
 </p>
 
-### Website Preview [Website Link](https://astrabots.xyz/)
-### Do you need help? Join our [Discord Server](https://astrabots.xyz/join)
+### Siteye Göz At [Sitemiz](https://astrabots.xyz/)
+### Yardıma mı ihtiyacın var? Discord Sunucumuza Katıl [Sunucumuz](https://astrabots.xyz/join)
 
-# Setup
-Rename `example.config.json` to `config.json`
-Fill All the **Values**
-Run `npm i`
-Start the bot-list `npm start` :)
+# Kurulum
+`example.config.json` 'u `config.json` şeklinde yeniden adlandır
+Tüm **değerleri** doldur 
+Ve `npm i` 'i çalıştır. 
+Botlist'i başlatmak için `npm start` bu komutu kullan :)
 
-# Dashboard Setup
-**1.** Visit [Discord Developer Portal](https://discord.com/developers/applications)
+# Panel Kurulum
+**1.** Developer Portala gir [Discord Developer Portal](https://discord.com/developers/applications)
 
-**2.** Click on your bot
+**2.** Botuna tıkla
 
-**3.** Go on `OAuth2`
+**3.** `OAuth2` bölümüne gir
 
-**4.** On `Redirects` add your website `domain/api/callback` [Eg. `https://astrabots.xyz/api/callback`]
+**4.** `Redirects`/`Yönlendirmeler` kısmına siteni ekle `domain/api/callback` [Örn. `https://astrabots.xyz/api/callback`]
 
-**5.** Click `Save`
+**5.** `Kaydet` butonuna tıkla
 
-# All Image location
+# Tüm Görüntülerin Konumu
 `src/public/assets/img/`
-[Make sure to keep names as it is]
+[İsimleri olduğu gibi tuttuğunuzdan emin olun]
 
-# MongoURL Value
-**1.** Visit [MongoDB](https://www.mongodb.com/)
+# MongoURL Değeri
+**1.** MongoDB sitesine git [MongoDB](https://www.mongodb.com/)
 
-**2.** Create Clutser
+**2.** `Clutser`/ `Küme` oluştur 
 
-**3.** Click connect
+**3.**  `Connect`/ `Bağlan` 'e tıkla 
 
-**4.** Connect your application & copy the code
+**4.** Uygulamanızı bağlayın ve kodu kopyalayın
 
-**5.** On the left side of MongoDB click on `DataBase Access`
+**5.** MongoDB'nin sol tarafında `DataBase Access` üzerine tıklayın
 
-**6.** Add **New database user**
+**6.** **Yeni veritabanı kullanıcısı** ekleyin
 
-**7.** Add a custom username [Eg. `LuckyTarget-username`] and a password [Eg. `LuckyTarget-password`]
+**7.** Özel bir kullanıcı adı ekleyin [Örn. `LuckyTarget-username`] ve bir şifre [Örn. 'LuckyTarget-şifre']
 
-**8.** Click the add user Button
+**8.** Kullanıcı Ekle Düğmesine tıklayın
 
-**9.** Visit `config.json`
+**9.** `config.json` sayfasına geri gelin
 
-**10.** At `"mongo_url": ""` paste the code you copied from step **4**
+**10.** `"mongo_url": "URL"` URL kısmına **4.** adımdan kopyaladığınız kodu yapıştırın
 
-### **Make sure on `<username>` & `<password>` to replace them with what you created on Step 6-8**
+### **6. ve 8. adımdaki oluşturduğunuz kullanıcı adı ve şifreyi username / password kısımlarına girin, kullanıcı adı veya şifre yanlış ise çalışmaz.**
 
-# Recaptcha_V2 Value
-**1.** Visit [Google Recaptcha Website](https://www.google.com/recaptcha/admin/)
+# Recaptcha_V2 Değeri
+**1.** Google Recaptcha sitesine girin [Google Recaptcha Website](https://www.google.com/recaptcha/admin/)
 
-**2.** Click on `Create` button
+**2.** `Create`/`Oluştur` butonuna tıklayın
 
-**3.** On the `label` section you can put whatever you want
+**3.** `Label`/`Etiket` bölümüne ne istersen koyabilirsin
 
-**4.** Select `reCAPTCHA v2`
+**4.**  `reCAPTCHA v2` 'yi seç!!
 
-**5.** On Domains, add the domain that you have for the **Bot List** [Eg. `astrabots.xyz`] > Click the **+**
 
-**6.** Click on `Submit` Button
 
-![image](https://user-images.githubusercontent.com/39243722/118609705-ac2bf600-b7c3-11eb-9378-6770576dad25.png)
-**7.** After `Submit` button you will be navigate to a page similar like this
-![image](https://user-images.githubusercontent.com/39243722/118610249-3c6a3b00-b7c4-11eb-8eb6-15733fdeb656.png)
-**8.** Copy `Site Key` & `Secret Key` and paste them on `config.json` file
+**5.** Domains/Alan Adları kısmında, **BotList** için sahip olduğunuz alan adınızı ekleyin [Örn. `astrabots.xyz`] > **+** simgesine tıklayın
+
+**6.** `Submit`/`Gönder` butonuna tıklayın
+
+![image](https://user-images.githubusercontent.com/85226977/120470241-fe683c00-c3ab-11eb-813b-e3003492acd9.png)
+
+**7.**  `Submit`/`Gönder` butonuna tıkladıktan sonra alttaki resim gibi bir sayfaya gideceksiniz
+
+![image](https://user-images.githubusercontent.com/85226977/120470173-ebee0280-c3ab-11eb-9fe6-681302353692.png)
+
+**8.**  `Site Key` & `Secret Key` 'i kopyalayın ve `config.json` içerisinde bu bölümlere yapıştırın 
 
 ![image](https://user-images.githubusercontent.com/39243722/118610668-aedb1b00-b7c4-11eb-9eb7-a3fe931afb89.png)
 
 
 
-# 📝 Do not change the footer of the website!
+# 📝 Web sitesinin alt bilgisini/footer kısmını değiştirmeyin!
 ![image](https://user-images.githubusercontent.com/39243722/118507353-d4214800-b736-11eb-8511-19cebb50e0ff.png)
-> If i find your botlist without the footer you are X_X
+> Botlistinizi altbilgi/footer olmadan bulursam, haklarımızı savunmaktan çekinmeyeceğim.
 
-# License Notice
-![License Notice](https://i.ibb.co/Q8vQDTs/image.png)
+# Lisans Bildirimi
+![License Bildirimi](https://i.ibb.co/Q8vQDTs/image.png)
