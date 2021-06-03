@@ -49,12 +49,13 @@ style.
       img.sidebar-header-img(src=userProfile.displayAvatarURL({dynamic: true}))
       h4#fat.mb-0 #{req.user.username}
     .list-group.list-group-flush
+     center
       a.list-group-item(href='/add')
         i.fad.fa-user-plus
         |  Add Bot
-      a.list-group-item(href='/user/edit')
-        i.fad.fa-user-cog.text-info.mr-1
-        |  Settings
+      // a.list-group-item(href='/user/edit')
+      //   i.fad.fa-user-cog.text-info.mr-1
+      //   |  Settings
       hr
       a.list-group-item(href='/logout')
         i.fad.fa-sign-out-alt
