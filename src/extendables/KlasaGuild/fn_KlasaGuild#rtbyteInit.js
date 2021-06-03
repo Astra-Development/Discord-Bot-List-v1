@@ -115,7 +115,6 @@ module.exports = class extends Extendable {
 			.setAuthor(this.language.get('INIT_TITLE'), this.client.user.displayAvatarURL())
 			.setColor(Colors.white)
 			.setImage('https://rtbyte.xyz/img/og-img.jpg')
-			.setTimestamp();
 
 		if (rolesSkipped && !channelsSkipped) {
 			this.client.emit('verbose', `Partially initialized guild: ${this.name} (${this.id}) - role setup skipped, missing permissions`);

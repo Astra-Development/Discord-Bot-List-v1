@@ -1,8 +1,8 @@
 const { Command } = require('klasa');
 const { MessageEmbed } = require('discord.js');
 const Bots = require("@models/bots");
-
-const { server: { mod_log_id, role_ids } } = require("@root/config.json");
+const Users = require("@models/users");
+const { server: { mod_log_id, role_ids, admin_user_ids } } = require("@root/config.json");
 const perms = require("@root/config.json");
 const reasons = {
   "1": `Your bot went offline during testing.`,
@@ -38,18 +38,19 @@ module.exports = class extends Command {
         embed: {
           color: 'RED',
           description: `${message.author} This bot is not on our botlist`,
-          timestamp: new Date(),
         }
       });
+
     if (!perms.server.botreviewer.includes(message.author.id))
       return message.channel.send({
         embed: {
           color: 'RED',
           description: `${message.author}, You do not have enough permissions to run this command.`,
-          timestamp: new Date(),
         }
       });
+
     if (!Member || !Member.bot) return message.channel.send(`You didn't ping a bot to decline.`)
+
     let e = new MessageEmbed()
       .setTitle('Decline Reasons')
       .setColor('#ff0000')
@@ -59,6 +60,7 @@ module.exports = class extends Command {
       let r = reasons[k];
       cont += ` ● **${k}**: ${r}\n`
     }
+
     cont += `\nEnter a valid reason number or your own reason.`
     e.setDescription(cont)
     message.channel.send(e);
@@ -86,7 +88,6 @@ module.exports = class extends Command {
       .addField("Reviewer", message.author, true)
       .addField("Reason", r)
       .setThumbnail(botUser.displayAvatarURL({ format: "png", size: 256 }))
-      .setTimestamp()
       .setColor('#FF4200')
     modLog.send(e)
     modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
@@ -96,6 +97,7 @@ module.exports = class extends Command {
     owners.forEach(o => {
       o.send(`Your bot \`${bot.username}\` / <@${bot.botid}> has been declined by reviewer ${message.author}.\nReason: ${r}\nIf you would like to dispute your decline, please DM ${message.author} (User ID: ${message.author.id})`)
     })
+
     if (!message.client.users.cache.find(u => u.id === bot.botid).bot) return;
     try {
       message.guild.members.fetch(message.client.users.cache.find(u => u.id === bot.botid))

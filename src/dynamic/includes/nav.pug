@@ -26,10 +26,25 @@ nav.navbar.navbar-expand-lg.navbar-dark.p-2.pl-4.pr-4.mainnav(style='background:
         a(style='text-decoration:none!important;', href='/join', target='_blank')
           li.nav-item
             span.nav-link Support
-        if (req.user) 
-         a(style='text-decoration:none!important;', href='/me')
-          li.nav-item.active
-            span.nav-link #{req.user.username}##{req.user.discriminator}    
+        // if (req.user) 
+        //  a(style='text-decoration:none!important;', href='/me')
+        //   li.nav-item.active
+        //     span.nav-link #{req.user.username}##{req.user.discriminator}    
+        // else
+        //  a(style='text-decoration:none!important;', href='/me')
+        //   li.nav-item
+        //     span.nav-link Login
+        
+        if (req.user)
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+              i.fas.fa-user
+              |  #{req.user.username}##{req.user.discriminator} 
+            .dropdown-menu.fade
+             center
+              a.btn.btn-sm.btn.btn-block(href='/me', style='max-width:400px;') Profile
+              a.btn.btn-sm.btn.btn-block(href='/add', style='width=10px') Add Bot
+              a.btn.btn-sm.btn-danger.btn-block(href='/Logout', style='width:100px;') Logout
         else
          a(style='text-decoration:none!important;', href='/me')
           li.nav-item

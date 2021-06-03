@@ -22,6 +22,7 @@ module.exports = class extends Command {
           description: `${message.author}, You do not have enough permissions to run this command.`,
         }
       });
+      
     if (!user || !user.bot) return message.channel.send(`Ping a **bot**.`);
     let bot = await Bots.findOne({ botid: user.id }, { _id: false });
 

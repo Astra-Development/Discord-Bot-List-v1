@@ -5,6 +5,8 @@ const botsSchema = new mongoose.Schema({
     default: () => new Date(),
     type: Date
   },
+
+
   username: {
     type: String,
     required: true
@@ -42,11 +44,16 @@ const botsSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+
+
   state: {
     type: String,
     required: true,
     default: "unverified"
   },
+
+
+
   support: {
     type: String,
     required: false
@@ -66,11 +73,17 @@ const botsSchema = new mongoose.Schema({
   webhook: {
     type: String
   },
+
+
+
   tags: {
     type: Array,
     required: false,
     default: []
   },
+
+
+
   owners: {
     primary: {
       type: String,
@@ -81,9 +94,13 @@ const botsSchema = new mongoose.Schema({
       default: []
     }
   },
+
+  
   auth: {
     type: String
   },
+
+
   servers: [
     {
       time: {
@@ -96,6 +113,8 @@ const botsSchema = new mongoose.Schema({
       }
     }
   ],
+
+
   nsfw: {
     type: Boolean,
     default: false

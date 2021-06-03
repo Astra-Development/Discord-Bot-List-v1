@@ -204,6 +204,11 @@ br
           span.text-danger.mr-1
             i.fas.fa-link
           |  Links
+        a.btn.btn-blue.btn-block.btn-icon(target='_blank' href=`/bots/${bot.botid}/botinfo`)
+              .btnicon-icon
+                i.fas.fa-stream
+              span.btnicon-content Api
+        <br /><br />
         if (bot.github)
           a.btn.btn-blue.btn-block.btn-icon(target='_blank' href=`${bot.github}`)
            .btnicon-icon

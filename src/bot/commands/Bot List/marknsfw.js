@@ -16,7 +16,6 @@ module.exports = class extends Command {
         embed: {
           color: 'RED',
           description: `> you do not have enough permissions to run this command.`,
-          timestamp: new Date(),
         }
       });
     if (!user || !user.bot) return message.channel.send(`You didn't ping a bot to mark as **NSFW**`);
@@ -27,7 +26,6 @@ module.exports = class extends Command {
         embed: {
           color: 'RED',
           description: `this bot is not on our botlist`,
-          timestamp: new Date(),
         }
       });
     await Bots.updateOne({ botid: user.id }, { $set: { nsfw: !bot.nsfw } })

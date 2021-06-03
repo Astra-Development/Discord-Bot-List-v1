@@ -44,7 +44,6 @@ module.exports = class extends Finalizer {
 			.setTitle(message.language.get('GLOBAL_LOG_COMMANDRUN_DM'))
 			.addField('Message', message.content)
 			.addField('Runtime', runTime)
-			.setTimestamp()
 			.setFooter(message.author.tag, message.author.displayAvatarURL());
 
 		logChannel = await this.client.channels.cache.get(logChannel);

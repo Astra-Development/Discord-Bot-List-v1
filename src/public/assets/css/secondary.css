@@ -182,6 +182,12 @@ body{
   -webkit-box-shadow:0 0 0 0.2rem rgba(111, 133, 210, 0.5);
   box-shadow:0 0 0 0.2rem rgba(111, 133, 210, 0.5)
 }
+/* orange BUTTON */
+.btn-orange{
+  color:#fff;
+  background-color:#FFA500;
+  border-color:#FFA500
+}
 
 /* BLUE BUTTON */
 .btn-blue{

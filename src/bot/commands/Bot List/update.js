@@ -24,7 +24,6 @@ module.exports = class extends Command {
         embed: {
           color: 'RED',
           description: `${message.author}, You do not have enough permissions to run this command.`,
-          timestamp: new Date(),
         }
       });
     let bots = await Bots.find({}, { _id: false })

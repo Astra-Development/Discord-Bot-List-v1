@@ -12,6 +12,7 @@ const usersSchema = new mongoose.Schema({
   },
   bio: {
     type: String,
+    required: false,
     default: "This user has no bio"
   },
   time: {

@@ -21,7 +21,7 @@ module.exports = class extends Command {
       return message.channel.send({
         embed: {
           color: 'RED',
-          description: `${message.author}, You do not have enough permissions to run this command.`,
+          description: `${message.author}, You do not have enough permissions to run this command.`
         }
       });
     if (!user || !user.bot) return message.channel.send(`Ping a **bot**.`);
@@ -33,7 +33,6 @@ module.exports = class extends Command {
           color: 'RED',
           thumpbnail: message.guild.iconURL,
           description: `This bot is not on our botlist`,
-          timestamp: new Date(),
         }
       });
 
@@ -42,7 +41,6 @@ module.exports = class extends Command {
         embed: {
           color: 'RED',
           description: `${message.author}, \`${bot.username}\` is already certify`,
-          timestamp: new Date(),
         }
       });
     const botUser = await this.client.users.fetch(user.id);
@@ -58,7 +56,6 @@ module.exports = class extends Command {
       .addField(`Owner(s)`, owners.map(x => x ? `<@${x}>` : ""), true)
       .addField("Mod", message.author, true)
       .setThumbnail(botUser.displayAvatarURL({ format: "png", size: 256 }))
-      .setTimestamp()
       .setColor(0x26ff00)
     modLog.send(e);
     modLog.send(owners.map(x => x ? `<@${x}>` : "")).then(m => { m.delete() });
