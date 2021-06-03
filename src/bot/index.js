@@ -17,6 +17,7 @@ const client = new Client({
 });
 
 //Bot Status
+
 client.once('ready', () => {
     client.user.setActivity(`astrabots.xyz`, { type: "WATCHING" });
 });

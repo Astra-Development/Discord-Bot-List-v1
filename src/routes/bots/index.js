@@ -115,7 +115,7 @@ route.get('/:id/botinfo', async (req, res) => {
   res.status(200).send({
     code: 200,
     status: 'success',
-    "API creator": 'BadTarget#0001',
+    "API creator": 'Astra Development',
     data: [
       {
         BotID: botID,
