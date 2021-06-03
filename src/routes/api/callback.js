@@ -9,9 +9,9 @@ route.get("/", passport.authenticate('discord', {
     failureRedirect: '/'
 }), function(req, res) {
   if(!server.website_logs){
-        res.redirect(req.session.url || "/me");
+        res.redirect("/me");
     }else{
-        res.redirect(req.session.url || "/me");
+        res.redirect("/me");
     let embed = new MessageEmbed()
     .setAuthor(`${req.user.username}#${req.user.discriminator}`, `https://cdn.discordapp.com/avatars/${req.user.id}/${req.user.avatar}`)
     .setColor('#4d79ff')
@@ -22,5 +22,3 @@ route.get("/", passport.authenticate('discord', {
 });
 
 module.exports = route;
-
-
