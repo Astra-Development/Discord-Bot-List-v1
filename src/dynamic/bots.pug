@@ -173,7 +173,18 @@ br
         h5.mb-3
           span.text-warning.mr-1
             i.fad.fa-badge-check
-          |  Certified
+          |  Status
+        .common__infocard.d-flex
+          .common__infocard-icon.text-damp
+            i.fas.fa-check-circle
+          span.common__infocard-content
+            b Verified
+            if (bot.state === 'verified')
+              span.float-right(href=`/bots/like/#{bot.botid}`)
+                | Verified
+            else
+              span.float-right(href=`/bots/like/#{bot.botid}`)
+                | Unverified
         .common__infocard.d-flex
           .common__infocard-icon.text-damp
             i.fas.fa-badge-check
@@ -181,10 +192,10 @@ br
             b Certified
             if (bot.certify)
               span.float-right(href=`/bots/like/#{bot.botid}`)
-                | Enabled
+                | Certified
             else
               span.float-right(href=`/bots/like/#{bot.botid}`)
-                | Disabled
+                | Un-Certified
 
       #owners
       .bot__owners.w-100.mb-5

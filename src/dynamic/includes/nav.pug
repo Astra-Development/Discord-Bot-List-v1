@@ -42,7 +42,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.p-2.pl-4.pr-4.mainnav(style='background:
               |  #{req.user.username}##{req.user.discriminator} 
             .dropdown-menu.fade
              center
-              a.btn.btn-sm.btn.btn-block(href='/me', style='max-width:400px;') Profile
+              a.btn.btn-sm.btn.btn-block(href=`/user/${req.user.id}`, style='max-width:400px;') Profile
+              a.btn.btn-sm.btn.btn-block(href='/me', style='max-width:400px;') Dashboard
               a.btn.btn-sm.btn.btn-block(href='/add', style='width=10px') Add Bot
               a.btn.btn-sm.btn-danger.btn-block(href='/Logout', style='width:100px;') Logout
         else
@@ -216,27 +217,27 @@ style.
   100% {box-shadow:0 10px 10px #0A0A0A;} */
   }
 
-// script.
-//   $('.nvhome').addClass('active');
+script.
+  $('.nvhome').addClass('active');
 
-// script.
-//   // disable right click
-//   document.addEventListener('contextmenu', event => event.preventDefault());
-//   document.onkeydown = function (e) {
-//   // disable F12 key
-//   if(e.keyCode == 123) {
-//   return false;
-//   }
-//   // disable I key
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
-//   return false;
-//   }
-//   // disable J key
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-//   return false;
-//   }
-//   // disable U key
-//   if(e.ctrlKey && e.keyCode == 85) {
-//   return false;
-//   }
-//   }
+script.
+  // disable right click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.onkeydown = function (e) {
+  // disable F12 key
+  if(e.keyCode == 123) {
+  return false;
+  }
+  // disable I key
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+  return false;
+  }
+  // disable J key
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+  return false;
+  }
+  // disable U key
+  if(e.ctrlKey && e.keyCode == 85) {
+  return false;
+  }
+  }

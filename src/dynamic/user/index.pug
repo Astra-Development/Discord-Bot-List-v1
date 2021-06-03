@@ -74,7 +74,10 @@ style.
   img.bot-img(src=userProfile.displayAvatarURL({dynamic: true}) )
   br
   h1#fat.mb-0 #{userProfile.username}##{userProfile.discriminator}'s
-  span (Profile)
+  br
+  .card.botcard(style='transform: translate(0px, 0px); opacity: 5;')
+    hr.mt-1.mb-3.bg-secondary
+    .card-body.pt-0.botcard-btnholder This user has no description.
   br
   br
   br
