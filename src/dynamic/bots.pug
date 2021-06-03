@@ -194,7 +194,7 @@ br
           |  Owner
         each person in owners
           a.btn.btn-dark.btn-block.btn-icon(href=`/user/${person.id}`)
-            img(src=person.tag !== 'Unknown User'  ? person.displayAvatarURL({format: "png", size: 256}) : '/assets/default-avatar.png')
+            img(src=person.tag !== 'Unknown User'  ? person.displayAvatarURL({format: "png", size: 256, dynamic: true}) : '/assets/default-avatar.png')
             span.btnicon-content
               | #{person.username}
               small.text-muted ##{person.discriminator}
