@@ -43,7 +43,7 @@ style.
 .bg-dark.hugething.text-center(style='box-shadow:0 5px 10px #1b1b1b;')
   br
   br
-  img.bot-img(src=userProfile.displayAvatarURL() )
+  img.bot-img(src=userProfile.displayAvatarURL({dynamic: true}) )
   br
   h3#fat.mb-0 Welcome to your profile #{req.user.username}!
   br
