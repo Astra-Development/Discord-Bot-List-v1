@@ -41,9 +41,6 @@ module.exports = async (req, b = null) => {
     return { success: false, message: "Invalid Captcha" }
   }
 
-  // Check that donation link is valid (48 characters)
-  if (data.donation.length < "48") return { success: false, message: "Your donation link is too short." };
-
   // Check that all the fields are filled in
   if (!data.long.length || !data.description.length || !data.prefix.length)
     return { success: false, message: "Invalid submission. Check you filled all the fields." }
