@@ -17,7 +17,7 @@
   Astra Bot List is an open-source!nt branch may have newer additions/features, but is also potentially more buggy or even insecure. Use at your own risk. If you have any issues, check the FAQs first please.
 </p>
 
-### Website Preview [Website Link](https://astrabots.xyz/)
+### Website Preview [Website Link](https://beta.astrabots.xyz/)
 ### Do you need help? Join our [Discord Server](https://astrabots.xyz/join)
 
 # ScreenShots
