@@ -104,7 +104,7 @@ route.get('/:id/botinfo', async (req, res) => {
   const botID = `${req.params.id}`;
   const botDB = await Bots.findOne({ botid: req.params.id }, { _id: false, auth: false });
   if (!botDB) return res.status(400).send({
-    code: 400,
+    code: 404,
     msg: 'No valid bot id was found within the request headers.',
   });
   // if (req.user.id !== botDB.dataValues.ownerID) return res.redirect('/404');
