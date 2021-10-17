@@ -43,3 +43,8 @@
 # 📝 Do not change the footer of the website!
 ![image](https://user-images.githubusercontent.com/39243722/120484161-7722c480-c3bb-11eb-8850-85a83bf3ab9d.png)
 > If i find your botlist without the footer you are X_X
+- You have permission to film and share videos, but you must include a mention of us, our server, in the video.
+- You are permitted to share in writing, but you must include a mention of us, our server, in the article.
+- You can't say things like "we did it."
+- You are unable to sell it.
+- Don't touch this section of the footer;
