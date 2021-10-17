@@ -40,7 +40,7 @@
   <img src="https://user-images.githubusercontent.com/39243722/119623756-29cdb280-be11-11eb-8bd0-d5e56a588c68.png">
 </p>
 
-# 📝 Do not change the footer of the website!
+# 📝 Terms of use
 ![image](https://user-images.githubusercontent.com/39243722/120484161-7722c480-c3bb-11eb-8850-85a83bf3ab9d.png)
 > If i find your botlist without the footer you are X_X
 - You have permission to film and share videos, but you must include a mention of us, our server, in the video.
