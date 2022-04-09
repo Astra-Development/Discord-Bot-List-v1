@@ -23,7 +23,7 @@
         "klasa-bot-plugin": "^1.0.18",
         "marked": "^2.0.6",
         "module-alias": "^2.2.2",
-        "moment": "^2.29.1",
+        "moment": "^2.29.2",
         "mongoose": "^5.12.7",
         "node-fetch": "^2.6.1",
         "passport": "^0.4.1",
