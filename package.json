@@ -15,7 +15,7 @@
         "cookie-parser": "^1.4.5",
         "date": "^1.0.2",
         "discord.js": "^12.5.3",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "express-session": "^1.17.1",
         "is-html": "^2.0.0",
         "is-url": "1.2.4",
