@@ -24,7 +24,7 @@
         "marked": "^4.0.10",
         "module-alias": "^2.2.2",
         "moment": "^2.29.2",
-        "mongoose": "^5.12.7",
+        "mongoose": "^5.13.20",
         "node-fetch": "^2.6.7",
         "passport": "^0.4.1",
         "passport-discord": "^0.1.4",
