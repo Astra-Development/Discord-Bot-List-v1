@@ -26,7 +26,7 @@
   <img src="https://imgur.com/1VuRUuT.png">
 </p>
 
-### Website Preview [Website Link](https://beta.astrabots.xyz/)
+### Official Website Preview [Website Link](https://astrabots.xyz/)
 ### Do you need help? Join our [Discord Server](https://astrabots.xyz/join)
 
 # ScreenShots
